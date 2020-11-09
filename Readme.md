@@ -1,7 +1,7 @@
 # Личный проект «Пинк» [![Build status][travis-image]][travis-url] [![Dependency status][dependency-image]][dependency-url]
 
 * Студент: [Сергей Зайцев](https://up.htmlacademy.ru/adaptive/21/user/274941).
-* Наставник: `Неизвестно`.
+* Наставник: `Павел Позняк`.
 
 ---
 
