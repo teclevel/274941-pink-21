@@ -150,8 +150,8 @@
         <form class="editor__form" action="https://echo.htmlacademy.ru" method="post">
           <img class="editor__img" src="https://via.placeholder.com" width="100" height="100" alt="Снимок для редактирования">
           <fieldset class="editor__fieldset">
+            <legend class="visually-hidden">Фильтры снимка</legend>
             <ul class="editor__list">
-
               <li class="editor__item range">
                 <a class="range__icon" href="#" aria-label="Изменить размер"></a>
                 <label class="range__label">
@@ -169,16 +169,7 @@
                 <label class="range__label">
                   <input class="range__value" type="range" min="1" max="10" value="5" name="filter">
                 </label>           
-              </li>
-
-              <li class="editor__item range">
-                <a class="range__icon" href="#"><label class="visually-hidden" for="fill">Заливка</label></a>            
-                <input class="range__value" type="range" min="1" max="10" id="fill" value="2" name="filter">
-              </li>
-              <li class="editor__item range">
-                <a class="range__icon" href="#"><label class="visually-hidden" for="contrast">Контраст</label></a>            
-                <input class="range__value" type="range" min="1" max="10" id="kontrast" value="5" name="filter">
-              </li>  
+              </li>        
             </ul>
           </fieldset>          
           <div class="editor__buttons">
