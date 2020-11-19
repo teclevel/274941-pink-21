@@ -21,25 +21,21 @@
             <li class="site-list__item"><a href="https://htmlacademy.ru">HTML Academy</a></li>
           </ul>
         </nav>
+        <h1 class="page-header__title">Фотографии пользователей</h1>
       </div>
     </header>
     <main class="page-photos">
-      <section class="title">
-        <div class="title__wrapper">
-          <h2 class="title__caption">Фотографии пользователей</h2>
-          <p class="title__text">Взгляните на фотографии, которые выкладывают пользователи! Видите, как не хватает ваших?</p>
-        </div>
-      </section>
       <section class="photos">
         <h2 class="visually-hidden">Посты пользователей</h2>
+        <p class="photos__text">Взгляните на фотографии, которые выкладывают пользователи! Видите, как не хватает ваших?</p>
         <ul class="photos__list">
           <li class="photos__item">
-            <figure class="photos__wrapper card">
+            <figure class="photos__wrapper photos__wrapper--full card">
               <img class="card__img" src="https://via.placeholder.com" width="100" height="100" alt="Снимок пользователя">
-              <span class="card__better">Панорама дня</span>
+              <span class="card__panorama-label">Панорама дня</span>
               <figcaption class="card__caption">
                 <blockquote class="card__description">
-                  <cite class="сard__autor">Анна</cite>
+                  <cite class="card__autor">Анна</cite>
                   <time class="card__timer" datetime="2020-11-17T18:18">(5 минут назад)</time>
                   <p class="card__text">Прыгать или нет? Напишите в комментарии свой совет и смотрите прямую трансляцию в перископе, задавайте свои вопросы!</p>
                   <div class="card__likes likes">
@@ -55,7 +51,7 @@
               <img class="card__img" src="https://via.placeholder.com" width="100" height="100" alt="Снимок пользователя">
               <figcaption class="card__caption">
                 <blockquote class="card__description">
-                  <cite class="сard__autor">Левон</cite>
+                  <cite class="card__autor">Левон</cite>
                   <time class="card__timer" datetime="2020-11-17T18:18">(5 часов назад)</time>
                   <p class="card__text">Вчера он на луну летал, сегодня в руки к нам попал.</p>
                   <div class="card__likes likes">
@@ -71,7 +67,7 @@
               <img class="card__img" src="https://via.placeholder.com" width="100" height="100" alt="Снимок пользователя">
               <figcaption class="card__caption">
                 <blockquote class="card__description">
-                  <cite class="сard__autor">Антон</cite>
+                  <cite class="card__autor">Антон</cite>
                   <time class="card__timer" datetime="2020-11-17T18:18">(12 часов назад)</time>
                   <p class="card__text">Соседи будут рады!</p>
                   <div class="card__likes likes">
@@ -87,7 +83,7 @@
               <img class="card__img" src="https://via.placeholder.com" width="100" height="100" alt="Снимок пользователя">
               <figcaption class="card__caption">
                 <blockquote class="card__description">
-                  <cite class="сard__autor">Борис</cite>
+                  <cite class="card__autor">Борис</cite>
                   <time class="card__timer" datetime="2020-11-17T18:18">(20 часов назад)</time>
                   <p class="card__text">Здесь могла быть ваша цитата о высоком и вечном.</p>
                   <div class="card__likes likes">
@@ -103,7 +99,7 @@
               <img class="card__img" src="https://via.placeholder.com" width="100" height="100" alt="Снимок пользователя">
               <figcaption class="card__caption">
                 <blockquote class="card__description">
-                  <cite class="сard__autor">Сергей</cite>
+                  <cite class="card__autor">Сергей</cite>
                   <time class="card__timer" datetime="2020-11-17T18:18">(25 часов назад)</time>
                   <p class="card__text">Самая кубанская в мире!</p>
                   <div class="card__likes likes">
@@ -119,7 +115,7 @@
               <img class="card__img" src="https://via.placeholder.com" width="100" height="100" alt="Снимок пользователя">
               <figcaption class="card__caption">
                 <blockquote class="card__description">
-                  <cite class="сard__autor">Максим</cite>
+                  <cite class="card__autor">Максим</cite>
                   <time class="card__timer" datetime="2020-11-17T18:18">(40 Часов назад)</time>
                   <p class="card__text">Где снег-то?</p>
                   <div class="card__likes likes">
@@ -135,7 +131,7 @@
               <img class="card__img" src="https://via.placeholder.com" width="100" height="100" alt="Снимок пользователя">
               <figcaption class="card__caption">
                 <blockquote class="card__description">
-                  <cite class="сard__autor">Надежда</cite>
+                  <cite class="card__autor">Надежда</cite>
                   <time class="card__timer" datetime="2020-11-17T18:18">(45 часов назад)</time>
                   <p class="card__text">Всем GM и взаимные лайки!</p>
                   <div class="card__likes likes">
@@ -150,21 +146,37 @@
       </section>
       <section class="editor">
         <h2 class="visually-hidden">Редактор поста</h2>
-        <div class="editor__wrapper">
-          <p class="editor__call">Затмите их всех! Выкладывайте все, что накопилось в телефоне!<p>
-          <img class="editor__img" src="https://via.placeholder.com" width="100" height="100" alt="Образец фотографии для редактирования">
-          <div class="editor__options">
-            <a class="editor__cut" href="#" aria-label="Обрезка"></a>
-            <a class="editor__fill" href="#" aria-label="Заливка"></a>
-            <a class="editor__contrast" href="#" aria-label="Контраст"></a>
+        <p class="editor__call">Затмите их всех! Выкладывайте все, что накопилось в телефоне!</p>
+        <form class="editor__form" action="https://echo.htmlacademy.ru" method="post">
+          <img class="editor__img" src="https://via.placeholder.com" width="100" height="100" alt="Снимок для редактирования">
+          <fieldset class="editor__fieldset">
+            <legend class="visually-hidden">Фильтры снимка</legend>
+            <ul class="editor__list">
+              <li class="editor__item range">
+                <a class="range__icon" href="#" aria-label="Изменить размер"></a>
+                <label class="range__label">
+                  <input class="range__value" type="range" min="1" max="10" value="8" name="filter">
+                </label>
+              </li>
+              <li class="editor__item range">
+                <a class="range__icon" href="#" aria-label="Изменить фон"></a>
+                <label class="range__label">
+                  <input class="range__value" type="range" min="1" max="10" value="2" name="filter">
+                </label>
+              </li>
+              <li class="editor__item range">
+                <a class="range__icon" href="#" aria-label="Изменить яркость"></a>
+                <label class="range__label">
+                  <input class="range__value" type="range" min="1" max="10" value="5" name="filter">
+                </label>
+              </li>
+            </ul>
+          </fieldset>
+          <div class="editor__buttons">
+            <button class="editor__post" type="submit">Запостить</button>
+            <button class="editor__cancel" type="reset">Отмена</button>
           </div>
-          <div class="range__control range">
-            <div class="range__bar"></div>
-            <div class="range__handle"></div>
-          </div>
-          <button class="editor__post" type="button">Запостить</button>
-          <button class="editor__cancel" type="button">Отмена</button>
-        </div>
+        </form>
       </section>
     </main>
     <footer class="page-footer">
