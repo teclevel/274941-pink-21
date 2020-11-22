@@ -83,7 +83,7 @@
         <img class="news__timer" src="https://via.placeholder.com" width="30" height="30" alt="таймер">
         <h3 class="news__caption">Эффект на 24 часа!</h3>
         <p class="news__text">Британские ученые провели исследования и доказали, что положительный эффект от использования приложения длится целые сутки!</p>
-        <a href="#">Узнать больше об исследовании</a>
+        <a class="news__learn-about" href="#">Узнать больше об исследовании</a>
       </section>
       <section class="reviews">
         <h2 class="visually-hidden">Отзывы</h2>
@@ -97,10 +97,10 @@
             </li>
           </ul>
           <div class="slider__control">
-            <button class="slider__button-prev" type="button">Предыдущий отзыв</button>
-            <button class="slider__button-next" type="button">Следующий отзыв</button>
+            <button class="slider__button-prev" type="button" aria-label="Предыдущий отзыв"></button>
+            <button class="slider__button-next" type="button" aria-label="Предыдущий отзыв"></button>
           </div>
-          <div class="reviews__pagination slider-pagination">
+          <div class="slider__pagination slider-pagination">
             <button class="slider-pagination__button slider-pagination__button--current" type="button">1</button>
             <button class="slider-pagination__button" type="button">2</button>
             <button class="slider-pagination__button" type="button">3</button>
@@ -109,41 +109,41 @@
       </section>
       <section class="tariffs">
         <h2 class="visually-hidden">Тарифы</h2>
-        <table class="tariffs__table">
-          <tr class="tariffs__row tariff">
+        <table class="tariffs__table table">
+          <tr class="table__row tariff">
             <td>
               <span class="visually-hidden">Тарифы</span>
             </td>
-            <td class="tariff__cell">
+            <td class="table__cell">
               <span class="tariff__caption">База</span>
               <span class="tariff__price">1.99 USD</span>
             </td>
-            <td class="tariff__cell">
+            <td class="table__cell">
               <span class="tariff__caption">Стандарт</span>
               <span class="tariff__price">3.99 USD</span>
             </td>
-            <td class="tariff__cell">
+            <td class="table__cell">
               <span class="tariff__caption">Анлим</span>
               <span class="tariff__price">9.99 USD</span>
             </td>
           </tr>
-          <tr class="tariffs__row options">
-            <td class="options__caption">Розовый фильтр</td>
-            <td class="options__state"><span class="visually-hidden">да</span></td>
-            <td class="options__state"><span class="visually-hidden">да</span></td>
-            <td class="options__state"><span class="visually-hidden">да</span></td>
+          <tr class="table__row options">
+            <td class="table__cell options__caption">Розовый фильтр</td>
+            <td class="table__cell options__state"><span class="visually-hidden">да</span></td>
+            <td class="table__cell options__state"><span class="visually-hidden">да</span></td>
+            <td class="table__cell options__state"><span class="visually-hidden">да</span></td>
           </tr>
-          <tr class="tariffs__row options">
-            <td class="options__caption">Смайлики</td>
-            <td class="options__state"><span class="visually-hidden">нет</span></td>
-            <td class="options__state"><span class="visually-hidden">да</span></td>
-            <td class="options__state"><span class="visually-hidden">да</span></td>
+          <tr class="table__row options">
+            <td class="table__cell options__caption">Смайлики</td>
+            <td class="table__cell options__state"><span class="visually-hidden">нет</span></td>
+            <td class="table__cell options__state"><span class="visually-hidden">да</span></td>
+            <td class="table__cell options__state"><span class="visually-hidden">да</span></td>
           </tr>
-          <tr class="tariffs__row options">
-            <td class="options__caption">Комментарии</td>
-            <td class="options__state"><span class="visually-hidden">нет</span></td>
-            <td class="options__state"><span class="visually-hidden">нет</span></td>
-            <td class="options__state"><span class="visually-hidden">да</span></td>
+          <tr class="table__row options">
+            <td class="table__cell options__caption">Комментарии</td>
+            <td class="table__cell options__state"><span class="visually-hidden">нет</span></td>
+            <td class="table__cell options__state"><span class="visually-hidden">нет</span></td>
+            <td class="table__cell options__state"><span class="visually-hidden">да</span></td>
           </tr>
         </table>
         <div class="tariffs__pagination slider-pagination">
@@ -167,7 +167,7 @@
             </li>
             <li class="contacts__item contacts__item-adress">
               <span class="contacts__text-title">Приезжайте в гости:</span>
-              <p class="contacts__link">ул. Большая<br>Конюшенная, 19/8</p>
+              <p class="contacts__adress">ул. Большая<br>Конюшенная, 19/8</p>
             </li>
           </ul>
         </div>
