@@ -3,13 +3,14 @@
   <head>
     <meta charset="utf-8">
     <title>HTML Academy: Пинк</title>
+    <link rel="stylesheet" href="css/style.css">
   </head>
   <body class="page__body">
     <header class="page-header">
       <div class="page-header__wrapper">
         <a class="page-header__logo" href="index.html">
           <img src="https://via.placeholder.com" width="30" height="30" alt="Pink">
-        </a> 
+        </a>
         <nav class="main-nav">
           <ul class="main-nav__list site-list">
             <li class="site-list__item"><a href="index.html">Главная</a></li>
@@ -27,7 +28,7 @@
     <main class="page-form">
       <p class="page-form__text">Поделитесь своей историей и получите шанс выиграть ценный приз — 1000 миль на вашу бонусную карту!</p>
       <section class="page-form__section">
-        <h1 class="visually-hidden">Страница заполнения формы</h1> 
+        <h1 class="visually-hidden">Страница заполнения формы</h1>
         <form class="form" action="https://echo.htmlacademy.ru" method="post">
           <fieldset class="form__fieldset">
             <ul class="form__list">
@@ -42,8 +43,8 @@
               <li class="form__item">
                 <label class="form__label" for="patronymic">Отчество:</label>
                 <input class="form__input" id="patronymic" type="text" name="patronymic" placeholder="Ну и отчество тоже">
-              </li>  
-            </ul>  
+              </li>
+            </ul>
           </fieldset>
           <fieldset class="form__fieldset form__fieldset--background">
             <legend class="form__legend">Ваши безбашенные достижения в путешествии</legend>
@@ -72,19 +73,19 @@
                 <input class="form__input visually-hidden" type="checkbox" id="thunder" value="thunder" name="progress">
                 <label for="thunder">Разгромил отель</label>
               </li>
-            </ul>  
+            </ul>
           </fieldset>
           <fieldset class="form__fieldset">
             <ul class="form__list">
               <li class="form__item">
                 <label class="form__label" for="tel">Номер телефона</label>
                 <input class="form__input" id="tel" type="tel" name="tel" placeholder="Номер, пожалуйста">
-              </li>  
+              </li>
               <li class="form__item">
                 <label class="form__label" for="email">Адрес почты</label>
                 <input class="form__input" id="email" type="email" name="email" placeholder="Введите почту *" required>
-              </li>  
-            </ul>          
+              </li>
+            </ul>
           </fieldset>
           <fieldset class="form__fieldset">
             <legend class="form__legend">С каким приложением путешествовали?</legend>
@@ -107,11 +108,11 @@
             <legend class="form__legend">Опишите свои эмоции</legend>
             <label class="form__label" for="message">Текст письма:</label>
             <textarea class="form__textarea" id="message" name="message" placeholder="Можно прям в красках, не стесняясь в выражениях" rows="10" cols="25"></textarea>
-          </fieldset> 
+          </fieldset>
           <button class="form__button button" type="submit">Отправить форму</button>
           <p class="form__note">*- Обязательные поля</p>
         </form>
-      </section>           
+      </section>
     </main>
     <footer class="page-footer">
       <div class="page-footer__wrapper">
@@ -146,6 +147,6 @@
       <p class="modal__title">Ваша заявка отправлена</p>
       <p class="modal__description">Спасибо за ваше участие, ваша заявка уже поступила к нам. В ближайшее время мы рассмотрим ее и оповестим вас.</p>
       <button class="modal__button button" type="button">Закрыть окно</button>
-    </div> 
+    </div>
   </body>
 </html>
