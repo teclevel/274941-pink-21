@@ -21,19 +21,19 @@
   margin-left: 23px;
 }
 
-.form input[placeholder] {
+.form__input {
+  min-height: 59px;
+  width: 100%;
   font-weight: 400;
   font-size: 18px;
   line-height: 30px;
   border: 2px solid @grey-light-border;
-  border-radius: 1px;
+  border-radius: 3px;
   padding-left: 23px;
-  color: red;            //непонял как поменять цвет
 }
 
-.form__input {
-  min-height: 59px;
-  width: 100%;
+.form__input::-webkit-input-placeholder {
+  color: @black-green;
 }
 
 .form__legend {
@@ -55,14 +55,32 @@
 
 .form__textarea {
   resize: none;
-}
-
-.form textarea[placeholder] {
+  width: 100%;
+  min-height: 150px;
+  margin-left: 0;
   font-weight: 400;
   font-size: 18px;
   line-height: 30px;
   border: 2px solid @grey-light-border;
-  border-radius: 1px;
+  border-radius: 3px;
   padding-left: 23px;
-  color: red;         //заменить цвет шрифта
+}
+
+.form__textarea::-webkit-input-placeholder {
+  color: @black-green;
+}
+
+.form__button {
+  width: 100%;
+}
+
+.form__note {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 30px;
+  text-transform: uppercase;
+}
+
+.form__note span {
+  color: @cherry;
 }
