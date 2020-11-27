@@ -7,8 +7,8 @@
   color: @black-green;
 }
 
-.editor__wrapper {
-  background-color:@grey-light;
+.editor__form {
+  background-color: @grey-light;
 }
 
 .editor__fieldset {
@@ -18,13 +18,21 @@
 .editor__list {
   list-style: none;
   margin: 0;
+  padding: 0;
 }
 
-.editor__post,
-.editor__cancel {
-  font-weight: 700;
-  font-size: 18px;
-  line-height: 18px;
-  color: @cherry;
+.editor__item {
+  width: 320px;
+  border-bottom: 1px solid @black-green-border;
+  padding: 20px 50px;
 }
 
+.range__link {
+  text-decoration: none;
+}
+
+.editor__buttons {
+  min-height: 160px;
+  margin-top: 40px;
+  margin-bottom: 40px;
+}
