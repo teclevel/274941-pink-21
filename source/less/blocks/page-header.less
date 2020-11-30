@@ -24,14 +24,15 @@
 
 //Удалить класс page-header__wrapper--active
 //при закрытом меню
-
-/*.page-header__wrapper--active{
+/*
+.page-header__wrapper--active {
   background-color: @black-green;
 
   @media (min-width: @desktop-width) {
     background-color: @black-03;
   }
-}*/
+}
+*/
 
 .page-header__header {
   //position: relative;
@@ -180,22 +181,9 @@
 // Удалить класс page-header__open
 // при закрытом меню
 
-/*.page-header__open {
-  display: none;
-}*/
-
-/*.page-header__section {
-  width: 100%;
-
-  @media (min-width: @tablet-width) {
-    width: 50%;
-  }
-
-  @media (min-width: @desktop-width) {
-    width: 25%;
-  }
-
-}*/
+.page-header__open {
+  display: block;
+}
 
 .page-header__slogan {
   min-height: 395px;
@@ -212,7 +200,7 @@
   }
 
   @media (min-width: @desktop-width) {
-    width: 25%;
+    width: 35%;
   }
 }
 
@@ -222,11 +210,11 @@
   min-height: 271px;
 
   @media (min-width: @tablet-width) {
-    width: 50%;
+    width: 45%;
   }
 
   @media (min-width: @desktop-width) {
-    width: 25%;
+    width: 35%;
   }
 }
 
