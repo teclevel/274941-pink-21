@@ -1,4 +1,5 @@
 .page-header {
+  position: relative;
   min-height: 395px;
   background: url("../img/bg-desktop.jpg");
   background-repeat: no-repeat;
@@ -52,25 +53,27 @@
 
 //картинка на главной
 
-/*.page-header__header--index {
-  height: 286px;
+.page-header__section {
+  //position: absolute;
+  background-position: -80px bottom;
+  background-size: 130%;
+  width: 100%;
+  height: 461px;
   background-image: url("../img/mobile.png");
   background-repeat: no-repeat;
-  background-position: -50px bottom;
-  background-size: 100%;
 
   @media (min-width: @tablet-width) {
-    height: 618px;
-    background-position: -50px bottom;
-  background-size: 100%;
-  }
-
-  @media (min-width: @desktop-width) {
-    height: 815px;
+    height: 509px;
     background-position: -50px bottom;
     background-size: 100%;
   }
-}*/
+
+  @media (min-width: @desktop-width) {
+    height: 705px;
+    background-position: -53px bottom;
+    background-size: 90%;
+  }
+}
 
 .page-header__logo-close {
   padding: 0 20px;
@@ -128,17 +131,31 @@
   text-transform: uppercase;
 }
 
-// Состояние main-nav__list
-// при закрытом меню
-
 .main-nav__list {
+  display: none;
+
+  @media (min-width: @desktop-width) {
+    display: flex;
+    position: static;
+    background-color: transparent;
+    min-width: 618px;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+}
+
+// main-nav__list--active удалить
+// при закрытом меню
+/*
+.main-nav__list--active {
   background-color: @black-green;
   width: 100%;
   position: absolute;
   top: 66px;
   left: 0;
   display: flex;
-  flex-direction: column;  //display: none; ошибка дубликат
+  flex-direction: column;
 
   @media (min-width: @tablet-width) {
     top: 109px;
@@ -153,10 +170,10 @@
     justify-content: space-between;
     flex-wrap: wrap;
   }
-}
+}*/
 
 // Удалить класс page-header__close
-// при закрытом меню
+// при  открытом меню
 
 .page-header__close {
   display: none;
@@ -175,6 +192,11 @@
   @media (min-width: @tablet-width) {
     width: 50%;
   }
+
+  @media (min-width: @desktop-width) {
+    width: 25%;
+  }
+
 }
 
 .page-header__slogan {
@@ -185,11 +207,14 @@
   text-align: center;
   margin: 0;
   padding: 30px 45px;
-  outline: 5px solid rgba(0, 255, 0, 0.8);
-  outline-offset: -5px;
 
   @media (min-width: @tablet-width) {
     min-height: 25px;
+    width: 50%;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 25%;
   }
 }
 
@@ -197,8 +222,14 @@
   text-align: center;
   color: @white;
   min-height: 271px;
-  outline: 5px solid rgba(255, 0, 0, 0.8);
-  outline-offset: -5px;
+
+  @media (min-width: @tablet-width) {
+    width: 50%;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 25%;
+  }
 }
 
 .page-header__title {
