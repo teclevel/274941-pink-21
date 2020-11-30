@@ -1,6 +1,6 @@
 .page-header {
   position: relative;
-  min-height: 395px;
+  height: 461px;
   background: url("../img/bg-desktop.jpg");
   background-repeat: no-repeat;
   background-position: 50% 0;
@@ -8,11 +8,11 @@
   color: @white;
 
   @media (min-width: @tablet-width) {
-    height: 618px;
+    height: 729px;
   }
 
   @media (min-width: @desktop-width) {
-    height: 815px;
+    height: 853px;
     background-size: cover;
   }
 }
@@ -34,7 +34,7 @@
 }*/
 
 .page-header__header {
-  position: relative;
+  //position: relative;
   height: 66px;
   display: flex;
   flex-direction: column;
@@ -54,24 +54,22 @@
 //картинка на главной
 
 .page-header__section {
-  //position: absolute;
-  background-position: -80px bottom;
-  background-size: 130%;
-  width: 100%;
-  height: 461px;
+  background-position: 50% 100%;  //  сместить влево, чтобы по центру осталось?
+  background-size: 435px;
+  height: 410px;
   background-image: url("../img/mobile.png");
   background-repeat: no-repeat;
 
   @media (min-width: @tablet-width) {
-    height: 509px;
-    background-position: -50px bottom;
-    background-size: 100%;
+    background-position: 50% 100%;
+    background-size: 870px;
+    height: 620px;
   }
 
   @media (min-width: @desktop-width) {
-    height: 705px;
-    background-position: -53px bottom;
+    background-position: 50% 100%;
     background-size: 90%;
+    height: 743px;
   }
 }
 
@@ -186,7 +184,7 @@
   display: none;
 }*/
 
-.page-header__section {
+/*.page-header__section {
   width: 100%;
 
   @media (min-width: @tablet-width) {
@@ -197,7 +195,7 @@
     width: 25%;
   }
 
-}
+}*/
 
 .page-header__slogan {
   min-height: 395px;
