@@ -1,6 +1,30 @@
-
-.news--invisible {
+.news {
   display: none;
+
+  @media (min-width: @tablet-width) {
+    display: flex;
+  }
+}
+
+.news__timer-wrapper {
+  background-color: @white;
+  width: 100%;
+  z-index: 3;
+  flex-grow: 1;
+}
+
+.news__timer {
+  width: 238px;
+  margin: 20px;
+}
+
+.news__description {
+  @media (min-width: @tablet-width) {
+    background-color: @white;
+    padding: 50px;
+    z-index: 2;
+    flex-grow: 1;
+  }
 }
 
 .news__caption {
@@ -24,3 +48,9 @@
   color: @cherry;
   text-decoration: underline;
 }
+
+/*
+@media (min-width: @desktop-width) {
+  position: static;
+  width: 186px;
+}*/

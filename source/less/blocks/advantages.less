@@ -16,6 +16,30 @@
 
 .advantages__list {
   list-style: none;
+  margin: 0;
+  padding: 0 20px;
+
+  @media (min-width: @tablet-width) {
+    padding-top: 100px;
+    padding-bottom: 30px;
+    position: relative;
+  }
+
+  @media (min-width: @desktop-width) {
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
+.advantages__description {
+  @media (min-width: @tablet-width) {
+    margin-left: 50%;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-left: 0;
+    order: 2;
+  }
 }
 
 .advantages__title {
@@ -34,8 +58,25 @@
 
 .advantages__cell-phone {
   margin: 0 auto;
+
+  @media (min-width: @tablet-width) {
+    position: absolute;
+    left: 20px;
+    bottom: -65px;
+    width: 268px;
+    z-index: 1;
+  }
+
+  @media (min-width: @desktop-width) {
+    position: static;
+    width: 186px;
+  }
 }
 
 .advantages__cell-phone--invisible {
   display: none;
+
+  @media (min-width: @desktop-width) {
+    display: block;
+  }
 }
