@@ -130,7 +130,7 @@
           </ul>
         </div>
       </section>
-      <section class="news ">
+      <section class="news container">
         <div class="news__timer-wrapper">
           <img class="news__timer" src="img/timer.svg" width="238" height="276" alt="таймер">
         </div>
@@ -147,7 +147,8 @@
           <ul class="reviews__list slider__list">
             <li class="reviews__item slider__item">
               <blockquote class="reviews__block">
-                <cite class="reviews__autor-name">Николай Петров</cite>
+                <cite class="reviews__author-name">Николай Петров</cite>
+                <cite class="reviews__author-about">25 лет, водитель трамвая</cite>
                 <p class="reviews__text">«Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые вещи! А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии!»</p>
               </blockquote>
             </li>
@@ -167,10 +168,10 @@
         <h2 class="visually-hidden">Тарифы</h2>
         <table class="tariffs__table table">
           <tr class="table__row tariffs__row">
-            <td>
+            <td class="table__cell-invisible table__cell-empty">
               <span class="visually-hidden">Тарифы</span>
             </td>
-            <td class="table__cell">
+            <td class="table__cell table__cell-invisible">
               <span class="tariffs__caption">База</span>
               <span class="tariffs__price">1.99 USD</span>
             </td>
@@ -178,28 +179,28 @@
               <span class="tariffs__caption">Стандарт</span>
               <span class="tariffs__price">3.99 USD</span>
             </td>
-            <td class="table__cell">
+            <td class="table__cell table__cell-invisible">
               <span class="tariffs__caption">Анлим</span>
               <span class="tariffs__price">9.99 USD</span>
             </td>
           </tr>
           <tr class="table__row">
             <td class="table__cell tariffs__name">Розовый фильтр</td>
+            <td class="table__cell tariffs__status table__cell-invisible"><span class="visually-hidden">да</span></td>
             <td class="table__cell tariffs__status"><span class="visually-hidden">да</span></td>
-            <td class="table__cell tariffs__status"><span class="visually-hidden">да</span></td>
-            <td class="table__cell tariffs__status"><span class="visually-hidden">да</span></td>
+            <td class="table__cell tariffs__status table__cell-invisible"><span class="visually-hidden">да</span></td>
           </tr>
           <tr class="table__row">
             <td class="table__cell tariffs__name">Смайлики</td>
-            <td class="table__cell tariffs__status"><span class="visually-hidden">нет</span></td>
+            <td class="table__cell tariffs__status table__cell-invisible"><span class="visually-hidden">нет</span></td>
             <td class="table__cell tariffs__status"><span class="visually-hidden">да</span></td>
-            <td class="table__cell tariffs__status"><span class="visually-hidden">да</span></td>
+            <td class="table__cell tariffs__status table__cell-invisible"><span class="visually-hidden">да</span></td>
           </tr>
           <tr class="table__row">
             <td class="table__cell tariffs__name">Комментарии</td>
+            <td class="table__cell tariffs__status table__cell-invisible"><span class="visually-hidden">нет</span></td>
             <td class="table__cell tariffs__status"><span class="visually-hidden">нет</span></td>
-            <td class="table__cell tariffs__status"><span class="visually-hidden">нет</span></td>
-            <td class="table__cell tariffs__status"><span class="visually-hidden">да</span></td>
+            <td class="table__cell tariffs__status table__cell-invisible"><span class="visually-hidden">да</span></td>
           </tr>
         </table>
         <div class="tariffs__pagination slider-pagination">

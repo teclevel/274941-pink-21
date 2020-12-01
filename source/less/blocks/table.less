@@ -1,0 +1,25 @@
+.table {
+  width: 100%;
+
+  @media (min-width: @tablet-width) {
+    width: 620px;
+    margin: 0 auto;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 940px;
+    margin: 0 auto;
+  }
+}
+
+.table__cell-empty {
+  background-color: @grey-light;
+}
+
+.table__cell-invisible {
+  display: none;
+
+  @media (min-width: @tablet-width) {
+    display: table-cell;
+  }
+}
