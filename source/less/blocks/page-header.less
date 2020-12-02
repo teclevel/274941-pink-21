@@ -1,15 +1,126 @@
 .page-header {
-  //min-height: 462px;
-  background: url("../img/back-mobile.png") center no-repeat;
+  position: relative;
+  min-height: 733px;
+  background: url("../img/bg-desktop.jpg");
+  background-repeat: no-repeat;
+  background-position: 50% 0;
   background-color: @blue-dark;
   color: @white;
+
+  @media (min-width: @tablet-width) {
+    min-height: 729px;
+  }
+
+  @media (min-width: @desktop-width) {
+    min-height: 853px;
+    background-size: cover;
+  }
 }
 
-.page-header__wrapper--main {         //только на главной
-  min-height: 462px;
+.page-header__wrapper {
+  background-color: @black-03;
+}
+
+
+//Удалить класс page-header__wrapper--active
+//при закрытом меню
+/*
+.page-header__wrapper--active {
+  background-color: @black-green;
+
+  @media (min-width: @desktop-width) {
+    background-color: @black-03;
+  }
+}
+*/
+
+.page-header__header {
+  //position: relative;
+  height: 66px;
+  display: flex;
+  flex-direction: column;
+
+  @media (min-width: @tablet-width) {
+    height: 109px;
+  }
+
+  @media (min-width: @desktop-width) {
+    height: 110px;
+    position: static;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
+
+//картинка на главной
+
+.page-header__section {
+  background-position: 50% 100%;  //  сместить влево, чтобы по центру осталось?
+  background-size: 435px;
+  height: 410px;
   background-image: url("../img/mobile.png");
   background-repeat: no-repeat;
-  background-position: center bottom;
+
+  @media (min-width: @tablet-width) {
+    background-position: 50% 100%;
+    background-size: 870px;
+    height: 620px;
+  }
+
+  @media (min-width: @desktop-width) {
+    background-position: 50% 100%;
+    background-size: 90%;
+    height: 743px;
+  }
+}
+
+.page-header__logo-close {
+  padding: 0 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 69px;
+
+  @media (min-width: @tablet-width) {
+    height: 110px;
+  }
+}
+
+// логотип на мобильном
+
+@media (max-width: @mobile-width-only) {
+  .page-header__logo-tablet,
+  .page-header__logo-desktop {
+    display: none;
+  }
+}
+
+//логотип на планшете
+
+@media (min-width: @tablet-width) {
+  .page-header__logo-mobile,
+  .page-header__logo-desktop {
+    display: none;
+  }
+}
+
+//логотип на десктопе
+
+@media (min-width: @desktop-width) {
+  .page-header__logo-mobile,
+  .page-header__logo-tablet {
+    display: none;
+  }
+
+  .page-header__logo-desktop {
+    display: block;
+  }
+}
+
+.page-header__toggle {
+  @media (min-width: @desktop-width) {
+    display: none;
+  }
 }
 
 .page-header__nav {
@@ -19,11 +130,92 @@
   text-transform: uppercase;
 }
 
+.main-nav__list {
+  display: none;
+
+  @media (min-width: @desktop-width) {
+    display: flex;
+    position: static;
+    background-color: transparent;
+    min-width: 618px;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+}
+
+// main-nav__list--active удалить
+// при закрытом меню
+/*
+.main-nav__list--active {
+  background-color: @black-green;
+  width: 100%;
+  position: absolute;
+  top: 66px;
+  left: 0;
+  display: flex;
+  flex-direction: column;
+
+  @media (min-width: @tablet-width) {
+    top: 109px;
+  }
+
+  @media (min-width: @desktop-width) {
+    display: flex;
+    position: static;
+    background-color: transparent;
+    min-width: 618px;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+}*/
+
+// Удалить класс page-header__close
+// при  открытом меню
+
+.page-header__close {
+  display: none;
+}
+
+// Удалить класс page-header__open
+// при закрытом меню
+
+.page-header__open {
+  display: block;
+}
+
 .page-header__slogan {
+  min-height: 395px;
   font-size: 24px;
   font-weight: 300;
   line-height: 29px;
   text-align: center;
+  margin: 0;
+  padding: 30px 45px;
+
+  @media (min-width: @tablet-width) {
+    min-height: 25px;
+    width: 50%;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 35%;
+  }
+}
+
+.page-header__download {
+  text-align: center;
+  color: @white;
+  min-height: 271px;
+
+  @media (min-width: @tablet-width) {
+    width: 45%;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 35%;
+  }
 }
 
 .page-header__title {

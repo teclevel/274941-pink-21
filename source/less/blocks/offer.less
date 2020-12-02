@@ -1,11 +1,10 @@
 .offer {
   background-color: @blue-dark;
-}
+  padding: 20px;
 
-.offer__download {
-  text-align: center;
-  color: @white;
-  min-height: 271px;
+  @media (min-width: @tablet-width) {
+    background-color: transparent;
+  }
 }
 
 .offer__button {
@@ -14,16 +13,19 @@
   line-height: 18px;
   border: 3px solid @white;
   border-radius: 29px;
-  padding: 10px;
-  display: block;
+  padding: 10px 20px;
+  display: inline-block;
   text-decoration: none;
   color: inherit;
 }
 
 .offer__list {
   list-style: none;
-  margin: 0;
+  margin: 20px;
   padding: 0;
+  display: flex;
+  align-items: baseline;
+  justify-content: space-around;
 }
 
 .offer__systems {
