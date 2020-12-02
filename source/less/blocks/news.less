@@ -1,4 +1,10 @@
 .news {
+  @media (min-width: @desktop-width) {
+    background-color: @grey-light;
+  }
+}
+
+.news__wrapper {
   display: none;
 
   @media (min-width: @tablet-width) {
@@ -11,6 +17,10 @@
   width: 100%;
   z-index: 3;
   flex-grow: 1;
+
+  @media (min-width: @desktop-width) {
+    background-color: inherit;
+  }
 }
 
 .news__timer {
@@ -24,6 +34,10 @@
     padding: 50px;
     z-index: 2;
     flex-grow: 1;
+  }
+
+  @media (min-width: @desktop-width) {
+    background-color: inherit;
   }
 }
 
@@ -48,9 +62,3 @@
   color: @cherry;
   text-decoration: underline;
 }
-
-/*
-@media (min-width: @desktop-width) {
-  position: static;
-  width: 186px;
-}*/
