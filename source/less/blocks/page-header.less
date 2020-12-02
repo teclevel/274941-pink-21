@@ -1,19 +1,33 @@
 .page-header {
   position: relative;
   min-height: 733px;
-  background: url("../img/bg-desktop.jpg");
-  background-repeat: no-repeat;
-  background-position: 50% 0;
   background-color: @blue-dark;
   color: @white;
+  background-image: url("../img/back-mobile.jpg");
+  background-repeat: no-repeat;
+  background-position: 50% 0;
+  background-size: cover;
 
   @media (min-width: @tablet-width) {
     min-height: 729px;
+    background-image: url("../img/back-tablet.jpg");
   }
 
   @media (min-width: @desktop-width) {
     min-height: 853px;
-    background-size: cover;
+    background-image: url("../img/bg-desktop.jpg");
+  }
+}
+
+.page-header.page-inner {
+  min-height: 237px;
+
+  @media (min-width: @tablet-width) {
+    min-height: 440px;
+  }
+
+  @media (min-width: @desktop-width) {
+    min-height: 394px;
   }
 }
 
@@ -35,7 +49,6 @@
 */
 
 .page-header__header {
-  //position: relative;
   height: 66px;
   display: flex;
   flex-direction: column;
