@@ -1,0 +1,21 @@
+.list-address {
+  @media (min-width: @tablet-width) {
+    display: flex;
+    flex-direction: column;
+  }
+
+  @media (min-width: @desktop-width) {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    margin-top: 20px;
+  }
+}
+
+.list-address__item {
+  @media (min-width: @desktop-width) {
+    width: 40%;
+    display: flex;
+    flex-direction: column-reverse;
+  }
+}

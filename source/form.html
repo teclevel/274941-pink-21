@@ -67,16 +67,16 @@
         <h1 class="visually-hidden">Страница заполнения формы</h1>
         <form class="form" action="https://echo.htmlacademy.ru" method="post">
           <fieldset class="form__fieldset-name">
-            <ul class="form__list">
-              <li class="form__item">
+            <ul class="form__list list-name">
+              <li class="form__item list-name__item">
                 <label class="form__name" for="last-name">Фамилия:</label>
                 <input class="form__input" id="last-name" type="text" name="last-name" placeholder="Укажите фамилию *" required>
               </li>
-              <li class="form__item">
+              <li class="form__item list-name__item">
                 <label class="form__name" for="name">Имя:</label>
                 <input class="form__input" id="name" type="text" name="name" placeholder="Введите ваше имя *" required>
               </li>
-              <li class="form__item">
+              <li class="form__item list-name__item">
                 <label class="form__name" for="patronymic">Отчество:</label>
                 <input class="form__input" id="patronymic" type="text" name="patronymic" placeholder="Ну и отчество тоже">
               </li>
@@ -114,12 +114,13 @@
             </fieldset>
           </div>
           <fieldset class="form__fieldset-address">
-            <ul class="form__list">
-              <li class="form__item">
+            <legend class="form__legend form__legend-invisible">Kонтактная информация</legend>
+            <ul class="form__list list-address">
+              <li class="form__item list-address__item ">
                 <label class="form__name" for="tel">Номер телефона</label>
                 <input class="form__input" id="tel" type="tel" name="tel" placeholder="Номер, пожалуйста">
               </li>
-              <li class="form__item">
+              <li class="form__item list-address__item">
                 <label class="form__name" for="email">Адрес почты</label>
                 <input class="form__input" id="email" type="email" name="email" placeholder="Введите почту *" required>
               </li>
