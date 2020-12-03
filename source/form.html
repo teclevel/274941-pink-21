@@ -66,7 +66,7 @@
       <section class="page-form__section">
         <h1 class="visually-hidden">Страница заполнения формы</h1>
         <form class="form" action="https://echo.htmlacademy.ru" method="post">
-          <fieldset class="form__fieldset container">
+          <fieldset class="form__fieldset-name">
             <ul class="form__list">
               <li class="form__item">
                 <label class="form__name" for="last-name">Фамилия:</label>
@@ -82,8 +82,8 @@
               </li>
             </ul>
           </fieldset>
-          <div class="form__fieldset-wrapper">
-            <fieldset class="form__fieldset container">
+          <div class="form__fieldset-checkbox form__fieldset-wrapper">
+            <fieldset class="form__fieldset">
               <legend class="form__legend">Ваши безбашенные достижения в путешествии</legend>
               <ul class="form__list checkbox">
                 <li class="checkbox__item">
@@ -113,7 +113,7 @@
               </ul>
             </fieldset>
           </div>
-          <fieldset class="form__fieldset container">
+          <fieldset class="form__fieldset-address">
             <ul class="form__list">
               <li class="form__item">
                 <label class="form__name" for="tel">Номер телефона</label>
@@ -125,10 +125,10 @@
               </li>
             </ul>
           </fieldset>
-          <div class="form__fieldset-wrapper">
-            <fieldset class="form__fieldset  container">
+          <div class="form__fieldset-radio form__fieldset-wrapper">
+            <fieldset class="form__fieldset">
               <legend class="form__legend">С каким приложением путешествовали?</legend>
-                  <ul class="form__list radiobox">
+                  <ul class="form__list radio-box">
                     <li class="radio-box__item">
                       <input class="form__input visually-hidden" type="radio" name="sistems" value="Pink для iOS" id="ios" checked>
                       <label class="form__label" for="ios">Pink для iOS</label>
@@ -144,12 +144,12 @@
                   </ul>
             </fieldset>
           </div>
-          <fieldset class="form__fieldset container">
+          <fieldset class="form__fieldset-message">
             <legend class="form__legend">Опишите свои эмоции</legend>
             <label for="message"></label>
             <textarea class="form__textarea" id="message" name="message" placeholder="Можно прям в красках, не стесняясь в выражениях"></textarea>
           </fieldset>
-          <div class="container">
+          <div class="form__submit">
             <button class="form__button button" type="submit">Отправить форму</button>
             <p class="form__note"><span>* </span>&mdash; Обязательные поля</p>
           </div>
