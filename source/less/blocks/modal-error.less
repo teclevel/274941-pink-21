@@ -1,9 +1,17 @@
 .modal-error {
-  min-height: 289px;
-  text-align: center;
-  background: @white;
-  box-shadow: 0 7px 15px @shadow;
-  border-radius: 1px;
+  display: block;
+  height: 289px;
+  width: 320px;
+
+  @media (min-width: @tablet-width) {
+    height: 363px;
+    width: 460px;
+  }
+
+  @media (min-width: @desktop-width) {
+    height: 377px;
+    width: 780px;
+  }
 }
 
 .modal-error__title {
@@ -11,15 +19,13 @@
 }
 
 .modal-error__wrapper {
-  background-color: @white;
-}
-
-.modal-error__center {
-  min-height: 163px;
-  display: flex;
+  @media (min-width: @desktop-width) {
+    background-color: @grey-light;
+    margin-top: 62px;
+  }
 }
 
 .modal-error__button {
-  width: 100%;
-  align-self: center;
+  width: 80%;
+  margin: 50px 10%;
 }
