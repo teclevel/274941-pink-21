@@ -1,5 +1,5 @@
 .modal-error {
-  display: block;
+  display: none;
   height: 289px;
   width: 320px;
 
@@ -16,16 +16,50 @@
 
 .modal-error__title {
   padding-top: 22px;
+
+  @media (min-width: @tablet-width) {
+    width: 50%;
+    margin: 0 25%;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 100%;
+    margin: 0;
+  }
+}
+
+.modal-error__description {
+  width: 86%;
+  margin: 20px 7%;
+
+  @media (min-width: @tablet-width) {
+    width: 58%;
+    margin: 50px 21%;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 48%;
+    margin: 50px 26%;
+  }
 }
 
 .modal-error__wrapper {
   @media (min-width: @desktop-width) {
     background-color: @grey-light;
-    margin-top: 62px;
   }
 }
 
 .modal-error__button {
   width: 80%;
   margin: 50px 10%;
+
+  @media (min-width: @tablet-width) {
+    width: 80%;
+    margin: 0 10%;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 42%;
+    margin: 62px 29%;
+  }
 }

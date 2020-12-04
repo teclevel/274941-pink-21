@@ -17,6 +17,11 @@
   line-height: 24px;
   color: @black;
   text-align: center;
+
+  @media (min-width: @tablet-width) {
+    font-size: 30px;
+    line-height: 40px;
+  }
 }
 
 .modal__description {
@@ -25,17 +30,8 @@
   line-height: 24px;
   color: @black-green;
   text-align: center;
-  width: 86%;
-  margin: 20px 7%;
 
   @media (min-width: @tablet-width) {
     font-size: 18px;
-    width: 58%;
-    margin: 50px 21%;
-  }
-
-  @media (min-width: @desktop-width) {
-    width: 48%;
-    margin: 50px 26%;
   }
 }
