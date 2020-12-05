@@ -1,9 +1,133 @@
-.form__fieldset-wrapper {
-  background-color: @grey-light;
+.form__fieldset-name,
+.form__fieldset-address,
+.form__fieldset-message,
+.form__fieldset-checkbox,
+.form__fieldset-radio {
+  padding: 0 20px;
+  margin: 0;
+
+  @media (min-width: @tablet-width) {
+    padding: 0;
+    margin-top: 40px;
+  }
 }
 
-.form__fieldset {
+@media (min-width: @desktop-width) {
+  .form__fieldset-radio {
+    margin-top: 0;
+    min-height: 232px;
+  }
+}
+
+.form__fieldset-wrapper {
+  background-color: @grey-light;
+
+  @media (min-width: @tablet-width) {
+    background-color: transparent;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .form {
+    width: 940px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-rows: auto auto auto auto auto;
+    grid-template-columns: 50% 50%;
+  }
+
+  .form__fieldset-name {
+    grid-row-start: 1;
+    grid-row-end: 2;
+    grid-column-start: 1;
+    grid-column-end: 2;
+    margin: 0;
+    margin-right: 20px;
+  }
+
+  .form__checkbox {
+    grid-row-start: 3;
+    grid-row-end: 4;
+    grid-column-start: 1;
+    grid-column-end: 3;
+  }
+
+  .form__fieldset-address {
+    grid-row-start: 2;
+    grid-row-end: 3;
+    grid-column-start: 1;
+    grid-column-end: 3;
+  }
+
+  .form__radio {
+    grid-row-start: 1;
+    grid-row-end: 2;
+    grid-column-start: 2;
+    grid-column-end: 3;
+    margin-top: 20px;
+  }
+
+  .form__fieldset-message {
+    grid-row-start: 4;
+    grid-row-end: 5;
+    grid-column-start: 1;
+    grid-column-end: 3;
+  }
+
+  .form__submit {
+    grid-row-start: 5;
+    grid-row-end: 6;
+    grid-column-start: 1;
+    grid-column-end: 3;
+  }
+}
+
+@media (min-width: @tablet-width) and (max-width: @desktop-width-except) {
+  .form {
+    padding: 0 20px;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .form__fieldset-name {
+    order: 1;
+  }
+
+  .form__checkbox {
+    order: 4;
+  }
+
+  .form__fieldset-address {
+    order: 3;
+  }
+
+  .form__radio {
+    order: 2;
+  }
+
+  .form__fieldset-message {
+    order: 5;
+  }
+
+  .form__submit {
+    order: 6;
+  }
+}
+
+.form__fieldset-name {
   border: none;
+}
+
+.form__fieldset-radio,
+.form__fieldset-checkbox,
+.form__fieldset-address,
+.form__fieldset-message {
+  border: none;
+
+  @media (min-width: @tablet-width) {
+    border: 2px solid @grey-light-border;
+    border-radius: 3px;
+  }
 }
 
 .form__list {
@@ -18,22 +142,38 @@
   line-height: 30px;
   color: @cherry;
   text-transform: uppercase;
-  margin-left: 23px;
+  padding-left: 20px;
+
+  @media (min-width: @tablet-width) {
+    padding-left: 0;
+    padding-right: 20px;
+  }
+}
+
+.form__item {
+  display: flex;
+  flex-direction: column;
+
+  @media (min-width: @tablet-width) {
+    display: flex;
+    flex-direction: row;
+  }
 }
 
 .form__input {
   min-height: 59px;
-  width: 100%;
   font-weight: 400;
   font-size: 18px;
   line-height: 30px;
   border: 2px solid @grey-light-border;
   border-radius: 3px;
-  padding-left: 23px;
-}
-
-.form__input::-webkit-input-placeholder {
+  padding-left: 20px;
   color: @black-green;
+  flex-grow: 1;
+
+  &::placeholder {
+    color: @black-green;
+  }
 }
 
 .form__legend {
@@ -43,7 +183,13 @@
   color: @cherry;
   text-transform: uppercase;
   text-align: center;
-  padding: 0 20px;
+  margin: 0  auto;
+}
+
+@media (max-width: @mobile-width-only) {
+  .form__legend-invisible {
+    display: none;
+  }
 }
 
 .form__label {
@@ -54,24 +200,37 @@
 }
 
 .form__textarea {
+  font-family: inherit;
   resize: none;
-  width: 100%;
-  min-height: 150px;
-  margin-left: 0;
   font-weight: 400;
   font-size: 18px;
   line-height: 30px;
   border: 2px solid @grey-light-border;
   border-radius: 3px;
-  padding-left: 23px;
+
+  &::placeholder {
+    color: @black-green;
+  }
 }
 
-.form__textarea::-webkit-input-placeholder {
-  color: @black-green;
+.form__submit {
+  padding: 20px 20px;
+
+  @media (min-width: @tablet-width) {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 0;
+  }
 }
 
 .form__button {
   width: 100%;
+
+  @media (min-width: @tablet-width) {
+    max-width: 296px;
+    margin: 20px 0;
+  }
 }
 
 .form__note {
@@ -79,6 +238,7 @@
   font-size: 14px;
   line-height: 30px;
   text-transform: uppercase;
+  text-align: center;
 }
 
 .form__note span {

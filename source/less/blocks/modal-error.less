@@ -1,25 +1,65 @@
 .modal-error {
-  min-height: 289px;
-  text-align: center;
-  background: @white;
-  box-shadow: 0 7px 15px @shadow;
-  border-radius: 1px;
+  display: none;
+  height: 289px;
+  width: 320px;
+
+  @media (min-width: @tablet-width) {
+    height: 363px;
+    width: 460px;
+  }
+
+  @media (min-width: @desktop-width) {
+    height: 377px;
+    width: 780px;
+  }
 }
 
 .modal-error__title {
   padding-top: 22px;
+
+  @media (min-width: @tablet-width) {
+    width: 50%;
+    margin: 0 25%;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 100%;
+    margin: 0;
+  }
+}
+
+.modal-error__description {
+  width: 86%;
+  margin: 20px 7%;
+
+  @media (min-width: @tablet-width) {
+    width: 58%;
+    margin: 50px 21%;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 48%;
+    margin: 50px 26%;
+  }
 }
 
 .modal-error__wrapper {
-  background-color: @white;
-}
-
-.modal-error__center {
-  min-height: 163px;
-  display: flex;
+  @media (min-width: @desktop-width) {
+    background-color: @grey-light;
+  }
 }
 
 .modal-error__button {
-  width: 100%;
-  align-self: center;
+  width: 80%;
+  margin: 50px 10%;
+
+  @media (min-width: @tablet-width) {
+    width: 80%;
+    margin: 0 10%;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 42%;
+    margin: 62px 29%;
+  }
 }
