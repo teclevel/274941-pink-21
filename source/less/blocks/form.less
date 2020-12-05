@@ -1,7 +1,8 @@
-.form__fieldset,
 .form__fieldset-name,
 .form__fieldset-address,
-.form__fieldset-message {
+.form__fieldset-message,
+.form__fieldset-checkbox,
+.form__fieldset-radio {
   padding: 0 20px;
   margin: 0;
 
@@ -10,6 +11,7 @@
     margin-top: 40px;
   }
 }
+
 
 .form__fieldset-wrapper {
   background-color: @grey-light;
@@ -37,7 +39,7 @@
     margin-right: 20px;
   }
 
-  .form__fieldset-checkbox {
+  .form__checkbox {
     grid-row-start: 3;
     grid-row-end: 4;
     grid-column-start: 1;
@@ -85,7 +87,7 @@
     order: 1;
   }
 
-  .form__fieldset-checkbox {
+  .form__checkbox {
     order: 4;
   }
 
@@ -110,11 +112,15 @@
   border: none;
 }
 
-@media (max-width: @mobile-width-only) {
-  .form__fieldset,
-  .form__fieldset-address,
-  .form__fieldset-message {
-    border: none;
+.form__fieldset-radio,
+.form__fieldset-checkbox,
+.form__fieldset-address,
+.form__fieldset-message {
+  border: none;
+
+  @media (min-width: @tablet-width) {
+    border: 2px solid @grey-light-border;
+    border-radius: 3px;
   }
 }
 
@@ -138,8 +144,17 @@
   }
 }
 
+.form__item {
+  display: flex;
+  flex-direction: column;
+
+  @media (min-width: @tablet-width) {
+    display: flex;
+    flex-direction: row;
+  }
+}
+
 .form__input {
-  display: block;
   min-height: 59px;
   font-weight: 400;
   font-size: 18px;
@@ -147,9 +162,12 @@
   border: 2px solid @grey-light-border;
   border-radius: 3px;
   padding-left: 20px;
-  width: -moz-available;
-  width: -webkit-fill-available;
   color: @black-green;
+  flex-grow: 1;
+
+  &::placeholder {
+    color: @black-green;
+  }
 }
 
 .form__legend {
@@ -183,6 +201,10 @@
   line-height: 30px;
   border: 2px solid @grey-light-border;
   border-radius: 3px;
+
+  &::placeholder {
+    color: @black-green;
+  }
 }
 
 .form__submit {
