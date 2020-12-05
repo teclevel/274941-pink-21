@@ -71,16 +71,16 @@
           <fieldset class="form__fieldset-name">
             <ul class="form__list list-name">
               <li class="form__item list-name__item">
-                <label class="form__name" for="last-name">Фамилия:</label>
-                <input class="form__input" id="last-name" type="text" name="last-name" placeholder="Укажите фамилию *" required>
+                <label class="form__name list-name__label" for="last-name">Фамилия:</label>
+                <input class="form__input list-name__input" id="last-name" type="text" name="last-name" placeholder="Укажите фамилию *" required>
               </li>
               <li class="form__item list-name__item">
-                <label class="form__name" for="name">Имя:</label>
-                <input class="form__input" id="name" type="text" name="name" placeholder="Введите ваше имя *" required>
+                <label class="form__name list-name__label" for="name">Имя:</label>
+                <input class="form__input list-name__input" id="name" type="text" name="name" placeholder="Введите ваше имя *" required>
               </li>
               <li class="form__item list-name__item">
-                <label class="form__name" for="patronymic">Отчество:</label>
-                <input class="form__input" id="patronymic" type="text" name="patronymic" placeholder="Ну и отчество тоже">
+                <label class="form__name list-name__label" for="patronymic">Отчество:</label>
+                <input class="form__input list-name__input" id="patronymic" type="text" name="patronymic" placeholder="Ну и отчество тоже">
               </li>
             </ul>
           </fieldset>
@@ -119,12 +119,12 @@
             <legend class="form__legend form__legend-invisible">Kонтактная информация</legend>
             <ul class="form__list list-address">
               <li class="form__item list-address__item ">
-                <label class="form__name" for="tel">Номер телефона</label>
-                <input class="form__input" id="tel" type="tel" name="tel" placeholder="Номер, пожалуйста">
+                <label class="form__name list-address__label" for="tel">Номер телефона</label>
+                <input class="form__input list-address__input" id="tel" type="tel" name="tel" placeholder="Номер, пожалуйста">
               </li>
               <li class="form__item list-address__item">
-                <label class="form__name" for="email">Адрес почты</label>
-                <input class="form__input" id="email" type="email" name="email" placeholder="Введите почту *" required>
+                <label class="form__name list-address__label" for="email">Адрес почты</label>
+                <input class="form__input list-address__input" id="email" type="email" name="email" placeholder="Введите почту *" required>
               </li>
             </ul>
           </fieldset>
@@ -133,24 +133,24 @@
               <legend class="form__legend">С каким приложением путешествовали?</legend>
               <ul class="form__list radio-box">
                 <li class="radio-box__item">
-                  <input class="form__input visually-hidden" type="radio" name="sistems" value="Pink для iOS" id="ios" checked>
+                  <input class="form__input visually-hidden" type="radio" name="systems" value="Pink для iOS" id="ios" checked>
                   <label class="form__label" for="ios">Pink для iOS</label>
                 </li>
                 <li class="radio-box__item">
-                  <input class="form__input visually-hidden" type="radio" name="sistems" value="Pink на android" id="android">
+                  <input class="form__input visually-hidden" type="radio" name="systems" value="Pink на android" id="android">
                   <label class="form__label" for="android">Pink на Android</label>
                 </li>
                 <li class="radio-box__item">
-                  <input class="form__input visually-hidden" type="radio" name="sistems" value="Windows Phone" id="windows">
+                  <input class="form__input visually-hidden" type="radio" name="systems" value="Windows Phone" id="windows">
                   <label class="form__label" for="windows">Windows Phone</label>
                 </li>
               </ul>
             </fieldset>
           </div>
-          <fieldset class="form__fieldset-message">
-            <legend class="form__legend">Опишите свои эмоции</legend>
+          <fieldset class="form__fieldset-message message">
+            <legend class="form__legend message__legend">Опишите свои эмоции</legend>
             <label for="message"></label>
-            <textarea class="form__textarea" id="message" name="message" placeholder="Можно прям в красках, не стесняясь в выражениях"></textarea>
+            <textarea class="form__textarea message__textarea" id="message" name="message" placeholder="Можно прям в красках, не стесняясь в выражениях"></textarea>
           </fieldset>
           <div class="form__submit">
             <button class="form__button button" type="submit">Отправить форму</button>

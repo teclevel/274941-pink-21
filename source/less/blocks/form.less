@@ -2,10 +2,12 @@
 .form__fieldset-name,
 .form__fieldset-address,
 .form__fieldset-message {
-  padding: 0;
+  padding: 0 20px;
+  margin: 0;
 
   @media (min-width: @tablet-width) {
-    margin: 35px 0;
+    padding: 0;
+    margin-top: 40px;
   }
 }
 
@@ -14,13 +16,6 @@
 
   @media (min-width: @tablet-width) {
     background-color: transparent;
-  }
-}
-
-@media (min-width: @tablet-width) {
-  .form {
-    width: 620px;
-    margin: 0 auto;
   }
 }
 
@@ -81,8 +76,7 @@
 
 @media (min-width: @tablet-width) and (max-width: @desktop-width-except) {
   .form {
-    width: 620px;
-    margin: 0 auto;
+    padding: 0 20px;
     display: flex;
     flex-direction: column;
   }
@@ -136,21 +130,25 @@
   line-height: 30px;
   color: @cherry;
   text-transform: uppercase;
-  margin-right: 20px;
+  padding-left: 20px;
+
+  @media (min-width: @tablet-width) {
+    padding-left: 0;
+    padding-right: 20px;
+  }
 }
 
 .form__input {
+  display: block;
   min-height: 59px;
-  width: 100%;
   font-weight: 400;
   font-size: 18px;
   line-height: 30px;
   border: 2px solid @grey-light-border;
   border-radius: 3px;
-  padding-left: 23px;
-}
-
-.form__input::-webkit-input-placeholder {
+  padding-left: 20px;
+  width: -moz-available;
+  width: -webkit-fill-available;
   color: @black-green;
 }
 
@@ -161,7 +159,7 @@
   color: @cherry;
   text-transform: uppercase;
   text-align: center;
-  padding: 0 20px;
+  margin: 0  auto;
 }
 
 @media (max-width: @mobile-width-only) {
@@ -178,27 +176,23 @@
 }
 
 .form__textarea {
+  font-family: inherit;
   resize: none;
-  width: 100%;
-  min-height: 150px;
-  margin-left: 0;
   font-weight: 400;
   font-size: 18px;
   line-height: 30px;
   border: 2px solid @grey-light-border;
   border-radius: 3px;
-  padding-left: 23px;
-}
-
-.form__textarea::-webkit-input-placeholder {
-  color: @black-green;
 }
 
 .form__submit {
+  padding: 20px 20px;
+
   @media (min-width: @tablet-width) {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    padding: 20px 0;
   }
 }
 
@@ -216,6 +210,7 @@
   font-size: 14px;
   line-height: 30px;
   text-transform: uppercase;
+  text-align: center;
 }
 
 .form__note span {

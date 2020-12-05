@@ -1,5 +1,7 @@
 .list-address {
   @media (min-width: @tablet-width) {
+    padding: 0 82px;
+    margin-top: 40px;
     display: flex;
     flex-direction: column;
   }
@@ -13,9 +15,19 @@
 }
 
 .list-address__item {
-  @media (min-width: @desktop-width) {
-    width: 40%;
+  @media (min-width: @tablet-width) {
+    margin-bottom: 37px;
     display: flex;
     flex-direction: column-reverse;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 40%;
+  }
+}
+
+.list-address__label {
+  @media (min-width: @tablet-width) {
+    padding-left: 20px;
   }
 }
