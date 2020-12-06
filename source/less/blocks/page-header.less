@@ -148,47 +148,6 @@
   }
 }
 
-.main-nav__list {
-  display: none;
-
-  @media (min-width: @desktop-width) {
-    display: flex;
-    position: static;
-    background-color: transparent;
-    min-width: 618px;
-    flex-direction: row;
-    justify-content: space-between;
-    flex-wrap: wrap;
-  }
-}
-
-// main-nav__list--active удалить
-// при закрытом меню
-/*
-.main-nav__list--active {
-  background-color: @black-green;
-  width: 100%;
-  position: absolute;
-  top: 66px;
-  left: 0;
-  display: flex;
-  flex-direction: column;
-
-  @media (min-width: @tablet-width) {
-    top: 109px;
-  }
-
-  @media (min-width: @desktop-width) {
-    display: flex;
-    position: static;
-    background-color: transparent;
-    min-width: 618px;
-    flex-direction: row;
-    justify-content: space-between;
-    flex-wrap: wrap;
-  }
-}*/
-
 // Удалить класс page-header__close
 // при  открытом меню
 
@@ -238,9 +197,22 @@
 
 .page-header__title {
   width: 228px;
-  margin: 0 auto;
+  margin: 36px auto 0;
   font-size: 24px;
   font-weight: 300;
   line-height: 33px;
   text-align: center;
+
+  @media (min-width: @tablet-width) {
+    width: 620px;
+    margin: 81px auto 0;
+    font-size: 50px;
+    font-weight: 300;
+    line-height: 68px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 747px;
+    margin: 74px auto 0;
+  }
 }
