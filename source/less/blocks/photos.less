@@ -5,12 +5,37 @@
   color: @black-green;
   text-align: center;
   padding: 0 35px;
+  margin: 54px auto 60px;
+
+  @media (min-width: @tablet-width) {
+    font-size: 18px;
+    margin: 100px auto 85px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin: 100px auto 97px;
+  }
+}
+
+.photos__panorama {
+  margin: 0;
 }
 
 .photos__full {
   position: relative;
-  width: 320px;
-  margin: 0 auto;
+  min-height: 137px;
+  background-image: url("../img/panorama-desktop.jpg");
+  background-position: 50%;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  @media (min-width: @tablet-width) {
+    min-height: 509px;
+  }
+
+  @media (min-width: @desktop-width) {
+    min-height: 506px;
+  }
 }
 
 .photos__panorama-label {
@@ -26,27 +51,89 @@
   padding: 10px 15px;
 }
 
+.photos__header {
+  margin: 0;
+  padding: 0 20px;
+
+  @media (min-width: @desktop-width) {
+    padding: 0;
+    width: 940px;
+    margin: 0 auto;
+  }
+}
+
+.photos__caption-header {
+  background-color: @grey-light;
+  min-height: 192px;
+  margin-bottom: 20px;
+  padding: 0 17px;
+
+  @media (min-width: @tablet-width) {
+    min-height: 121px;
+  }
+
+  @media (min-width: @desktop-width) {
+    min-height: 96px;
+  }
+}
+
+.photos__description-header {
+  margin: 0;
+}
+
 .photos__list {
   list-style: none;
+  padding: 0;
+  margin: 0;
+
+  @media (min-width: @tablet-width) {
+    display: flex;
+    flex-wrap: wrap;
+    //margin: 0;
+    padding: 0 10px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 980px;
+    margin: 0 auto;
+  }
 }
 
 .photos__item {
-  padding: 0;
+  padding: 0 20px;
+
+  @media (min-width: @tablet-width) {
+    padding: 0 10px;
+    margin-bottom: 20px;
+    width: 50%;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 320px;
+  }
 }
 
 .photos__wrapper {
   margin: 0;
+  padding-bottom: 20px;
+
+  @media (min-width: @tablet-width) {
+    padding: 0;
+  }
+}
+
+.photos__img {
+  margin: 0 auto;
+  width: 100%;
 }
 
 .photos__caption {
   background-color: @grey-light;
+  min-height: 155px;
 }
 
 .photos__description {
-  margin-left: 17px;
-  margin-right: 0;
-  margin-top: 0;
-  text-align: left;
+  margin: 0 17px 20px;
 }
 
 .photos__author {
