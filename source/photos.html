@@ -233,16 +233,20 @@
           <fieldset class="editor__fieldset container">
             <legend class="visually-hidden">Фильтры снимка</legend>
             <ul class="editor__list">
+
+
               <li class="editor__item range">
                 <a class="editor__link-crop range__link" href="#" aria-label="Изменить размер">
                   <svg class="editor__img-crop" width="44" height="44" viewBox="0 0 44 44" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M32 28H36V12C36 10.9391 35.5786 9.92172 34.8284 9.17157C34.0783 8.42143 33.0609 8 32 8H16V12H32V28ZM12 32V0H8V8H0V12H8V32C8 33.0609 8.42143 34.0783 9.17157 34.8284C9.92172 35.5786 10.9391 36 12 36H32V44H36V36H44V32H12Z" fill="#D22856"/>
                   </svg>
                 </a>
-                <label class="range__label">
+                <label class="editor__range-crop">
                   <input class="range__value" type="range" min="1" max="10" value="8" name="filter">
                 </label>
               </li>
+
+
               <li class="editor__item range">
                 <a class="editor__link-fill range__link" href="#" aria-label="Изменить фон">
                   <svg class="editor__img-fill" width="48" height="43" viewBox="0 0 48 43" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -252,10 +256,12 @@
                     </g>
                   </svg>
                 </a>
-                <label class="range__label">
+                <label class="editor__range-fill">
                   <input class="range__value" type="range" min="1" max="10" value="2" name="filter">
                 </label>
               </li>
+
+
               <li class="editor__item range">
                 <a class="editor__link-contrast range__link" href="#" aria-label="Изменить яркость">
                   <svg class="editor__img-contrast" width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -265,7 +271,7 @@
                     </g>
                   </svg>
                 </a>
-                <label class="range__label">
+                <label class="editor__range-contrast">
                   <input class="range__value" type="range" min="1" max="10" value="5" name="filter">
                 </label>
               </li>

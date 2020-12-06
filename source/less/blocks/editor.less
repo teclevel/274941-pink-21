@@ -9,41 +9,80 @@
   @media (min-width: @tablet-width) {
     font-size: 18px;
   }
-
-  @media (min-width: @desktop-width) {
-    
-  }
-
 }
 
 .editor__form {
   background-color: @grey-light;
+  padding: 10px 0;
+}
+
+.editor__img {
+  margin: 20px auto;
 }
 
 .editor__fieldset {
   border: none;
   padding: 0;
   margin: 0;
+  border-bottom: 1px solid @black-green-border;
 }
 
 .editor__list {
+  position: relative;
   list-style: none;
-  margin: 0;
-  padding: 0;
+  margin: 0 auto;
+  display: flex;
+  width: 280px;
+  padding-left: 10px;
+}
+
+.editor__link-crop {
+  position: absolute;
+  top: 0;
+  left: 40px;
+}
+
+.editor__link-fill {
+  position: absolute;
+  top: 0;
+  left: 115px;
+}
+
+.editor__link-contrast {
+  position: absolute;
+  top: 5px;
+  right: 40px;
 }
 
 .editor__item {
-  width: 320px;
-  border-bottom: 1px solid @black-green-border;
-  padding: 20px 50px;
+  //border-bottom: 1px solid @black-green-border;
+  padding-bottom: 30px;
+  margin-top: 70px;
 }
 
+.editor__range-fill,
+.editor__range-contrast {
+  display: none;
+}
+
+/// перенести
 .range__link {
   text-decoration: none;
+  width: 50px;
+  height: 50px;
+}
+
+.range__value {
+  width: 240px;
 }
 
 .editor__buttons {
   min-height: 160px;
-  margin-top: 40px;
-  margin-bottom: 40px;
+  margin: 20px auto;
+  padding: 17px;
+  width: 280px;
+}
+
+.editor__post {
+  margin-bottom: 17px;
 }
