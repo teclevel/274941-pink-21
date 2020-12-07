@@ -69,8 +69,8 @@
           <div class="photos__full">
             <span class="photos__panorama-label">Панорама дня</span>
           </div>
-          <div class="photos__header">
-            <figcaption class="photos__caption-header">
+          <figcaption class="photos__header">
+            <div class="photos__caption-header">
               <blockquote class="photos__description-header">
                 <cite class="photos__author">Анна</cite>
                 <time class="photos__timer" datetime="2020-11-17T18:18">(5 минут назад)</time>
@@ -84,8 +84,8 @@
                   <span class="photos__counter">Нравится: 356</span>
                 </div>
               </blockquote>
-            </figcaption>
-          </div>
+            </div>
+          </figcaption>
         </figure>
         <ul class="photos__list">
           <li class="photos__item">
@@ -224,13 +224,13 @@
       </section>
       <section class="editor">
         <h2 class="visually-hidden">Редактор поста</h2>
-        <div class="container">
+        <div class=" editor__title container">
           <span class="editor__call">Затмите их всех!</span>
           <span class="editor__call">Выкладывайте все, что накопилось в телефоне!</span>
         </div>
         <form class="editor__form" action="https://echo.htmlacademy.ru" method="post">
-          <img class="editor__img container" src="img/photo-7-tablet.jpg" width="280" height="374" alt="Снимок для редактирования">
-          <fieldset class="editor__fieldset container">
+          <img class="editor__img" src="img/photo-7-tablet.jpg" width="280" height="374" alt="Снимок для редактирования">
+          <fieldset class="editor__fieldset">
             <legend class="visually-hidden">Фильтры снимка</legend>
             <ul class="editor__list">
               <li class="editor__item range">
@@ -271,7 +271,7 @@
               </li>
             </ul>
           </fieldset>
-          <div class="editor__buttons container">
+          <div class="editor__buttons">
             <button class="editor__post button-editor" type="submit">Запостить</button>
             <button class="editor__cancel button-editor" type="reset">Отмена</button>
           </div>
