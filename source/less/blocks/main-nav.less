@@ -4,7 +4,7 @@
 }
 
 .main-nav__list {
-  display: none;
+  display: block;
   list-style: none;
   margin: 0;
   padding: 0;
@@ -21,10 +21,10 @@
   }
 }
 
-// main-nav__list--active удалить
+// main-nav__list--open удалить
 // при закрытом меню
 /*
-.main-nav__list--active {
+.main-nav__list--open {
   background-color: @black-green;
   width: 100%;
   position: absolute;
@@ -47,3 +47,9 @@
     flex-wrap: wrap;
   }
 }*/
+
+.site-list__item {
+  height: 63px;
+  background: @black-green;
+  box-shadow: 0 1px 0 @black, inset 0 1px 0 @box-shadow;
+}

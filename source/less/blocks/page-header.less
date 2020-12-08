@@ -48,7 +48,7 @@
 */
 
 .page-header__header {
-  padding: 0 20px;
+  position: relative;
   height: 66px;
   display: flex;
   flex-direction: column;
@@ -88,6 +88,7 @@
 }
 
 .page-header__logo-close {
+  padding: 0 20px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -136,12 +137,20 @@
 }
 
 .page-header__nav {
+  position: absolute;
+  top: 66px;
+  width: 100%;
   font-size: 18px;
   font-weight: 700;
   line-height: 32px;
   text-transform: uppercase;
 
+  @media (min-width: @tablet-width) {
+    top: 108px;
+  }
+
   @media (min-width: @desktop-width) {
+    position: static;
     font-weight: 400;
     line-height: 18px;
     text-transform: none;
@@ -149,17 +158,17 @@
 }
 
 // Удалить класс page-header__close
-// при  открытом меню
+// при  открытом меню удаляет крестик
 
 .page-header__close {
-  display: none;
+  display: block;
 }
 
 // Удалить класс page-header__open
-// при закрытом меню
+// при закрытом меню удаляет бургер
 
 .page-header__open {
-  display: block;
+  display: none;
 }
 
 .page-header__slogan {

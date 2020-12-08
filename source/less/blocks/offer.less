@@ -21,8 +21,9 @@
 
 .offer__list {
   list-style: none;
-  margin: 20px;
+  margin: 20px auto;
   padding: 0;
+  max-width: 320px;
   display: flex;
   align-items: baseline;
   justify-content: space-around;
@@ -32,4 +33,11 @@
   font-size: 14px;
   font-weight: 300;
   line-height: 24px;
+  max-width: 280px;
+  margin: 0 auto;
+
+  @media (min-width: @tablet-width) {
+    font-size: 18px;
+    max-width: 300px;
+  }
 }
