@@ -1,5 +1,4 @@
 .page-header {
- // position: relative;
   min-height: 733px;
   background-color: @blue-dark;
   color: @white;
@@ -18,39 +17,6 @@
     background-image: url("../img/bg-desktop.jpg");
   }
 }
-
-
-
-/*
-.page-header.page-inner {
-  //min-height: 237px;
-
-  @media (min-width: @tablet-width) {
-    min-height: 440px;
-  }
-
-  @media (min-width: @desktop-width) {
-    min-height: 394px;
-  }
-}*/
-
-
-
-
-
-
-//Удалить класс page-header__nav--active
-//при закрытом меню
-/*
-.page-header__nav--active {
-  background-color: @black-green;
-
-  @media (min-width: @desktop-width) {
-    background-color: @black-03;
-  }
-}
-*/
-
 
 
 //картинка на главной
@@ -81,16 +47,25 @@
   font-weight: 300;
   line-height: 29px;
   text-align: center;
-  margin: 0;
-  padding: 30px 45px;
+  margin: 0 auto;
+  padding: 30px 0;
+  width: 280px;
 
   @media (min-width: @tablet-width) {
     min-height: 25px;
-    width: 50%;
+    font-size: 40px;
+    line-height: 48px;
+    width: 247px;
+    margin: 0;
+    margin-left: 10%;
   }
 
   @media (min-width: @desktop-width) {
+    font-size: 50px;
+    line-height: 68px;
     width: 35%;
+    width: 250px;
+    margin: 0 25px;
   }
 }
 

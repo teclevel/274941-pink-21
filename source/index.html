@@ -8,7 +8,7 @@
   </head>
   <body class="page__body">
     <header class="page-header">
-      <div class="main-nav main-nav--opened">
+      <div class="main-nav main-nav--closed main-nav--nojs">
         <nav class="main-nav__wrapper">
           <div class="main-nav__logo-button">
             <a class="main-nav__link-logo">
@@ -95,6 +95,22 @@
         </div>
       </section>
     </header>
+    <script>
+      var navMain = document.querySelector('.main-nav');
+      var navToggle = document.querySelector('.main-nav__toggle');
+
+      navMain.classList.remove('main-nav--no-js');
+
+      navToggle.addEventListener('click', function() {
+        if (navMain.classList.contains('main-nav--closed')) {
+          navMain.classList.remove('main-nav--closed');
+          navMain.classList.add('main-nav--opened');
+        } else {
+          navMain.classList.add('main-nav--closed');
+          navMain.classList.remove('main-nav--opened');
+        }
+      });
+    </script>
     <main class="page-main">
       <section class="advantages">
         <h2 class="visually-hidden">Преимущества</h2>

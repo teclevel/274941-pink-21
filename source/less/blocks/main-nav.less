@@ -19,6 +19,14 @@
   }
 }
 
+.main-nav--no-js .main-nav__list {
+  display: block;
+
+  @media (min-width: @desktop-width) {
+    display: flex;
+  }
+}
+
 .main-nav--closed .main-nav__list {
   display: none;
 
@@ -36,6 +44,7 @@
   line-height: 32px;
   text-transform: uppercase;
   text-align: center;
+  z-index: 10;
 
   @media (min-width: @desktop-width) {
     display: flex;
@@ -50,11 +59,8 @@
   }
 }
 
-
-
 .main-nav__wrapper {
- // position: relative;
-  height: 66px;
+  height: 68px;
   display: flex;
   flex-direction: column;
 
@@ -70,6 +76,47 @@
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+  }
+}
+
+.main-nav__list a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.site-list__item {
+  @media (max-width: @desktop-width-except) {
+    height: 63px;
+    background: @black-green;
+    border-top: 1px solid @box-shadow;
+    border-bottom: 1px solid @black;
+    padding-top: 15px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding-top: 50px;
+  }
+}
+
+.site-list__item {
+  @media (min-width: @desktop-width) {
+    &:last-child {
+      margin-right: 0;
+    }
+
+    &--active {
+      position: relative;
+
+      &::after {
+        content: "";
+        position: absolute;
+        right: 0;
+        bottom: 24px;
+        left: 0;
+        height: 2px;
+        background: @white;
+      }
+    }
   }
 }
 
@@ -120,18 +167,16 @@
   }
 }
 
-// Удалить класс main-nav__close
-// при  открытом меню удаляет крестик
-
-.main-nav__close {
+.main-nav--closed .main-nav__close {
   display: none;
 }
 
-// Удалить класс main-nav__open
-// при закрытом меню удаляет бургер
+.main-nav--no-js .main-nav__close {
+  display: none;
+}
 
-.main-nav__open {
-  display: block;
+.main-nav--opened .main-nav__open {
+  display: none;
 }
 
 .main-nav__toggle {
@@ -139,76 +184,3 @@
     display: none;
   }
 }
-
-
-
-
-
-/*
-.main-nav {
-  position: absolute;
-  top: 67px;
-  width: 100%;
-
-  @media (min-width: @tablet-width) {
-    top: 110px;
-  }
-
-  @media (min-width: @desktop-width) {
-    position: static;
-    font-weight: 400;
-    line-height: 18px;
-    text-transform: none;
-    width: 618px;
-  }
-}*/
-
-.main-nav__list a {
-  text-decoration: none;
-  color: inherit;
-}
-
-
-// main-nav__list--open удалить
-// при закрытом меню
-/*
-.main-nav__list--open {
-  background-color: @black-green;
-  width: 100%;
-  position: absolute;
-  top: 66px;
-  left: 0;
-  display: flex;
-  flex-direction: column;
-
-  @media (min-width: @tablet-width) {
-    top: 109px;
-  }
-
-  @media (min-width: @desktop-width) {
-    display: flex;
-    position: static;
-    background-color: transparent;
-    min-width: 618px;
-    flex-direction: row;
-    justify-content: space-between;
-    flex-wrap: wrap;
-  }
-}*/
-
-
-/*
-.site-list__item {
-  @media (max-width: @desktop-width-except) {
-    height: 63px;
-    background: @black-green;
-    border-top: 1px solid @box-shadow;
-    border-bottom: 1px solid @black;
-    padding-top: 15px;
-  }
-
-  @media (min-width: @desktop-width) {
-    padding-top: 50px;
-  }
-}
-*/
