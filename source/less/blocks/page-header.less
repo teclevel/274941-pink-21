@@ -1,44 +1,48 @@
 .page-header {
-  min-height: 733px;
+  height: 462px;
   background-color: @blue-dark;
   color: @white;
   background-image: url("../img/back-mobile.jpg");
   background-repeat: no-repeat;
   background-position: 50% -5px;
   background-size: cover;
-
+  margin-bottom: 271px;
 
   @media (min-width: @tablet-width) {
-    min-height: 729px;
+    margin: 0;
+    height: 729px;
+    background-position: 50%;
     background-image: url("../img/back-tablet.jpg");
   }
 
   @media (min-width: @desktop-width) {
-    min-height: 853px;
+    height: 835px;
     background-image: url("../img/bg-desktop.jpg");
   }
 }
 
-
 //картинка на главной
 
 .page-header__section {
-  background-position: 87% 85%;
-  background-size: 519px;
-  height: 412px;
+  background-position: 100% 27%;
+  background-size: auto 286px;
   background-image: url("../img/mobile.png");
   background-repeat: no-repeat;
 
   @media (min-width: @tablet-width) {
-    background-position: 50% 100%;
-    background-size: 870px;
-    height: 620px;
+    background-position: 50%;
+    background-size: auto 545px;
+    height: 545px;
+    margin-top: 74px;
   }
 
   @media (min-width: @desktop-width) {
-    background-position: 50% 100%;
-    background-size: 90%;
-    height: 743px;
+    width: 940px;
+    margin: 0 auto;
+    height: 645px;
+    background-position: -50%;
+    background-size: auto 645px;
+    margin-top: 80px;
   }
 }
 
@@ -54,21 +58,20 @@
     font-size: 40px;
     line-height: 48px;
     width: 300px;
+    margin: 0;
     padding: 0;
     margin-left: 20px;
-    margin-top: 102px;
   }
 
   @media (min-width: @desktop-width) {
     font-size: 50px;
     line-height: 68px;
-    margin-top: 114px;
   }
 }
 
 .page-header__download {
   background-color: @blue-dark;
-  margin-top: 315px;
+  margin-top: 313px;
   text-align: center;
   color: @white;
   min-height: 271px;
