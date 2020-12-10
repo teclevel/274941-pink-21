@@ -8,6 +8,18 @@
   line-height: 29px;
   color: @black-green;
   display: block;
+  margin-top: 46px;
+
+  @media (min-width: @tablet-width) {
+    margin-top: 0;
+    font-size: 40px;
+    line-height: 55px;
+  }
+
+  @media (min-width: @desktop-width) {
+    font-size: 50px;
+    line-height: 68px;
+  }
 }
 
 .advantages__wrapper {
@@ -52,8 +64,13 @@
 .advantages__title {
   font-size: 18px;
   font-weight: 700;
-  line-height: 36px;
+  line-height: 24px;
   color: @black;
+
+  @media (min-width: @desktop-width) {
+    font-size: 30px;
+    line-height: 30px;
+  }
 }
 
 .advantages__text {
@@ -61,6 +78,11 @@
   font-weight: 400;
   line-height: 24px;
   color: @black-green;
+
+  @media (min-width: @desktop-width) {
+    font-size: 18px;
+    line-height: 30px;
+  }
 }
 
 .advantages__cell-phone {

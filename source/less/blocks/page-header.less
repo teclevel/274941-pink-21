@@ -4,8 +4,9 @@
   color: @white;
   background-image: url("../img/back-mobile.jpg");
   background-repeat: no-repeat;
-  background-position: 50% 0;
+  background-position: 50% -5px;
   background-size: cover;
+
 
   @media (min-width: @tablet-width) {
     min-height: 729px;
@@ -22,9 +23,9 @@
 //картинка на главной
 
 .page-header__section {
-  background-position: 50% 100%;  //  сместить влево, чтобы по центру осталось?
-  background-size: 435px;
-  height: 410px;
+  background-position: 87% 85%;
+  background-size: 519px;
+  height: 412px;
   background-image: url("../img/mobile.png");
   background-repeat: no-repeat;
 
@@ -42,43 +43,47 @@
 }
 
 .page-header__slogan {
-  min-height: 395px;
   font-size: 24px;
   font-weight: 300;
   line-height: 29px;
   text-align: center;
-  margin: 0 auto;
-  padding: 30px 0;
-  width: 280px;
+  margin: 0;
+  margin-top: 25px;
 
   @media (min-width: @tablet-width) {
-    min-height: 25px;
     font-size: 40px;
     line-height: 48px;
-    width: 247px;
-    margin: 0;
-    margin-left: 10%;
+    width: 300px;
+    padding: 0;
+    margin-left: 20px;
+    margin-top: 102px;
   }
 
   @media (min-width: @desktop-width) {
     font-size: 50px;
     line-height: 68px;
-    width: 250px;
-    margin: 0 25px;
+    margin-top: 114px;
   }
 }
 
 .page-header__download {
+  background-color: @blue-dark;
+  margin-top: 315px;
   text-align: center;
   color: @white;
   min-height: 271px;
 
   @media (min-width: @tablet-width) {
-    width: 45%;
+    background-color: transparent;
+    padding: 0;
+    margin-left: 20px;
+    width: 300px;
+    margin-top: 39px;
   }
 
   @media (min-width: @desktop-width) {
-    width: 35%;
+    margin: 0;
+    margin-top: 51px;
   }
 }
 
