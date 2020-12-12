@@ -13,6 +13,23 @@
 
 .reviews__slider {
   position: relative;
+
+  @media (min-width: @desktop-width) {
+    position: relative;
+    padding: 190px 100px 100px;
+
+    &::before {
+      position: absolute;
+      content: "";
+      width: 79px;
+      height: 63px;
+      background-image: url("../img/quotes.svg");
+      background-repeat: no-repeat;
+      opacity: 1;
+      top: 78px;
+      left: 432px;
+    }
+  }
 }
 
 .reviews__list {
@@ -81,22 +98,5 @@
 
   @media (min-width: @tablet-width) {
     font-size: 18px;
-  }
-
-  @media (min-width: @desktop-width) {
-    padding: 0 100px;
-    position: relative;
-    padding-top: 190px;
-
-    &::before {
-      position: absolute;
-      content: "";
-      width: 79px;
-      height: 63px;
-      background-image: url("../img/quotes.svg");
-      background-repeat: no-repeat;
-      top: 55px;
-      left: 432px;
-    }
   }
 }

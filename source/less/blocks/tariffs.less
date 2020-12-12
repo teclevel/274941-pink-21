@@ -1,15 +1,28 @@
 .tariffs {
   background-color: @grey-light;
+
+  @media (min-width: @desktop-width) {
+    padding-top: 59px;
+    padding-bottom: 98px;
+  }
 }
 
 .tariffs__table {
   margin: 0 auto;
+
+  border-collapse: collapse;
+  border: 2px solid #E5E5E5;
+  border-radius: 1px 0px 0px 0px;
 }
 
 .tariffs__row {
   background-color: @black-green;
   color: @white;
   text-transform: uppercase;
+}
+
+.table__cell {
+  border: 2px solid #E5E5E5;
 }
 
 .tariffs__caption {
