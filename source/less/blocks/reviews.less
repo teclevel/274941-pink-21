@@ -4,6 +4,15 @@
   @media (min-width: @tablet-width) {
     margin-top: 100px;
   }
+
+  @media (min-width: @desktop-width) {
+    width: 940px;
+    margin:0 auto;
+  }
+}
+
+.reviews__slider {
+  position: relative;
 }
 
 .reviews__list {
@@ -37,6 +46,10 @@
     margin-top: 35px;
     order: 2;
   }
+
+  @media (min-width: @desktop-width) {
+    font-size: 24px;
+  }
 }
 
 .reviews__author-about {
@@ -51,6 +64,10 @@
     display: block;
     font-style: normal;
     order: 2;
+  }
+
+  @media (min-width: @desktop-width) {
+    font-size: 18px;
   }
 }
 
@@ -68,5 +85,18 @@
 
   @media (min-width: @desktop-width) {
     padding: 0 100px;
+    position: relative;
+    padding-top: 190px;
+
+    &::before {
+      position: absolute;
+      content: "";
+      width: 79px;
+      height: 63px;
+      background-image: url("../img/quotes.svg");
+      background-repeat: no-repeat;
+      top: 55px;
+      left: 432px;
+    }
   }
 }
