@@ -1,22 +1,37 @@
-.main-nav.main-nav--closed {
+.main-nav {
+  height: 66px;
+  position: relative;
   background-color: @black-03;
-}
 
-.main-nav.main-nav--opened {
-  background-color: @black-green;
-  border-bottom: 1px solid @black;
-
-  @media (min-width: @desktop-width) {
-    background-color: @black-03;
+  @media (min-width: @tablet-width) {
+    height: 110px;
   }
 }
 
 .main-nav--opened .main-nav__list {
   display: block;
+  position: absolute;
+  top: 70px;
+  left: 0;
+  right: 0;
+
+  @media (min-width: @tablet-width) {
+    top: 110px;
+  }
 
   @media (min-width: @desktop-width) {
     display: flex;
   }
+}
+
+.main-nav--opened .main-nav__logo-button {
+  height: 70px;
+  background-color: @black-green;
+  border-bottom: 1px solid @black;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
 }
 
 .main-nav--no-js .main-nav__list {

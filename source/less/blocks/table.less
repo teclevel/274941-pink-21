@@ -3,7 +3,6 @@
   margin: 0 20px;
   border-collapse: collapse;
 
-
   @media (min-width: @tablet-width) {
     width: 620px;
     margin: 0 auto;
@@ -22,22 +21,42 @@
 }
 
 .table__cell-header {
-  border: 2px solid @black-green;    //кроме 1ой
-  // border-radius: 3px px 0px 0px;  для левой  и последней ячейки
-  padding-top: 15px;
-  padding-bottom: 15px;
+  padding-top: 14px;
+  padding-bottom: 26px;
   position: absolute;
   background-color: @black-green;
   width: 100%;
-  top: -92px;
+  top: -102px;
 
   @media (min-width: @tablet-width) {
+    padding-top: 10px;
+    padding-bottom: 10px;
     width: 25%;
     position: static;
   }
 
+  @media (min-width: @desktop-width) {
+    padding-top: 14px;
+    padding-bottom: 26px;
+  }
+
+  &:nth-child(2) {
+    @media (min-width: @tablet-width) {
+      border-top-left-radius: 3px;
+      border-right: 2px solid @grey-light;
+    }
+  }
+
+  &:last-child {
+    @media (min-width: @tablet-width) {
+      border-top-right-radius: 3px;
+      border-left: 2px solid @grey-light;
+    }
+  }
+
   &--empty {
     background-color: @grey-light;
+    border: none;
   }
 
   &--invisible {
@@ -61,23 +80,23 @@
     &::before {
       position: absolute;
       content: "";
-      top: -16px;
-      left: -2px;
+      top: -14px;
+      left: -1px;
       width: 74px;
       height: 74px;
       background-image: url("../img/hit-ribbon.svg");
 
       @media (min-width: @tablet-width) {
-        top: -15px;
-        left: -4px;
+        top: -10px;
+        left: -1px;
         width: 61px;
         height: 61px;
         background-image: url("../img/ribbon-tablet.svg");
       }
 
       @media (min-width: @desktop-width) {
-        top: -15px;
-        left: -4px;
+        top: -14px;
+        left: -1px;
         width: 74px;
         height: 74px;
         background-image: url("../img/hit-ribbon.svg");
@@ -113,8 +132,15 @@
   width: 100%;
 
   @media (min-width: @tablet-width) {
+    padding-top: 8px;
+    padding-bottom: 8px;
     border: 2px solid @grey-light-border;
     width: 25%;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding-top: 15px;
+    padding-bottom: 15px;
   }
 
   &--invisible {
@@ -148,7 +174,8 @@
   line-height: 30px;
   text-transform: uppercase;
   color: @black-green;
-  padding: 12px 15px;
+  padding-left: 15px;
+  padding-right: 15px;
 
   @media (min-width: @tablet-width) {
     text-transform: none;

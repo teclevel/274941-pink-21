@@ -1,7 +1,31 @@
 .social-list {
+  width: 172px;
   display: flex;
+  justify-content: space-between;
 }
 
 .social-list__item {
-  margin: 30px;
+  //margin: 30px;
+
+  @media (min-width: @tablet-width) {
+    margin: 0;
+  }
+}
+
+.social-list__link {
+  circle {
+    opacity: 0.1;
+  }
+
+  &:hover svg circle {
+    opacity: 1;
+  }
+
+  &:active svg circle {
+    opacity: 0.1;
+  }
+
+  &:active svg path {
+    opacity: 0.3;
+  }
 }
