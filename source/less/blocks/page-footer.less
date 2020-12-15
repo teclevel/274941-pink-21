@@ -1,9 +1,3 @@
-/*.page-footer {
-  @media (min-width: @desktop-width) {
-    min-height: 197px;
-  }
-}*/
-
 .page-footer {
   display: flex;
   flex-direction: column;
@@ -25,7 +19,7 @@
   }
 }
 
-.page-footer__logo {
+.page-footer__link-logo {
   &:hover path {
     fill: @cherry;
   }
@@ -36,6 +30,20 @@
 
   &:active path:not(:last-child) {
     fill: @black-green-03;
+  }
+}
+
+.page-footer__logo-desktop {
+  display: none;
+
+  @media (min-width: @desktop-width) {
+    display: block;
+  }
+}
+
+.page-footer__logo-mobile {
+  @media (min-width: @desktop-width) {
+  display: none;
   }
 }
 
