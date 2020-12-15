@@ -21,6 +21,8 @@
 
 .form__fieldset-wrapper {
   background-color: @grey-light;
+  padding-top: 37px;
+  padding-bottom: 47px;
 
   @media (min-width: @tablet-width) {
     background-color: transparent;
@@ -57,6 +59,8 @@
     grid-row-end: 3;
     grid-column-start: 1;
     grid-column-end: 3;
+    padding-top: 15px;
+    padding-bottom: 45px;
   }
 
   .form__radio {
@@ -116,6 +120,7 @@
 
 .form__fieldset-name {
   border: none;
+  margin-bottom: 41px;
 }
 
 .form__fieldset-radio,
@@ -130,6 +135,21 @@
   }
 }
 
+.form__fieldset-address {
+  margin-top: 14px;
+  margin-bottom: 46px;
+}
+
+.form__fieldset-message {
+  margin-top: 35px;
+  margin-bottom: 24px;
+}
+
+.form__legend-message {
+  margin-bottom: 14px;
+}
+
+// list не позиционировать
 .form__list {
   list-style: none;
   margin: 0;
@@ -143,6 +163,7 @@
   color: @cherry;
   text-transform: uppercase;
   padding-left: 20px;
+  margin-bottom: 5px;
 
   @media (min-width: @tablet-width) {
     padding-left: 0;
@@ -153,6 +174,7 @@
 .form__item {
   display: flex;
   flex-direction: column;
+  margin-top: 17px;
 
   @media (min-width: @tablet-width) {
     display: flex;
@@ -183,7 +205,9 @@
   color: @cherry;
   text-transform: uppercase;
   text-align: center;
-  margin: 0  auto;
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-bottom: 15px;
 }
 
 @media (max-width: @mobile-width-only) {
@@ -239,6 +263,8 @@
   line-height: 30px;
   text-transform: uppercase;
   text-align: center;
+  margin-top: 34px;
+  margin-bottom: 0;
 }
 
 .form__note span {

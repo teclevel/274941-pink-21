@@ -1,5 +1,5 @@
 .modal-error {
-  display: none;
+  display: block;
   height: 289px;
   width: 320px;
 
@@ -15,7 +15,8 @@
 }
 
 .modal-error__title {
-  padding-top: 22px;
+  margin-top: 39px;
+  margin-bottom: 23px;
 
   @media (min-width: @tablet-width) {
     width: 50%;
@@ -29,8 +30,8 @@
 }
 
 .modal-error__description {
-  width: 86%;
-  margin: 20px 7%;
+  margin: 0;
+  padding: 0 20px;
 
   @media (min-width: @tablet-width) {
     width: 58%;
@@ -50,8 +51,10 @@
 }
 
 .modal-error__button {
-  width: 80%;
-  margin: 50px 10%;
+  display: block;
+  width: 280px;
+  margin: 0 auto;
+  margin-top: 38px;
 
   @media (min-width: @tablet-width) {
     width: 80%;
