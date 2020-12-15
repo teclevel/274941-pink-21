@@ -1,14 +1,40 @@
+.contacts__wrapper {
+  @media (min-width: @desktop-width) {
+    width: 940px;
+    margin: 0 auto;
+  }
+}
+
 .contacts__caption {
   font-size: 24px;
   font-weight: 300;
   line-height: 29px;
   color: @black-green;
   text-align: center;
+  margin-top: 42px;
+  margin-bottom: 32px;
+
+  @media (min-width: @tablet-width) {
+    font-size: 40px;
+    line-height: 54px;
+    margin-bottom: 0;
+  }
+
+  @media (min-width: @desktop-width) {
+    font-size: 50px;
+    line-height: 68px;
+    margin-top: 52px;
+  }
+}
+
+.contacts__caption span {
+  display: block;
 }
 
 .contacts__list {
   list-style: none;
-  margin: 30px 0;
+  margin: 0;
+  margin-top: 13px;
   padding: 0;
   text-align: center;
 
@@ -25,6 +51,15 @@
   }
 }
 
+.contacts__item-write {
+  margin-top: 17px;
+  margin-bottom: 21px;
+
+  @media (min-width: @desktop-width) {
+    order: 3;
+  }
+}
+
 .contacts__text-title {
   font-size: 18px;
   font-weight: 700;
@@ -35,6 +70,14 @@
 
 .contacts__link {
   text-decoration: none;
+
+  &:hover {
+    color: @black-green;
+  }
+
+  &:active {
+    color: @black-green-03;
+  }
 }
 
 .contacts__address,
@@ -52,6 +95,8 @@
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
+  clip-path: polygon(50% 15%, 100% 0, 100% 100%, 0 100%, 0 0);
+  margin-top: 32px;
 
   @media (min-width: @tablet-width) {
     min-height: 374px;
@@ -59,6 +104,7 @@
 
   @media (min-width: @desktop-width) {
     min-height: 502px;
+    clip-path: polygon(50% 20%, 100% 0, 100% 100%, 0 100%, 0 0);
   }
 }
 
@@ -66,4 +112,6 @@
   position: absolute;
   top: 50%;
   left: 50%;
+  margin-top: -18px;
+  margin-left: -18px;
 }

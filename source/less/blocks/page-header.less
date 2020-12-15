@@ -1,197 +1,94 @@
 .page-header {
-  position: relative;
-  min-height: 733px;
+  height: 462px;
   background-color: @blue-dark;
   color: @white;
   background-image: url("../img/back-mobile.jpg");
   background-repeat: no-repeat;
-  background-position: 50% 0;
+  background-position: 50% -5px;
   background-size: cover;
+  margin-bottom: 271px;
 
   @media (min-width: @tablet-width) {
-    min-height: 729px;
+    margin: 0;
+    height: 729px;
+    background-position: 50%;
     background-image: url("../img/back-tablet.jpg");
   }
 
   @media (min-width: @desktop-width) {
-    min-height: 853px;
+    height: 835px;
     background-image: url("../img/bg-desktop.jpg");
   }
 }
 
-.page-header.page-inner {
-  min-height: 237px;
-
-  @media (min-width: @tablet-width) {
-    min-height: 440px;
-  }
-
-  @media (min-width: @desktop-width) {
-    min-height: 394px;
-  }
-}
-
-.page-header__wrapper {
-  background-color: @black-03;
-}
-
-//Удалить класс page-header__wrapper--active
-//при закрытом меню
-/*
-.page-header__wrapper--active {
-  background-color: @black-green;
-
-  @media (min-width: @desktop-width) {
-    background-color: @black-03;
-  }
-}
-*/
-
-.page-header__header {
-  padding: 0 20px;
-  height: 66px;
-  display: flex;
-  flex-direction: column;
-
-  @media (min-width: @tablet-width) {
-    height: 109px;
-  }
-
-  @media (min-width: @desktop-width) {
-    height: 110px;
-    position: static;
-    flex-direction: row;
-    justify-content: space-between;
-  }
-}
-
-//картинка на главной
-
 .page-header__section {
-  background-position: 50% 100%;  //  сместить влево, чтобы по центру осталось?
-  background-size: 435px;
-  height: 410px;
+  background-position: 85% 23%;
+  background-size: auto 323px;
   background-image: url("../img/mobile.png");
   background-repeat: no-repeat;
 
   @media (min-width: @tablet-width) {
-    background-position: 50% 100%;
-    background-size: 870px;
-    height: 620px;
+    background-position: 50%;
+    background-size: auto 545px;
+    height: 545px;
+    margin-top: 74px;
   }
 
   @media (min-width: @desktop-width) {
-    background-position: 50% 100%;
-    background-size: 90%;
-    height: 743px;
+    width: 940px;
+    margin: 0 auto;
+    height: 632px;
+    background-position: -15% 0;
+    background-size: auto 632px;
+    margin-top: 93px;
   }
-}
-
-.page-header__logo-close {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  height: 69px;
-
-  @media (min-width: @tablet-width) {
-    height: 110px;
-  }
-}
-
-// логотип на мобильном
-
-@media (max-width: @mobile-width-only) {
-  .page-header__logo-tablet,
-  .page-header__logo-desktop {
-    display: none;
-  }
-}
-
-//логотип на планшете
-
-@media (min-width: @tablet-width) {
-  .page-header__logo-mobile,
-  .page-header__logo-desktop {
-    display: none;
-  }
-}
-
-//логотип на десктопе
-
-@media (min-width: @desktop-width) {
-  .page-header__logo-mobile,
-  .page-header__logo-tablet {
-    display: none;
-  }
-
-  .page-header__logo-desktop {
-    display: block;
-  }
-}
-
-.page-header__toggle {
-  @media (min-width: @desktop-width) {
-    display: none;
-  }
-}
-
-.page-header__nav {
-  font-size: 18px;
-  font-weight: 700;
-  line-height: 32px;
-  text-transform: uppercase;
-
-  @media (min-width: @desktop-width) {
-    font-weight: 400;
-    line-height: 18px;
-    text-transform: none;
-  }
-}
-
-// Удалить класс page-header__close
-// при  открытом меню
-
-.page-header__close {
-  display: none;
-}
-
-// Удалить класс page-header__open
-// при закрытом меню
-
-.page-header__open {
-  display: block;
 }
 
 .page-header__slogan {
-  min-height: 395px;
   font-size: 24px;
   font-weight: 300;
   line-height: 29px;
   text-align: center;
-  margin: 0;
-  padding: 30px 45px;
+  width: 300px;
+  margin: 0 auto;
+  margin-top: 25px;
 
   @media (min-width: @tablet-width) {
-    min-height: 25px;
-    width: 50%;
+    font-size: 40px;
+    line-height: 48px;
+    margin: 0;
+    padding: 0;
+    padding-top: 25px;
+    margin-left: 20px;
   }
 
   @media (min-width: @desktop-width) {
-    width: 35%;
+    margin: 0;
+    padding: 0;
+    font-size: 50px;
+    line-height: 68px;
   }
 }
 
 .page-header__download {
+  background-color: @blue-dark;
+  margin-top: 313px;
   text-align: center;
   color: @white;
   min-height: 271px;
 
   @media (min-width: @tablet-width) {
-    width: 45%;
+    background-color: transparent;
+    padding: 0;
+    margin-left: 20px;
+    width: 300px;
+    margin-top: 39px;
   }
 
   @media (min-width: @desktop-width) {
-    width: 35%;
+    width: 940px;
+    margin: 0 auto;
+    margin-top: 33px;
   }
 }
 
@@ -214,5 +111,17 @@
   @media (min-width: @desktop-width) {
     width: 747px;
     margin: 74px auto 0;
+  }
+}
+
+.page-header.page-inner {
+  min-height: 237px;
+
+  @media (min-width: @tablet-width) {
+    min-height: 440px;
+  }
+
+  @media (min-width: @desktop-width) {
+    min-height: 394px;
   }
 }

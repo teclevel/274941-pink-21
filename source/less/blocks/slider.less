@@ -1,0 +1,52 @@
+.slider__control {
+  display: none;
+
+  @media (min-width: @desktop-width) {
+    display: block;
+  }
+}
+
+.slider__button-prev,
+.slider__button-next {
+  position: absolute;
+  width: 22px;
+  height: 41px;
+  top: 215px;
+  background-image: url("../img/arrow.svg");
+  border: none;
+  background-color: @white;
+  opacity: 0.3;
+
+  &:hover {
+    opacity: 0.6;
+  }
+
+  &:active {
+    opacity: 0.1;
+  }
+}
+
+.slider__button-prev {
+  right: 0;
+}
+
+.slider__button-next {
+  left: 0;
+  transform: rotate(180deg);
+}
+
+.slider__pagination {
+  margin: 38px auto;
+  width: 62px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  @media (min-width: @tablet-width) {
+    margin-bottom: 18px;
+  }
+
+  @media (min-width: @desktop-width) {
+    display: none;
+  }
+}

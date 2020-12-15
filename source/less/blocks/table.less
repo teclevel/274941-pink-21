@@ -1,5 +1,7 @@
 .table {
-  width: 100%;
+  position: relative;
+  margin: 0 20px;
+  border-collapse: collapse;
 
   @media (min-width: @tablet-width) {
     width: 620px;
@@ -12,14 +14,174 @@
   }
 }
 
-.table__cell-empty {
-  background-color: @grey-light;
+.table__row-header {
+  background-color: @black-green;
+  color: @white;
+  text-transform: uppercase;
 }
 
-.table__cell-invisible {
-  display: none;
+.table__cell-header {
+  padding-top: 14px;
+  padding-bottom: 26px;
+  position: absolute;
+  background-color: @black-green;
+  width: 100%;
+  top: -102px;
 
   @media (min-width: @tablet-width) {
-    display: table-cell;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    width: 25%;
+    position: static;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding-top: 14px;
+    padding-bottom: 26px;
+  }
+
+  &:nth-child(2) {
+    @media (min-width: @tablet-width) {
+      border-top-left-radius: 3px;
+      border-right: 2px solid @grey-light;
+    }
+  }
+
+  &:last-child {
+    @media (min-width: @tablet-width) {
+      border-top-right-radius: 3px;
+      border-left: 2px solid @grey-light;
+    }
+  }
+
+  &--empty {
+    background-color: @grey-light;
+    border: none;
+  }
+
+  &--invisible {
+    display: none;
+
+    @media (min-width: @tablet-width) {
+      display: table-cell;
+    }
+  }
+}
+
+.table__caption {
+  position: relative;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 30px;
+  display: block;
+  text-align: center;
+
+  &--ribbon {
+    &::before {
+      position: absolute;
+      content: "";
+      top: -14px;
+      left: -1px;
+      width: 74px;
+      height: 74px;
+      background-image: url("../img/hit-ribbon.svg");
+
+      @media (min-width: @tablet-width) {
+        top: -10px;
+        left: -1px;
+        width: 61px;
+        height: 61px;
+        background-image: url("../img/ribbon-tablet.svg");
+      }
+
+      @media (min-width: @desktop-width) {
+        top: -14px;
+        left: -1px;
+        width: 74px;
+        height: 74px;
+        background-image: url("../img/hit-ribbon.svg");
+      }
+    }
+  }
+}
+
+.table__price {
+  font-size: 18px;
+  font-weight: 300;
+  line-height: 30px;
+  display: block;
+  text-align: center;
+}
+
+.table__row {
+  @media (max-width: @mobile-width-only) {
+    border-bottom: 2px solid @grey-light-border;
+  }
+}
+
+.table__status {
+  @media (max-width: @mobile-width-only) {
+    padding-right: 20px;
+  }
+}
+
+.table__cell {
+  padding-top: 15px;
+  padding-bottom: 15px;
+  background-color: @white;
+  width: 100%;
+
+  @media (min-width: @tablet-width) {
+    padding-top: 8px;
+    padding-bottom: 8px;
+    border: 2px solid @grey-light-border;
+    width: 25%;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding-top: 15px;
+    padding-bottom: 15px;
+  }
+
+  &--invisible {
+    display: none;
+
+    @media (min-width: @tablet-width) {
+      display: table-cell;
+    }
+  }
+}
+
+.table__cell-yes {
+  display: block;
+  margin: 0 auto;
+  width: 31px;
+  height: 21px;
+  background-image: url("../img/yes.svg");
+}
+
+.table__cell-no {
+  display: block;
+  margin: 0 auto;
+  width: 27px;
+  height: 27px;
+  background-image: url("../img/no.svg");
+}
+
+.table__name {
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 30px;
+  text-transform: uppercase;
+  color: @black-green;
+  padding-left: 15px;
+  padding-right: 15px;
+
+  @media (min-width: @tablet-width) {
+    text-transform: none;
+  }
+
+  @media (min-width: @desktop-width) {
+    font-size: 18px;
   }
 }
