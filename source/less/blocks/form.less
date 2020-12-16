@@ -1,31 +1,32 @@
-.form__fieldset-name,
-.form__fieldset-address,
-.form__fieldset-message,
-.form__fieldset-checkbox,
-.form__fieldset-radio {
-  padding: 0 20px;
-  margin: 0;
-
-  @media (min-width: @tablet-width) {
-    padding: 0;
-    margin-top: 40px;
+@media (min-width: @tablet-width) and (max-width: @desktop-width-except) {
+  .form {
+    padding: 0 20px;
+    display: flex;
+    flex-direction: column;
   }
-}
 
-@media (min-width: @desktop-width) {
-  .form__fieldset-radio {
-    margin-top: 0;
-    min-height: 232px;
+  .form__fieldset-name {
+    order: 1;
   }
-}
 
-.form__fieldset-wrapper {
-  background-color: @grey-light;
-  padding-top: 37px;
-  padding-bottom: 47px;
+  .form__checkbox {
+    order: 4;
+  }
 
-  @media (min-width: @tablet-width) {
-    background-color: transparent;
+  .form__fieldset-address {
+    order: 3;
+  }
+
+  .form__radio {
+    order: 2;
+  }
+
+  .form__fieldset-message {
+    order: 5;
+  }
+
+  .form__submit {
+    order: 6;
   }
 }
 
@@ -86,41 +87,49 @@
   }
 }
 
-@media (min-width: @tablet-width) and (max-width: @desktop-width-except) {
-  .form {
-    padding: 0 20px;
-    display: flex;
-    flex-direction: column;
+.form__fieldset-name,
+.form__fieldset-address,
+.form__fieldset-message,
+.form__fieldset-checkbox,
+.form__fieldset-radio {
+  padding: 0 20px;
+  margin: 0;
+
+  @media (min-width: @tablet-width) { //////////////
+    padding: 0;
+  }
+}
+
+.form__fieldset-wrapper {
+  background-color: @grey-light;
+  padding-top: 37px;
+  padding-bottom: 47px;
+
+  @media (min-width: @tablet-width) {
+    background-color: transparent;
+    padding-top: 56px;
+    margin: 0;
+  }
+}
+
+.form__fieldset-radio {
+  @media (min-width: @tablet-width) {
+    padding: 27px 0 52px 58px;
   }
 
-  .form__fieldset-name {
-    order: 1;
-  }
-
-  .form__checkbox {
-    order: 4;
-  }
-
-  .form__fieldset-address {
-    order: 3;
-  }
-
-  .form__radio {
-    order: 2;
-  }
-
-  .form__fieldset-message {
-    order: 5;
-  }
-
-  .form__submit {
-    order: 6;
+  @media (min-width: @desktop-width) {
+    padding: 0;
+    min-height: 232px;                  //////???
   }
 }
 
 .form__fieldset-name {
   border: none;
   margin-bottom: 41px;
+
+  @media (min-width: @tablet-width) {
+    margin: 0;
+  }
 }
 
 .form__fieldset-radio,
@@ -170,7 +179,7 @@
     padding-right: 20px;
   }
 }
-
+/*удалить
 .form__item {
   display: flex;
   flex-direction: column;
@@ -180,7 +189,7 @@
     display: flex;
     flex-direction: row;
   }
-}
+}*/
 
 .form__input {
   min-height: 59px;
@@ -251,19 +260,23 @@
 .form__button {
   width: 100%;
 
+  @media (min-width: @tablet-width) {
+    max-width: 296px;
+    margin: 20px 0;
+  }
+
   &:hover {
     background-color: @green-button-hover;
   }
 
   &:active {
-    background-color: red;//@green-button-hover;
-    color: red;
-   //color: @white-03;
+    background-color: @green-button-hover;
+    color: @white-03;
   }
 
-  @media (min-width: @tablet-width) {
-    max-width: 296px;
-    margin: 20px 0;
+  &:disabled {
+    background-color: @grey-light-border;
+    border: none;
   }
 }
 

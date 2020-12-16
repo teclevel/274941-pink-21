@@ -117,11 +117,11 @@
             <legend class="form__legend form__legend-invisible">Kонтактная информация</legend>
             <ul class="form__list list-address">
               <li class="form__item list-address__item ">
-                <label class="form__name list-address__label" for="tel">Номер телефона</label>
+                <label class="form__name list-address__label list-address__label--phone" for="tel">Номер телефона</label>
                 <input class="form__input list-address__input" id="tel" type="tel" name="tel" placeholder="Номер, пожалуйста">
               </li>
               <li class="form__item list-address__item">
-                <label class="form__name list-address__label" for="email">Адрес почты</label>
+                <label class="form__name list-address__label list-address__label--mail" for="email">Адрес почты</label>
                 <input class="form__input list-address__input" id="email" type="email" name="email" placeholder="Введите почту *" required>
               </li>
             </ul>
@@ -151,7 +151,7 @@
             <textarea class="form__textarea message__textarea" id="message" name="message" placeholder="Можно прям в красках, не стесняясь в выражениях"></textarea>
           </fieldset>
           <div class="form__submit">
-            <button class="form__button button" type="submit">Отправить форму</button>
+            <button class="form__button button" type="submit" disabled>Отправить форму</button>
             <p class="form__note"><span>* </span>&mdash; Обязательные поля</p>
           </div>
         </form>

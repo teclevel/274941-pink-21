@@ -1,6 +1,19 @@
+.radio-box {
+  @media (min-width: @tablet-width) {
+    display: flex;
+    min-height: 187px;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+}
+
 .radio-box__item {
   margin-top: 43px;
   padding-left: 66px;
+
+  @media (min-width: @tablet-width) {
+    margin: 0;
+  }
 }
 
 .radio-box__input + label {
