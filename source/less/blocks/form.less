@@ -251,6 +251,16 @@
 .form__button {
   width: 100%;
 
+  &:hover {
+    background-color: @green-button-hover;
+  }
+
+  &:active {
+    background-color: red;//@green-button-hover;
+    color: red;
+   //color: @white-03;
+  }
+
   @media (min-width: @tablet-width) {
     max-width: 296px;
     margin: 20px 0;

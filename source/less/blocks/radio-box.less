@@ -2,3 +2,45 @@
   margin-top: 43px;
   padding-left: 66px;
 }
+
+.radio-box__input + label {
+  position: relative;
+  display: block;
+
+  &::before {
+    position: absolute;
+    content: "";
+    top: -4px;
+    left: -67px;
+    width: 37px;
+    height: 37px;
+    background-color: @white;
+    border: 2px solid @grey-light-border;
+    border-radius: 50%;
+  }
+}
+
+.radio-box__input:checked + label {
+  &::after {
+    position: absolute;
+    content: "";
+    top: 7px;
+    left: -56px;
+    width: 15px;
+    height: 15px;
+    background-color: @cherry;
+    border-radius: 50%;
+  }
+}
+
+.radio-box__input:hover + label {
+  &::before {
+    border-color: @black-green;
+  }
+}
+
+.radio-box__input:active + label {
+  &::before {
+    border-color: @cherry;
+  }
+}
