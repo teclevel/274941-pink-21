@@ -46,21 +46,20 @@
   @media (min-width: @tablet-width) {
     position: relative;
     background-color: @white;
-    padding-top: 45px;
-  }
-
-  @media (min-width: @tablet-width) {
     padding-top: 0;
     clip-path: none;
   }
 }
 
-.advantages__clip-path {
+.advantages__wrapper::before {
   @media (min-width: @tablet-width) {
+    content: "";
     position: absolute;
     background-color: @grey-light;
     width: 100%;
     height: 100%;
+    top: 0;
+    left: 0;
     clip-path: polygon(0 12%, 100% 0, 100% 100%, 0 100%);
   }
 
