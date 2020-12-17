@@ -1,5 +1,5 @@
 .modal-sent {
-  display: none;
+  display: block;
   height: 380px;
   width: 320px;
 
@@ -15,7 +15,7 @@
 }
 
 .modal-sent__title {
-  padding-top: 22px;
+  margin: 46px 0 28px;
 
   @media (min-width: @tablet-width) {
     width: 50%;
@@ -29,12 +29,12 @@
 }
 
 .modal-sent__description {
-  width: 90%;
-  margin: 32px 5%;
+  width: 280px;
+  margin: 22px auto 32px;
 
   @media (min-width: @tablet-width) {
     width: 70%;
-    margin: 15px 15%;
+    margin: 15px 15% 37px;
   }
 
   @media (min-width: @desktop-width) {
@@ -45,15 +45,20 @@
 
 .modal-sent__wrapper {
   background-color: @grey-light;
+
+  @media (min-width: @tablet-width) {
+    padding: 55px 0;
+  }
 }
 
 .modal-sent__button {
-  width: 80%;
-  margin: 63px 10%;
+  width: 280px;
+  margin: 45px 20px;
 
   @media (min-width: @tablet-width) {
-    width: 64%;
-    margin: 60px 18%;
+    display: block;
+    width: 300px;
+    margin: 0 auto;
   }
 
   @media (min-width: @desktop-width) {
