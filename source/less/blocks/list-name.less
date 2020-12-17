@@ -1,9 +1,15 @@
 .list-name {
   @media (min-width: @tablet-width) {
+    margin: 0;
+    padding: 0;
     display: flex;
     min-height: 289px;
     flex-direction: column;
     justify-content: space-between;
+  }
+
+  @media (min-width: @desktop-width) {
+    min-height: 289px;
   }
 }
 

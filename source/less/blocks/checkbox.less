@@ -1,9 +1,19 @@
 .checkbox {
-  @media (min-width: @desktop-width) {
+  @media (min-width: @tablet-width) {
+    margin: 0;
+    padding: 46px 0 50px 60px;
     display: flex;
     flex-direction: column;
+    justify-content: space-between;
+    min-height: 528px;
+  }
+
+  @media (min-width: @desktop-width) {
+    display: flex;
+    flex-direction: row;
     flex-wrap: wrap;
-    min-height: 200px;
+    padding-bottom: 0;
+    min-height: 219px;
   }
 }
 
@@ -11,6 +21,40 @@
   padding-left: 62px;
   margin-top: 40px;
   margin-bottom: 50px;
+
+  @media (min-width: @tablet-width) {
+    margin: 0;
+    padding-left: 60px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 292px;
+    padding-bottom: 50px;
+  }
+}
+
+.checkbox__item {
+  @media (min-width: @desktop-width) {
+    &:nth-child(2){
+      order: 3;
+    }
+
+    &:nth-child(3){
+      order: 1;
+    }
+
+    &:nth-child(4){
+      order: 4;
+    }
+
+    &:nth-child(5){
+      order: 2;
+    }
+
+    &:nth-child(6){
+      order: 5;
+    }
+  }
 }
 
 .checkbox__input + label {
@@ -27,6 +71,10 @@
     background-color: @white;
     border: 2px solid @grey-light-border;
     border-radius: 1px;
+
+    @media (min-width: @desktop-width) {
+      left: -57px;
+    }
   }
 }
 
@@ -40,6 +88,10 @@
     height: 16px;
     background-image: url("../img/tick.svg");
     background-repeat: no-repeat;
+
+    @media (min-width: @desktop-width) {
+      left: -48px;
+    }
   }
 }
 
