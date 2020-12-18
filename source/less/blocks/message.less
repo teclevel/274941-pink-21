@@ -1,6 +1,17 @@
 .message {
+  margin: 38px 0 20px;
+  padding: 13px 20px 0;
+
   @media (min-width: @tablet-width) {
-    padding: 47px 60px;
+    margin: 0;
+    margin-top: 60px;
+    margin-bottom: 26px;
+    padding: 37px 60px 45px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin: 0;
+    padding: 38px 58px;
   }
 }
 
@@ -9,8 +20,18 @@
   width: 100%;
   min-height: 197px;
 
+  &:hover {
+    border-color: @black-green;
+  }
+
+  &:focus {
+    outline: 0;
+    border-color: @cherry;
+  }
+
   @media (min-width: @tablet-width) {
     min-height: 189px;
+    padding-top: 8px;
   }
 
   @media (min-width: @desktop-width) {
