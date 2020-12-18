@@ -20,13 +20,11 @@
 }
 
 .checkbox__item {
-  padding-left: 62px;
   margin-top: 40px;
   margin-bottom: 50px;
 
   @media (min-width: @tablet-width) {
     margin: 0;
-    padding-left: 60px;
   }
 
   @media (min-width: @desktop-width) {
@@ -57,22 +55,19 @@
 
 .checkbox__input + label {
   position: relative;
-  display: block;
+  display: inline-block;
+  padding-left: 60px;
 
   &::before {
     position: absolute;
     content: "";
     top: -3px;
-    left: -62px;
+    left: 0;
     width: 35px;
     height: 35px;
     background-color: @white;
     border: 2px solid @grey-light-border;
     border-radius: 1px;
-
-    @media (min-width: @desktop-width) {
-      left: -57px;
-    }
   }
 }
 
@@ -81,15 +76,11 @@
     position: absolute;
     content: "";
     top: 7px;
-    left: -55px;
+    left: 7px;
     width: 22px;
     height: 16px;
     background-image: url("../img/tick.svg");
     background-repeat: no-repeat;
-
-    @media (min-width: @desktop-width) {
-      left: -48px;
-    }
   }
 }
 

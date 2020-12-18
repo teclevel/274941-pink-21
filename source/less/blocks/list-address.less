@@ -40,7 +40,7 @@
     border-color: @black-green;
   }
 
-  &:active {
+  &:focus {
     outline: 0;
     border-color: @cherry;
   }
@@ -59,12 +59,12 @@
     &--phone::before {
       position: absolute;
       content: "";
-      right: 0;
-      top: -59px;
+      right: 2px;
+      bottom: 40px;
       width: 59px;
       height: 59px;
       background-color: @grey-light-border;
-      border-radius: 0 3px 3px 0;
+      border-radius: 0 1px 1px 0;
       background-image: url("../img/phone-icon.svg");
       background-repeat: no-repeat;
       background-position: 50% 50%;
@@ -74,12 +74,12 @@
     &--mail::before {
       position: absolute;
       content: "";
-      right: 0;
-      top: -59px;
+      right: 2px;
+      bottom: 40px;
       width: 59px;
       height: 59px;
       background-color: @grey-light-border;
-      border-radius: 0 3px 3px 0;
+      border-radius: 0 1px 1px 0;
       background-image: url("../img/mail-icon.svg");
       background-repeat: no-repeat;
       background-position: 50% 50%;
