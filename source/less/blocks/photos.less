@@ -20,13 +20,31 @@
 .photos__panorama {
   position: relative;
   margin: 0;
+
+  &::before{
+    position: absolute;
+    content: "Панорама дня";
+    top: 0;
+    right: 6%;
+    font-weight: 700;
+    font-size: 12px;
+    line-height: 24px;
+    text-transform: uppercase;
+    background-color: @cherry;
+    color: @white;
+    padding: 5px 15px;
+  }
+
+  @media (min-width: @desktop-width) {
+    right: 130px;
+  }
 }
 
 .photos__full {
   width: 100%;
   min-height: 137px;
 }
-
+/*
 .photos__panorama-label {
   position: absolute;
   top: 0;
@@ -38,11 +56,8 @@
   background-color: @cherry;
   color: @white;
   padding: 5px 15px;
+}*/
 
-  @media (min-width: @desktop-width) {
-    right: 130px;
-  }
-}
 /*удалил
 .photos__header {
   margin: 0;
