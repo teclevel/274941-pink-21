@@ -106,6 +106,21 @@
   }
 }
 
+.editor__link--on path {
+  opacity: 1;
+  fill: @cherry;
+}
+
+.editor__link--off path {
+  opacity: 0.3;
+}
+
+.editor__link--off {
+  &:hover path {
+    opacity: 0.5;
+  }
+}
+
 .editor__range-fill,
 .editor__range-contrast {
   display: none;
@@ -120,6 +135,71 @@
   bottom: 0;
   left: 0;
   right: 0;
+
+  @media (min-width: @tablet-width) {
+    position: static;
+  }
+}
+
+.editor__range {
+  -webkit-appearance: none;
+  margin: 0 auto;
+  width: 240px;
+
+  &:focus {
+    outline: none;
+  }
+
+  &::-webkit-slider-runnable-track {
+    width: 100%;
+    height: 2px;
+    cursor: pointer;
+    background: @black-green;
+  }
+
+  &::-webkit-slider-thumb {
+    border: 2px solid @cherry;
+    height: 14px;
+    width: 14px;
+    border-radius: 50%;
+    background-color: @white;
+    cursor: pointer;
+    -webkit-appearance: none;
+    margin-top: -6px;
+  }
+
+  &:active::-webkit-slider-thumb {
+    background-color: @cherry;
+  }
+
+  &::-moz-range-track {
+    width: 100%;
+    height: 2px;
+    cursor: pointer;
+    background-color: @black-green;
+  }
+
+  &::-moz-range-thumb {
+    border: 2px solid @cherry;
+    height: 14px;
+    width: 14px;
+    border-radius: 50%;
+    background-color: @white;
+    cursor: pointer;
+  }
+
+  &:active::-moz-range-thumb {
+    background-color: @cherry;
+  }
+
+  @media (min-width: @tablet-width) {
+    width: 180px;
+    margin-left: 20px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 280px;
+  }
 }
 
 .editor__buttons {
