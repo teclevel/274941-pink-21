@@ -5,7 +5,7 @@
   color: @black-green;
   text-align: center;
   padding: 0 35px;
-  margin: 54px auto 60px;
+  margin: 42px auto 50px;
 
   @media (min-width: @tablet-width) {
     font-size: 18px;
@@ -18,24 +18,13 @@
 }
 
 .photos__panorama {
+  position: relative;
   margin: 0;
 }
 
 .photos__full {
-  position: relative;
+  width: 100%;
   min-height: 137px;
-  background-image: url("../img/panorama-desktop.jpg");
-  background-position: 50%;
-  background-repeat: no-repeat;
-  background-size: cover;
-
-  @media (min-width: @tablet-width) {
-    min-height: 509px;
-  }
-
-  @media (min-width: @desktop-width) {
-    min-height: 506px;
-  }
 }
 
 .photos__panorama-label {
@@ -48,7 +37,7 @@
   text-transform: uppercase;
   background-color: @cherry;
   color: @white;
-  padding: 10px 15px;
+  padding: 5px 15px;
 
   @media (min-width: @desktop-width) {
     right: 130px;
@@ -108,7 +97,7 @@
 .photos__list figure {
   margin: 0;
 }
-
+/*
 .photos__item {
   padding: 0 20px;
   margin-bottom: 20px;
@@ -121,7 +110,7 @@
   @media (min-width: @desktop-width) {
     width: 320px;
   }
-}
+}*/
 /*удалил
 .photos__wrapper {
   margin: 0;
@@ -134,7 +123,7 @@
 
 .photos__img {
   margin: 0 auto;
-  width: 100%;
+  width: 88%;
 }
 
 .photos__caption {
@@ -143,7 +132,10 @@
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  padding: 20px 0 20px  17px;
+  padding: 20px 14px;
+  width: 88%;
+  margin: 0 auto;
+  margin-bottom: 20px;
 }
 
 .photos__description {
