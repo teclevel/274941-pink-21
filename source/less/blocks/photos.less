@@ -132,11 +132,15 @@
 
 .photos__caption {
   background-color: @grey-light;
-  min-height: 155px;
+  min-height: 121px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 20px 0 20px  17px;
 }
 
 .photos__description {
-  margin: 0 17px 20px;
+  margin: 0;
 }
 
 .photos__author {
@@ -160,6 +164,8 @@
   font-size: 14px;
   line-height: 24px;
   color: @black-green;
+  margin: 0;
+  margin-bottom: 13px;
 }
 
 .photos__button {
@@ -172,4 +178,14 @@
   line-height: 24px;
   text-transform: uppercase;
   color: @cherry;
+  margin-left: 20px;
+}
+
+.photos__likes {
+  display: flex;
+
+  @media (min-width: @tablet-width) {
+    flex-direction: row-reverse;
+    justify-content: space-between;
+  }
 }
