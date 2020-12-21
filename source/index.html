@@ -109,21 +109,33 @@
                 <h3 class="advantages__title">Поднимает настроение</h3>
                 <p class="advantages__text">Приложение позволит вам победить осеннюю хандру и депрессию буквально в несколько кликов!</p>
               </div>
-              <img class="advantages__cell-phone advantages__cell-phone--invisible" src="img/mobile-grey.png" width="30" height="30" alt="снимок на смартфоне">
+              <picture>
+                <source media="(min-width: 1200px)" srcset="img/desktop-grey.png 1x, img/desktop-grey@2x.png 2x">
+                <source media="(min-width: 660px)" srcset="img/tablet-grey.png 1x, img/tablet-grey@2x.png 2x">
+                <img class="advantages__cell-phone advantages__cell-phone--invisible" src="img/mobile-grey.png" srcset="img/mobile-grey@2x.png 2x" alt="снимок на смартфоне">
+              </picture>
             </li>
             <li class="advantages__item advantages__item--invisible">
               <div class="advantages__description">
                 <h3 class="advantages__title">Меняет мир вокруг</h3>
                 <p class="advantages__text">Сделайте снимок и украсьте его смайликом или текстовой подписью, чтобы усилить&nbsp;эффект</p>
               </div>
-              <img class="advantages__cell-phone advantages__cell-phone--invisible"  src="img/mobile-pink.png" width="30" height="30" alt="снимок с розовым фильтром">
+              <picture>
+                <source media="(min-width: 1200px)" srcset="img/desktop-pink.png 1x, img/desktop-pink@2x.png 2x">
+                <source media="(min-width: 660px)" srcset="img/tablet-pink.png 1x, img/tablet-pink@2x.png 2x">
+                <img class="advantages__cell-phone advantages__cell-phone--invisible" src="img/mobile-pink.png" srcset="img/mobile-pink@2x.png 2x" alt="снимок с розовым фильтром">
+              </picture>
             </li>
             <li class="advantages__item">
               <div class="advantages__description">
                 <h3 class="advantages__title">Заводит новых друзей</h3>
                 <p class="advantages__text">Ставьте лайки, комментируйте, делитесь фотографиями с друзьями и заводите новых</p>
               </div>
-              <img class="advantages__cell-phone" src="img/mobile-smile.png" width="157" height="320" alt="снимок с наложенным смайликом">
+              <picture>
+                <source media="(min-width: 1200px)" srcset="img/desktop-smile.png 1x, img/desktop-smile@2x.png 2x">
+                <source media="(min-width: 660px)" srcset="img/tablet-smile.png 1x, img/tablet-smile@2x.png 2x">
+                <img class="advantages__cell-phone" src="img/mobile-smile.png" srcset="img/mobile-smile@2x.png 2x" alt="снимок с наложенным смайликом">
+              </picture>
             </li>
           </ul>
         </div>
