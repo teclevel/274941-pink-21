@@ -29,6 +29,15 @@
   }
 }
 
+.list-name__label {
+  align-self: flex-start;
+
+  @media (min-width: @tablet-width) {
+    align-self: auto;
+    align-items: baseline;
+  }
+}
+
 .list-name__input {
   &:hover {
     border-color: @black-green;
