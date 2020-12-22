@@ -64,7 +64,11 @@
         <h1 class="visually-hidden">Посты пользователей</h1>
         <p class="photos__title">Взгляните на фотографии, которые выкладывают пользователи! Видите, как не хватает ваших?</p>
         <figure class="photos__panorama">
-          <img class="photos__full" src="img/panorama-desktop.jpg" width="320" height="180" alt="Снимок пользователя">
+          <picture>
+            <source media="(min-width: 1200px)" srcset="img/photos/panorama-desktop.jpg 1x, img/photos/panorama-desktop@2x.jpg 2x">
+            <source media="(min-width: 660px)" srcset="img/photos/panorama-tablet.jpg 1x, img/photos/panorama-tablet@2x.jpg 2x">
+            <img class="photos__full" src="img/photos/panorama-mobile.jpg" srcset="img/photos/panorama-mobile@2x.jpg 2x" alt="снимок пользователя">
+          </picture>
           <figcaption class="photos__caption photos__caption--top">
             <blockquote class="photos__description">
               <cite class="photos__author">Анна</cite>
@@ -85,7 +89,11 @@
           <li class="photos__item">
             <figure>
               <a href="#">
-                <img class="photos__img" src="img/photo-1-mobile.jpg" width="280" height="180" alt="Снимок пользователя">
+                <picture>
+                  <source media="(min-width: 1200px)" srcset="img/photos/photo-1-desktop.jpg 1x, img/photos/photo-1-desktop@2x.jpg 2x">
+                  <source media="(min-width: 660px)" srcset="img/photos/photo-1-tablet.jpg 1x, img/photos/photo-1-tablet@2x.jpg 2x">
+                  <img class="photos__img" src="img/photos/photo-1-mobile.jpg" srcset="img/photos/photo-1-mobile@2x.jpg 2x" alt="снимок пользователя">
+                </picture>
               </a>
               <figcaption class="photos__caption">
                 <blockquote class="photos__description">
