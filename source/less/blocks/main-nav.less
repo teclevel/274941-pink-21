@@ -133,6 +133,10 @@
   }
 }
 
+.main-nav__logo-mobile {
+  fill: @white;
+}
+
 //логотип на планшете
 
 @media (min-width: @tablet-width) {
@@ -140,6 +144,11 @@
   .main-nav__logo-desktop {
     display: none;
   }
+}
+
+.main-nav__logo-tablet {
+  fill: @white;
+  color: @white;
 }
 
 //логотип на десктопе
@@ -152,6 +161,8 @@
 
   .main-nav__logo-desktop {
     display: block;
+    fill: @white;
+    color: @cherry;
   }
 }
 
@@ -170,33 +181,40 @@
 .main-nav__link-logo[href] {
   padding: 10px 0;
 
-  &:hover .main-nav__logo-mobile path,
-  &:hover .main-nav__logo-tablet path,
-  &:hover .main-nav__logo-desktop path {
+  &:hover .main-nav__logo-mobile,
+  &:hover .main-nav__logo-tablet,
+  &:hover .main-nav__logo-desktop {
     fill: @cherry;
+    color: @cherry;
   }
 
-  &:active .main-nav__logo-desktop path {
+  &:active .main-nav__logo-desktop {
     fill: @white;
+    color: @cherry;
     opacity: 0.3;
   }
 
-  &:active .main-nav__logo-mobile path,
-  &:active .main-nav__logo-tablet path {
+  &:active .main-nav__logo-mobile,
+  &:active .main-nav__logo-tablet {
     opacity: 0.3;
   }
+}
+
+.main-nav__close,
+.main-nav__open {
+  fill: @white;
 }
 
 .main-nav__toggle {
   padding: 10px 0;
 
-  &:hover .main-nav__close path,
-  &:hover .main-nav__open path {
+  &:hover .main-nav__close,
+  &:hover .main-nav__open {
     fill: @cherry;
   }
 
-  &:active .main-nav__close path,
-  &:active .main-nav__open path {
+  &:active .main-nav__close,
+  &:active .main-nav__open {
     opacity: 0.3;
   }
 
