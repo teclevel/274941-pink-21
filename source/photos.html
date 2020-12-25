@@ -65,6 +65,9 @@
         <p class="photos__title">Взгляните на фотографии, которые выкладывают пользователи! Видите, как не хватает ваших?</p>
         <figure class="photos__panorama">
           <picture>
+            <source type="image/webp" media="(min-width: 1200px)" srcset="img/photos/webp/panorama-desktop.webp 1x, img/photos/webp/panorama-desktop@2x.webp 2x">
+            <source type="image/webp" media="(min-width: 660px)" srcset="img/photos/webp/panorama-tablet.webp 1x, img/photos/webp/panorama-tablet@2x.webp 2x">
+            <source type="image/webp" srcset="img/photos/webp/panorama-mobile.webp 1x, img/photos/webp/panorama-mobile@2x.webp 2x">
             <source media="(min-width: 1200px)" srcset="img/photos/panorama-desktop.jpg 1x, img/photos/panorama-desktop@2x.jpg 2x">
             <source media="(min-width: 660px)" srcset="img/photos/panorama-tablet.jpg 1x, img/photos/panorama-tablet@2x.jpg 2x">
             <img class="photos__full" src="img/photos/panorama-mobile.jpg" srcset="img/photos/panorama-mobile@2x.jpg 2x" alt="снимок пользователя">
