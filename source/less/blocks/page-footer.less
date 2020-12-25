@@ -18,9 +18,15 @@
     padding: 0;
   }
 }
+//.page-footer__logo-desktop
+/*  .green{
+  fill: red;
+} */
 
 .page-footer__link-logo {
-  &:hover path {
+  color: green;
+
+  &:hover .pink {
     fill: @cherry;
   }
 
@@ -42,6 +48,8 @@
 
   @media (min-width: @desktop-width) {
     display: block;
+    color: red;
+    fill: green;
   }
 }
 
@@ -64,6 +72,10 @@
   color: @black-green;
 }
 
+.page-footer__logo-academy {
+  fill: @cherry;
+}
+
 .page-footer__copyright {
   text-decoration: none;
   color: inherit;
@@ -71,16 +83,12 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-}
 
-.page-footer__logo-academy{
-  fill: @cherry;
-
-  &:hover {
+  &:hover .page-footer__logo-academy {
     fill: @black-green;
   }
 
-  &:active {
+  &:active .page-footer__logo-academy {
     fill: @black-green-03;
   }
 }
