@@ -2,9 +2,15 @@
 <html class="page" lang="ru">
   <head>
     <meta charset="utf-8">
+    <meta name="description" content="Сайт фотоприложения для раскрашивания серых будней">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>HTML Academy: Пинк</title>
     <link rel="stylesheet" href="css/style.min.css">
+    <link rel="preload" href="/css/style.min.css" as="style">
+    <link rel="preload" href="/js/script.min.js" as="script">
+    <link rel="preload" href="/img/page-header-mobile@2x.png" as="image">
+    <link rel="preload" href="/img/page-header-back-mobile@2x.jpg" as="image">
+    <link rel="preload" href="/fonts/opensans.woff2" as="font" type="font/woff2" crossorigin>
   </head>
   <body class="page__body">
 
@@ -78,7 +84,7 @@
       <div class="main-nav main-nav--closed main-nav--nojs">
         <nav class="main-nav__wrapper">
           <div class="main-nav__logo-button">
-            <a class="main-nav__link-logo">
+         <!--    <a class="main-nav__link-logo" aria-label="главная страница"> -->
               <svg class="main-nav__logo-mobile" fill="none" width="74" height="23">
                 <use xlink:href="#main-nav__logo-mobile"></use>
               </svg>
@@ -88,9 +94,8 @@
               <svg class="main-nav__logo-desktop" width="147" height="40" fill="none">
                 <use xlink:href="#main-nav__logo-desktop"></use>
               </svg>
-            </a>
-            <a href="#" class="main-nav__toggle">
-              <span class="visually-hidden">Открыть/закрыть меню</span>
+           <!--  </a> -->
+            <a href="#" class="main-nav__toggle" aria-label="Открыть/закрыть меню">
               <svg class="main-nav__close" width="23" height="23" fill="none">
                 <use xlink:href="#main-nav__close"></use>
               </svg>
@@ -100,7 +105,7 @@
             </a>
           </div>
           <ul class="main-nav__list site-list">
-            <li class="site-list__item site-list__item--active"><a>Главная</a></li>
+            <li class="site-list__item site-list__item--active">Главная</li>
             <li class="site-list__item"><a href="photos.html">Фотографии</a></li>
             <li class="site-list__item"><a href="form.html">Конкурс</a></li>
             <li class="site-list__item"><a href="https://htmlacademy.ru">HTML Academy</a></li>
@@ -159,7 +164,7 @@
                 <source type="image/webp" srcset="img/advantages-mobile-grey.webp 1x, img/advantages-mobile-grey@2x.webp 2x">
                 <source media="(min-width: 1200px)" srcset="img/advantages-desktop-grey.png 1x, img/advantages-desktop-grey@2x.png 2x">
                 <source media="(min-width: 660px)" srcset="img/advantages-tablet-grey.png 1x, img/advantages-tablet-grey@2x.png 2x">
-                <img class="advantages__cell-phone advantages__cell-phone--invisible" src="img/advantages-mobile-grey.png" srcset="img/advantages-mobile-grey@2x.png 2x" alt="снимок на смартфоне">
+                <img class="advantages__cell-phone advantages__cell-phone--invisible" width="136" height="245" src="img/advantages-mobile-grey.png" srcset="img/advantages-mobile-grey@2x.png 2x" alt="снимок на смартфоне">
               </picture>
             </li>
             <li class="advantages__item advantages__item--invisible">
@@ -173,7 +178,7 @@
                 <source type="image/webp" srcset="img/advantages-mobile-pink.webp 1x, img/advantages-mobile-pink@2x.webp 2x">
                 <source media="(min-width: 1200px)" srcset="img/advantages-desktop-pink.png 1x, img/advantages-desktop-pink@2x.png 2x">
                 <source media="(min-width: 660px)" srcset="img/advantages-tablet-pink.png 1x, img/advantages-tablet-pink@2x.png 2x">
-                <img class="advantages__cell-phone advantages__cell-phone--invisible" src="img/advantages-mobile-pink.png" srcset="img/advantages-mobile-pink@2x.png 2x" alt="снимок с розовым фильтром">
+                <img class="advantages__cell-phone advantages__cell-phone--invisible" width="136" height="245" src="img/advantages-mobile-pink.png" srcset="img/advantages-mobile-pink@2x.png 2x" alt="снимок с розовым фильтром">
               </picture>
             </li>
             <li class="advantages__item">
@@ -187,7 +192,7 @@
                 <source type="image/webp" srcset="img/advantages-mobile-smile.webp 1x, img/advantages-mobile-smile@2x.webp 2x">
                 <source media="(min-width: 1200px)" srcset="img/advantages-desktop-smile.png 1x, img/advantages-desktop-smile@2x.png 2x">
                 <source media="(min-width: 660px)" srcset="img/advantages-tablet-smile.png 1x, img/advantages-tablet-smile@2x.png 2x">
-                <img class="advantages__cell-phone" src="img/advantages-mobile-smile.png" srcset="img/advantages-mobile-smile@2x.png 2x" alt="снимок с наложенным смайликом">
+                <img class="advantages__cell-phone" src="img/advantages-mobile-smile.png" width="136" height="245" srcset="img/advantages-mobile-smile@2x.png 2x" alt="снимок с наложенным смайликом">
               </picture>
             </li>
           </ul>

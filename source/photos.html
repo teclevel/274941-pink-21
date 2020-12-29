@@ -2,9 +2,13 @@
 <html class="page" lang="ru">
   <head>
     <meta charset="utf-8">
+    <meta name="description" content="фотогалерея пользователей">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>HTML Academy: Пинк</title>
     <link rel="stylesheet" href="css/style.min.css">
+    <link rel="preload" href="/css/style.min.css" as="style">
+    <link rel="preload" href="/js/script.min.js" as="script">
+    <link rel="preload" href="/fonts/opensans.woff2" as="font" type="font/woff2" crossorigin>
   </head>
   <body class="page__body">
 
@@ -74,7 +78,7 @@
       <div class="main-nav main-nav--closed main-nav--nojs">
         <nav class="main-nav__wrapper">
           <div class="main-nav__logo-button">
-            <a class="main-nav__link-logo" href="index.html">
+            <a class="main-nav__link-logo" href="index.html" aria-label="перейти на главную страницу">
               <svg class="main-nav__logo-mobile" fill="none" width="74" height="23">
                 <use xlink:href="#main-nav__logo-mobile"></use>
               </svg>
@@ -85,8 +89,7 @@
                 <use xlink:href="#main-nav__logo-desktop"></use>
               </svg>
             </a>
-            <a href="#" class="main-nav__toggle">
-              <span class="visually-hidden">Открыть/закрыть меню</span>
+            <a href="#" class="main-nav__toggle" aria-label="Открыть/закрыть меню">
               <svg class="main-nav__close" width="23" height="23" fill="none">
                 <use xlink:href="#main-nav__close"></use>
               </svg>
@@ -97,7 +100,7 @@
           </div>
           <ul class="main-nav__list site-list">
             <li class="site-list__item"><a href="index.html">Главная</a></li>
-            <li class="site-list__item site-list__item--active"><a>Фотографии</a></li>
+            <li class="site-list__item site-list__item--active">Фотографии</li>
             <li class="site-list__item"><a href="form.html">Конкурс</a></li>
             <li class="site-list__item"><a href="https://htmlacademy.ru">HTML Academy</a></li>
           </ul>
@@ -116,7 +119,7 @@
             <source type="image/webp" srcset="img/photos/panorama-mobile.webp 1x, img/photos/panorama-mobile@2x.webp 2x">
             <source media="(min-width: 1200px)" srcset="img/photos/panorama-desktop.jpg 1x, img/photos/panorama-desktop@2x.jpg 2x">
             <source media="(min-width: 660px)" srcset="img/photos/panorama-tablet.jpg 1x, img/photos/panorama-tablet@2x.jpg 2x">
-            <img class="photos__full" src="img/photos/panorama-mobile.jpg" srcset="img/photos/panorama-mobile@2x.jpg 2x" alt="снимок пользователя">
+            <img class="photos__full" width="320" height="137" src="/img/photos/panorama-mobile.jpg" srcset="/img/photos/panorama-mobile@2x.jpg 2x" alt="снимок пользователя">
           </picture>
           <figcaption class="photos__caption photos__caption--top">
             <blockquote class="photos__description">
@@ -125,7 +128,7 @@
               <p class="photos__text">Прыгать или нет? Напишите в комментарии свой совет и смотрите&nbsp;прямую трансляцию в перископе, задавайте свои вопросы!</p>
             </blockquote>
             <div class="photos__likes photos__likes--top">
-              <a class="photos__button" href="#">
+              <a class="photos__button" href="#" aria-label="кнопка нравится">
                 <svg width="13" height="12" fill="none">
                   <use xlink:href="#photos__button-heart"></use>
                 </svg>
@@ -144,7 +147,7 @@
                   <source type="image/webp" srcset="img/photos/photo-1-mobile.webp 1x, img/photos/photo-1-mobile@2x.webp 2x">
                   <source media="(min-width: 1200px)" srcset="img/photos/photo-1-desktop.jpg 1x, img/photos/photo-1-desktop@2x.jpg 2x">
                   <source media="(min-width: 660px)" srcset="img/photos/photo-1-tablet.jpg 1x, img/photos/photo-1-tablet@2x.jpg 2x">
-                  <img class="photos__img" src="img/photos/photo-1-mobile.jpg" srcset="img/photos/photo-1-mobile@2x.jpg 2x" alt="снимок пользователя">
+                  <img class="photos__img" width="280" height="180" src="img/photos/photo-1-mobile.jpg" srcset="img/photos/photo-1-mobile@2x.jpg 2x" alt="снимок пользователя">
                 </picture>
               </a>
               <figcaption class="photos__caption">
@@ -154,7 +157,7 @@
                   <p class="photos__text">Вчера он на луну летал, сегодня в руки к нам попал.</p>
                 </blockquote>
                 <div class="photos__likes">
-                  <a class="photos__button" href="#">
+                  <a class="photos__button" href="#" aria-label="кнопка нравится">
                     <svg width="13" height="12" fill="none">
                       <use xlink:href="#photos__button-heart"></use>
                     </svg>
@@ -173,7 +176,7 @@
                   <source type="image/webp" srcset="img/photos/photo-2-mobile.webp 1x, img/photos/photo-2-mobile@2x.webp 2x">
                   <source media="(min-width: 1200px)" srcset="img/photos/photo-2-desktop.jpg 1x, img/photos/photo-2-desktop@2x.jpg 2x">
                   <source media="(min-width: 660px)" srcset="img/photos/photo-2-tablet.jpg 1x, img/photos/photo-2-tablet@2x.jpg 2x">
-                  <img class="photos__img" src="img/photos/photo-2-mobile.jpg" srcset="img/photos/photo-2-mobile@2x.jpg 2x" alt="снимок пользователя">
+                  <img class="photos__img" width="280" height="180" src="img/photos/photo-2-mobile.jpg" srcset="img/photos/photo-2-mobile@2x.jpg 2x" alt="снимок пользователя">
                 </picture>
               </a>
               <figcaption class="photos__caption">
@@ -183,7 +186,7 @@
                   <p class="photos__text">Соседи будут рады!</p>
                 </blockquote>
                 <div class="photos__likes">
-                  <a class="photos__button" href="#">
+                  <a class="photos__button" href="#" aria-label="кнопка нравится">
                     <svg width="13" height="12" fill="none">
                       <use xlink:href="#photos__button-heart"></use>
                     </svg>
@@ -202,7 +205,7 @@
                   <source type="image/webp" srcset="img/photos/photo-3-mobile.webp 1x, img/photos/photo-3-mobile@2x.webp 2x">
                   <source media="(min-width: 1200px)" srcset="img/photos/photo-3-desktop.jpg 1x, img/photos/photo-3-desktop@2x.jpg 2x">
                   <source media="(min-width: 660px)" srcset="img/photos/photo-3-tablet.jpg 1x, img/photos/photo-3-tablet@2x.jpg 2x">
-                  <img class="photos__img" src="img/photos/photo-3-mobile.jpg" srcset="img/photos/photo-3-mobile@2x.jpg 2x" alt="снимок пользователя">
+                  <img class="photos__img" width="280" height="180" src="img/photos/photo-3-mobile.jpg" srcset="img/photos/photo-3-mobile@2x.jpg 2x" alt="снимок пользователя">
                 </picture>
               </a>
               <figcaption class="photos__caption">
@@ -212,7 +215,7 @@
                   <p class="photos__text">Здесь могла быть ваша цитата о высоком и вечном.</p>
                 </blockquote>
                 <div class="photos__likes">
-                  <a class="photos__button" href="#">
+                  <a class="photos__button" href="#" aria-label="кнопка нравится">
                     <svg width="13" height="12" fill="none">
                       <use xlink:href="#photos__button-heart"></use>
                     </svg>
@@ -231,7 +234,7 @@
                   <source type="image/webp" srcset="img/photos/photo-4-mobile.webp 1x, img/photos/photo-4-mobile@2x.webp 2x">
                   <source media="(min-width: 1200px)" srcset="img/photos/photo-4-desktop.jpg 1x, img/photos/photo-4-desktop@2x.jpg 2x">
                   <source media="(min-width: 660px)" srcset="img/photos/photo-4-tablet.jpg 1x, img/photos/photo-4-tablet@2x.jpg 2x">
-                  <img class="photos__img" src="img/photos/photo-4-mobile.jpg" srcset="img/photos/photo-4-mobile@2x.jpg 2x" alt="снимок пользователя">
+                  <img class="photos__img" width="280" height="180" src="img/photos/photo-4-mobile.jpg" srcset="img/photos/photo-4-mobile@2x.jpg 2x" alt="снимок пользователя">
                 </picture>
               </a>
               <figcaption class="photos__caption">
@@ -241,7 +244,7 @@
                   <p class="photos__text">Самая кубанская в мире!</p>
                 </blockquote>
                 <div class="photos__likes">
-                  <a class="photos__button" href="#">
+                  <a class="photos__button" href="#" aria-label="кнопка нравится">
                     <svg width="13" height="12" fill="none">
                       <use xlink:href="#photos__button-heart"></use>
                     </svg>
@@ -260,7 +263,7 @@
                   <source type="image/webp" srcset="img/photos/photo-5-mobile.webp 1x, img/photos/photo-5-mobile@2x.webp 2x">
                   <source media="(min-width: 1200px)" srcset="img/photos/photo-5-desktop.jpg 1x, img/photos/photo-5-desktop@2x.jpg 2x">
                   <source media="(min-width: 660px)" srcset="img/photos/photo-5-tablet.jpg 1x, img/photos/photo-5-tablet@2x.jpg 2x">
-                  <img class="photos__img" src="img/photos/photo-5-mobile.jpg" srcset="img/photos/photo-5-mobile@2x.jpg 2x" alt="снимок пользователя">
+                  <img class="photos__img" width="280" height="180" src="img/photos/photo-5-mobile.jpg" srcset="img/photos/photo-5-mobile@2x.jpg 2x" alt="снимок пользователя">
                 </picture>
               </a>
               <figcaption class="photos__caption">
@@ -270,7 +273,7 @@
                   <p class="photos__text">Где снег-то?</p>
                 </blockquote>
                 <div class="photos__likes">
-                  <a class="photos__button" href="#">
+                  <a class="photos__button" href="#" aria-label="кнопка нравится">
                     <svg width="13" height="12" fill="none">
                       <use xlink:href="#photos__button-heart"></use>
                     </svg>
@@ -289,7 +292,7 @@
                   <source type="image/webp" srcset="img/photos/photo-6-mobile.webp 1x, img/photos/photo-6-mobile@2x.webp 2x">
                   <source media="(min-width: 1200px)" srcset="img/photos/photo-6-desktop.jpg 1x, img/photos/photo-6-desktop@2x.jpg 2x">
                   <source media="(min-width: 660px)" srcset="img/photos/photo-6-tablet.jpg 1x, img/photos/photo-6-tablet@2x.jpg 2x">
-                  <img class="photos__img" src="img/photos/photo-6-mobile.jpg" srcset="img/photos/photo-6-mobile@2x.jpg 2x" alt="снимок пользователя">
+                  <img class="photos__img" width="280" height="180" src="img/photos/photo-6-mobile.jpg" srcset="img/photos/photo-6-mobile@2x.jpg 2x" alt="снимок пользователя">
                 </picture>
               </a>
               <figcaption class="photos__caption">
@@ -299,7 +302,7 @@
                   <p class="photos__text">Всем GM и взаимные лайки!</p>
                 </blockquote>
                 <div class="photos__likes">
-                  <a class="photos__button" href="#">
+                  <a class="photos__button" href="#" aria-label="кнопка нравится">
                     <svg width="13" height="12" fill="none">
                       <use xlink:href="#photos__button-heart"></use>
                     </svg>
@@ -322,7 +325,7 @@
             <source type="image/webp" media="(min-width: 660px)" srcset="img/photos/editor-tablet-desktop.webp 1x, img/photos/editor-tablet-desktop@2x.webp 2x">
             <source type="image/webp" srcset="img/photos/editor-mobile.webp 1x, img/photos/editor-mobile@2x.webp 2x">
             <source media="(min-width: 660px)" srcset="img/photos/editor-tablet-desktop.jpg 1x, img/photos/editor-tablet-desktop@2x.jpg 2x">
-            <img class="editor__img" src="img/photos/editor-mobile.jpg" srcset="img/photos/editor-mobile@2x.jpg 2x" alt="Снимок для редактирования">
+            <img class="editor__img" width="280" height="374" src="img/photos/editor-mobile.jpg" srcset="img/photos/editor-mobile@2x.jpg 2x" alt="Снимок для редактирования">
           </picture>
           <fieldset class="editor__fieldset">
             <legend class="visually-hidden">Фильтры снимка</legend>
@@ -367,7 +370,7 @@
       </section>
     </main>
     <footer class="page-footer">
-      <a class="page-footer__link-logo" href="#">
+      <a class="page-footer__link-logo" href="index.html" aria-label="перейти на главную страницу">
         <svg class="page-footer__logo-mobile" width="145" height="40" >
           <use xlink:href="#logo-mobile-tablet"></use>
         </svg>
@@ -377,21 +380,21 @@
       </a>
       <ul class="page-footer__list social-list">
         <li class="social-list__item">
-          <a class="social-list__link" href="#" aria-label="Твиттер">
+          <a class="social-list__link" href="https://twitter.com" aria-label="Твиттер">
             <svg class="social-list__logo" width="54" height="54" fill="none">
               <use xlink:href="#social-list__logo-twitter"></use>
             </svg>
           </a>
         </li>
         <li class="social-list__item">
-          <a class="social-list__link" href="#" aria-label="Фейсбук">
+          <a class="social-list__link" href="https://facebook.com/" aria-label="Фейсбук">
             <svg class="social-list__logo" width="54" height="54" fill="none">
               <use xlink:href="#social-list__logo-facebook"></use>
             </svg>
           </a>
         </li>
         <li class="social-list__item">
-          <a class="social-list__link" href="#" aria-label="Ютьюб">
+          <a class="social-list__link" href="https://www.youtube.com" aria-label="Ютьюб">
             <svg class="social-list__logo" width="54" height="54" fill="none">
               <use xlink:href="#social-list__logo-youtube"></use>
             </svg>
