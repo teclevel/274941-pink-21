@@ -8,6 +8,10 @@
   background-size: cover;
   margin-bottom: 271px;
 
+  &--nojs {
+    margin-top: 325px;
+  }
+
   @media (min-resolution: 2dppx) {
     background-image: url("../img/page-header-back-mobile@2x.jpg");
   }
@@ -30,6 +34,17 @@
     @media (min-resolution: 2dppx) {
       background-image: url("../img/page-header-back-desktop@2x.jpg");
     }
+  }
+}
+
+.page-header--nojs .main-nav__wrapper {
+  position: absolute;
+  top: 325px;
+  left: 0;
+  width: 100%;
+
+  @media (min-width: @desktop-width) {
+    position: static;
   }
 }
 
