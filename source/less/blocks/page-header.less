@@ -1,15 +1,17 @@
 .page-header {
-  height: 462px;
-  background-color: @blue-dark;
+  display: flex;
+  flex-direction: column;
+  //height: 993px;
+  background-size: contain;
+  background-color: @black-green;
   color: @white;
   background-image: url("../img/page-header-back-mobile.jpg");
   background-repeat: no-repeat;
   background-position: 50% 0;
-  background-size: cover;
-  margin-bottom: 271px;
 
   &--nojs {
-    margin-top: 325px;
+    background-position: 50% 258px;
+    padding-top: 325px;
   }
 
   @media (min-resolution: 2dppx) {
@@ -37,19 +39,29 @@
   }
 }
 
-.page-header--nojs .main-nav__wrapper {
+.page-header--nojs .main-nav {
   position: absolute;
-  top: 325px;
-  left: 0;
   width: 100%;
+  display: flex;
+  flex-direction: column;
+  top: 0;
+  background-color: @black-green;
 
   @media (min-width: @desktop-width) {
     position: static;
   }
 }
 
+.page-header--nojs .main-nav__toggle {
+  display: none;
+}
+
+.page-header--nojs .main-nav--closed {
+  display: block;
+}
+
 .page-header__section {
-  background-position: 50% 24%;
+  background-position: 50% 29%;
   background-image: url("../img/page-header-mobile.png");
   background-repeat: no-repeat;
 
