@@ -1,4 +1,6 @@
 .page-header {
+  height: 462px;
+  margin-bottom: 268px;
   display: flex;
   flex-direction: column;
   background-size: cover;
@@ -13,9 +15,10 @@
   }
 
   @media (min-width: @tablet-width) {
+    height: 729px;
+    margin-bottom: 0;
     background-position: 50% 0;
     background-image: url("../img/page-header-back-tablet.jpg");
-    background-size: cover;
 
     @media (min-resolution: 2dppx) {
       background-image: url("../img/page-header-back-tablet@2x.jpg");
@@ -34,6 +37,9 @@
   &--nojs {
     background-position: 50% 269px;
     padding-top: 334px;
+    height: auto;
+    margin-bottom: 0;
+    background-size: contain;
 
     @media (min-width: @tablet-width) {
       background-position: 50% 263px;
@@ -58,6 +64,7 @@
 
   @media (min-width: @desktop-width) {
     position: static;
+    background-color: @black-03;
   }
 }
 
@@ -67,12 +74,22 @@
 
 .page-header--nojs .main-nav__list {
   display: block;
+
+  @media (min-width: @desktop-width) {
+    display: flex;
+  }
 }
 
 .page-header--nojs .main-nav__logo-button {
   height: 70px;
   background-color: @black-green;
   border-bottom: 1px solid @black;
+
+  @media (min-width: @desktop-width) {
+    position: static;
+    background-color: transparent;
+    border-bottom: none;
+  }
 }
 
 .page-header__section {
