@@ -161,7 +161,9 @@
 }
 
 .main-nav__link-logo[href] {
-  padding: 10px 0;
+  @media (min-width: @tablet-width) {
+    padding: 10px 0 21px;
+  }
 
   &:hover .main-nav__logo-mobile,
   &:hover .main-nav__logo-tablet,
