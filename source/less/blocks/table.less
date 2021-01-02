@@ -36,8 +36,8 @@
   }
 
   @media (min-width: @desktop-width) {
-    padding-top: 14px;
-    padding-bottom: 26px;
+    padding-top: 16px;
+    padding-bottom: 20px;
   }
 
   &:nth-child(2) {
@@ -76,6 +76,10 @@
   display: block;
   text-align: center;
 
+  @media (min-width: @desktop-width) {
+    font-size: 18px;
+  }
+
   &--ribbon {
     &::before {
       position: absolute;
@@ -95,7 +99,7 @@
       }
 
       @media (min-width: @desktop-width) {
-        top: -14px;
+        top: -16px;
         left: -1px;
         width: 74px;
         height: 74px;
@@ -111,6 +115,10 @@
   line-height: 30px;
   display: block;
   text-align: center;
+
+  @media (min-width: @desktop-width) {
+    font-size: 24px;
+  }
 }
 
 .table__row {
@@ -136,11 +144,6 @@
     padding-bottom: 7px;
     border: 2px solid @grey-light-border;
     width: 25%;
-  }
-
-  @media (min-width: @desktop-width) {
-    padding-top: 15px;
-    padding-bottom: 15px;
   }
 
   &--invisible {
@@ -184,5 +187,6 @@
 
   @media (min-width: @desktop-width) {
     font-size: 18px;
+    padding: 16px 0 13px 22px;
   }
 }

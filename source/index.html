@@ -8,8 +8,8 @@
     <link rel="stylesheet" href="css/style.min.css">
     <link rel="preload" href="/css/style.min.css" as="style">
     <link rel="preload" href="/js/script.min.js" as="script">
-    <link rel="preload" href="/img/page-header-mobile@2x.png" as="image">
-    <link rel="preload" href="/img/page-header-back-mobile@2x.jpg" as="image">
+    <link rel="preload" href="/img/page-header-mobile@2x.png" media="(max-width: mobile-width-only)" as="image">
+    <link rel="preload" href="/img/page-header-back-mobile@2x.jpg" media="(max-width: mobile-width-only)" as="image">
     <link rel="preload" href="/fonts/opensans.woff2" as="font" type="font/woff2" crossorigin>
   </head>
   <body class="page__body">
@@ -294,6 +294,7 @@
           </ul>
         </div>
         <div class="contacts__map">
+          <iframe class="contacts__map-google" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d9506.482998884241!2d30.32564292404735!3d59.94057345152094!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCAxOTExODY!5e0!3m2!1sru!2sru!4v1609585623097!5m2!1sru!2sru" width="600" height="450" ></iframe>
           <svg class= "contacts__map-marker" width="36" height="36" fill="none">
             <use xlink:href="#contacts__map-marker"></use>
           </svg>
@@ -339,6 +340,6 @@
         </svg>
       </a>
     </footer>
-    <!-- <script src="js/script.min.js"></script> -->
+    <script src="js/script.min.js"></script>
   </body>
 </html>

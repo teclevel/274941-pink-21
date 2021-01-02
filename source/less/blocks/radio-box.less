@@ -1,17 +1,19 @@
 .radio-box {
   margin: 0;
   padding: 0;
+  display: flex;
+  flex-direction: column;
+  margin-top: 16px;
 
   @media (min-width: @tablet-width) {
-    display: flex;
     min-height: 187px;
-    flex-direction: column;
     justify-content: space-between;
   }
 }
 
 .radio-box__item {
-  margin-top: 43px;
+  min-height: 75px;
+  display: flex;
 
   @media (min-width: @tablet-width) {
     margin: 0;
@@ -20,16 +22,16 @@
 
 .radio-box__input + label {
   position: relative;
-  display: inline-block;
-  padding-left: 66px;
+  padding-left: 70px;
+  align-self: center;
 
   &::before {
     position: absolute;
     content: "";
     top: -4px;
     left: 0;
-    width: 37px;
-    height: 37px;
+    width: 40px;
+    height: 40px;
     background-color: @white;
     border: 2px solid @grey-light-border;
     border-radius: 50%;
@@ -40,8 +42,8 @@
   &::after {
     position: absolute;
     content: "";
-    top: 7px;
-    left: 11px;
+    top: 8px;
+    left: 13px;
     width: 15px;
     height: 15px;
     background-color: @cherry;
