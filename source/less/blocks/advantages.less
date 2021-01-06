@@ -6,8 +6,8 @@
   margin: 40px 20px 34px;
 
   @media (min-width: @tablet-width) {
-    margin-top: 41px;
-    margin-bottom: 19px;
+    margin-top: 46px;
+    margin-bottom: 27px;
   }
 
   @media (min-width: @desktop-width) {
@@ -24,7 +24,7 @@
   line-height: 29px;
   color: @black-green;
   display: block;
-  margin-top: 32px;
+  margin-top: 29px;
 
   @media (min-width: @tablet-width) {
     margin-top: 0;
@@ -39,7 +39,7 @@
 }
 
 .advantages__wrapper {
-  padding-top: 40px;
+  padding-top: 48px;
   background-color: @grey-light;
   clip-path: polygon(0 4%, 100% 0, 100% 100%, 0 100%);
 
@@ -60,7 +60,7 @@
     height: 100%;
     top: 0;
     left: 0;
-    clip-path: polygon(0 12%, 100% 0, 100% 100%, 0 100%);
+    clip-path: polygon(0 11%, 100% 0, 100% 100%, 0 100%);
   }
 
   @media (min-width: @desktop-width) {
@@ -74,16 +74,19 @@
   padding: 0 20px;
 
   @media (min-width: @tablet-width) {
-    padding-top: 28px;
-    padding-bottom: 40px;
     position: relative;
+    padding: 76px 20px 16px;
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr;
+    row-gap: 34px;
   }
 
   @media (min-width: @desktop-width) {
-    width: 940px;
+    width: 960px;
     margin: 0 auto;
     padding: 0;
     display: grid;
+    grid-template-rows: none;
     grid-template-columns: 1fr 1fr 1fr;
   }
 }
@@ -143,17 +146,19 @@
   font-weight: 700;
   line-height: 24px;
   color: @black;
-  margin: 30px 0 14px;
+  margin: 30px 0 13px;
 
   @media (min-width: @tablet-width) {
-    margin: 39px 0 17px;
+    margin: 0;
+    margin-bottom: 13px;
   }
 
   @media (min-width: @desktop-width) {
     font-size: 30px;
     line-height: 30px;
     margin-top: 0;
-    padding-top: 39px;
+    padding-top: 56px;
+    margin-bottom: 23px;
   }
 }
 
@@ -177,7 +182,8 @@
 
 .advantages__cell-phone {
   margin: 0 auto;
-  margin-top: 48px;
+  margin-top: 41px;
+  width: 157px;
 
   @media (min-width: @tablet-width) {
     margin: 0;

@@ -21,23 +21,23 @@
 }
 
 .table__cell-header {
-  padding-top: 14px;
-  padding-bottom: 26px;
+  padding-top: 11px;
+  padding-bottom: 27px;
   position: absolute;
   background-color: @black-green;
   width: 100%;
-  top: -102px;
+  top: -101px;
 
   @media (min-width: @tablet-width) {
-    padding-top: 10px;
-    padding-bottom: 10px;
+    padding-top: 13px;
+    padding-bottom: 6px;
     width: 25%;
     position: static;
   }
 
   @media (min-width: @desktop-width) {
-    padding-top: 14px;
-    padding-bottom: 26px;
+    padding-top: 16px;
+    padding-bottom: 20px;
   }
 
   &:nth-child(2) {
@@ -76,18 +76,22 @@
   display: block;
   text-align: center;
 
+  @media (min-width: @desktop-width) {
+    font-size: 18px;
+  }
+
   &--ribbon {
     &::before {
       position: absolute;
       content: "";
-      top: -14px;
+      top: -11px;
       left: -1px;
       width: 74px;
       height: 74px;
       background-image: url("../img/table-hit-ribbon.svg");
 
       @media (min-width: @tablet-width) {
-        top: -10px;
+        top: -13px;
         left: -1px;
         width: 61px;
         height: 61px;
@@ -95,7 +99,7 @@
       }
 
       @media (min-width: @desktop-width) {
-        top: -14px;
+        top: -16px;
         left: -1px;
         width: 74px;
         height: 74px;
@@ -111,6 +115,10 @@
   line-height: 30px;
   display: block;
   text-align: center;
+
+  @media (min-width: @desktop-width) {
+    font-size: 24px;
+  }
 }
 
 .table__row {
@@ -126,21 +134,16 @@
 }
 
 .table__cell {
-  padding-top: 15px;
-  padding-bottom: 15px;
+  padding-top: 14px;
+  padding-bottom: 14px;
   background-color: @white;
   width: 100%;
 
   @media (min-width: @tablet-width) {
-    padding-top: 8px;
-    padding-bottom: 8px;
+    padding-top: 7px;
+    padding-bottom: 7px;
     border: 2px solid @grey-light-border;
     width: 25%;
-  }
-
-  @media (min-width: @desktop-width) {
-    padding-top: 15px;
-    padding-bottom: 15px;
   }
 
   &--invisible {
@@ -174,14 +177,16 @@
   line-height: 30px;
   text-transform: uppercase;
   color: @black-green;
-  padding-left: 15px;
+  padding-left: 22px;
   padding-right: 15px;
 
   @media (min-width: @tablet-width) {
     text-transform: none;
+    padding-left: 16px;
   }
 
   @media (min-width: @desktop-width) {
     font-size: 18px;
+    padding: 16px 0 13px 22px;
   }
 }

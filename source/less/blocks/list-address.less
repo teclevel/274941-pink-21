@@ -3,18 +3,18 @@
   padding: 0;
 
   @media (min-width: @tablet-width) {
-    padding: 19px 60px 36px;
+    padding: 0 58px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    min-height: 279px;
+    min-height: 233px;
   }
 
   @media (min-width: @desktop-width) {
     display: flex;
     flex-direction: row;
     margin: 0;
-    padding: 30px 60px 17px;
+    padding: 29px 60px 15px;
     min-height: 100px;
   }
 }
@@ -22,13 +22,14 @@
 .list-address__item {
   display: flex;
   flex-direction: column;
-  margin-top: 17px;
+  margin-bottom: 18px;
 
   @media (min-width: @tablet-width) {
     position: relative;
     display: flex;
     flex-direction: column-reverse;
     margin: 0;
+    min-height: 100px;
   }
 
   @media (min-width: @desktop-width) {
@@ -53,6 +54,8 @@
 
 .list-address__label {
   align-self: flex-start;
+  margin-bottom: 4px;
+  padding-left: 23px;
 
   @media (min-width: @tablet-width) {
     padding: 8px 20px 0;

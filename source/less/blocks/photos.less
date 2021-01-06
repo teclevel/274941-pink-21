@@ -5,17 +5,25 @@
   color: @black-green;
   text-align: center;
   padding: 0 35px;
-  margin: 42px auto 50px;
+  margin: 44px auto 50px;
 
   @media (min-width: @tablet-width) {
     font-size: 18px;
-    margin: 100px auto 85px;
+    margin: 91px auto 77px;
     padding: 0 100px;
+
+    br {
+      display: none;
+    }
   }
 
   @media (min-width: @desktop-width) {
-    margin: 100px auto 97px;
-    padding: 0 280px;
+    margin: 91px auto 89px;
+    padding: 0;
+
+    br {
+      display: block;
+    }
   }
 }
 
@@ -34,29 +42,32 @@
     text-transform: uppercase;
     background-color: @cherry;
     color: @white;
-    padding: 5px 15px;
+    padding: 6px 20px;
 
     @media (min-width: @tablet-width) {
-      top: 60px;
+      top: 57px;
       right: 3%;
     }
 
     @media (min-width: @desktop-width) {
-      right: 130px;
+      top: 53px;
+      right: 20%;
+      padding: 7px 20px;
     }
   }
 }
 
 .photos__full {
   width: 100%;
-  min-height: 137px;
+  object-fit: cover;
+  height: 137px;
 
   @media (min-width: @tablet-width) {
-    min-height: 509px;
+    height: 509px;
   }
 
   @media (min-width: @desktop-width) {
-    min-height: 506px;
+    height: 506px;
   }
 }
 
@@ -64,6 +75,9 @@
   list-style: none;
   padding: 0;
   margin: 0 20px;
+  display: grid;
+  grid-auto-rows: auto;
+  row-gap: 20px;
 
   @media (min-width: @tablet-width) {
     display: grid;
@@ -119,13 +133,12 @@
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  padding: 20px 14px;
-  margin-bottom: 20px;
+  padding: 18px 10px 17px 17px;
   position: relative;
 
   @media (min-width: @tablet-width) {
     min-height: 155px;
-    padding: 20px 32px;
+    padding: 23px 30px;
     flex-grow: 1;
     margin: 0;
   }
@@ -138,8 +151,10 @@
     min-height: 121px;
     margin: 0 20px 20px;
 
+
     @media (min-width: @tablet-width) {
       margin: 0 20px 50px;
+      padding-bottom: 14px;
     }
 
     @media (min-width: @desktop-width) {
@@ -177,7 +192,7 @@
   line-height: 24px;
   color: @black-green;
   margin: 0;
-  margin-bottom: 13px;
+  margin-bottom: 11px;
 
   @media (min-width: @desktop-width) {
     margin: 0;
@@ -198,7 +213,7 @@
 
   @media (min-width: @tablet-width) {
     margin: 0;
-    margin-right: 20px;
+    margin-right: 16px;
   }
 }
 
@@ -214,8 +229,8 @@
   &--top {
     @media (min-width: @tablet-width) {
       position: absolute;
-      top: 23px;
-      right: 24px;
+      top: 25px;
+      right: 30px;
       justify-self: start;
     }
   }
