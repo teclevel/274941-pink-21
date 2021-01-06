@@ -84,7 +84,9 @@
   }
 }
 
-.checkbox__input:hover + label {
+.checkbox__input:hover + label,
+.checkbox__input:focus + label
+ {
   &::before {
     border-color: @black-green;
   }
