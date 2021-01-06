@@ -4,7 +4,7 @@
   line-height: 18px;
   border: 3px solid @white;
   border-radius: 29px;
-  padding: 10px 20px;
+  padding: 16px 36px;
   margin-top: 28px;
   display: inline-block;
   text-decoration: none;
@@ -13,7 +13,7 @@
   @media (min-width: @tablet-width) {
     margin: 0;
     width: 300px;
-    padding: 13px 0;
+    padding: 16px 0;
     text-align: center;
   }
 
@@ -39,7 +39,7 @@
   padding: 0;
   width: 204px;
   display: flex;
-  align-items: baseline;
+  align-items: center;
   justify-content: space-between;
 
   @media (min-width: @tablet-width) {
@@ -54,21 +54,25 @@
   }
 }
 
+.offer__item:last-child {
+  padding-top: 6px;
+}
+
 .offer__systems {
   font-size: 14px;
   font-weight: 300;
   line-height: 24px;
   max-width: 280px;
-  margin: 28px auto 0;
+  margin: 16px auto 0;
 
   @media (min-width: @tablet-width) {
     font-size: 18px;
     max-width: 300px;
-    margin-top: 38px;
+    margin-top: 28px;
   }
 
   @media (min-width: @desktop-width) {
     margin: 0;
-    margin-top: 61px;
+    margin-top: 48px;
   }
 }

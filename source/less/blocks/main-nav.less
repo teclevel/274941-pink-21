@@ -1,6 +1,5 @@
 .main-nav {
-  height: 66px;
-  position: relative;
+  height: 63px;
   background-color: @black-03;
 
   @media (min-width: @tablet-width) {
@@ -10,10 +9,6 @@
 
 .main-nav--opened .main-nav__list {
   display: block;
-  position: absolute;
-  top: 69px;
-  left: 0;
-  right: 0;
 
   @media (min-width: @tablet-width) {
     top: 110px;
@@ -26,13 +21,8 @@
 }
 
 .main-nav--opened .main-nav__logo-button {
-  height: 70px;
   background-color: @black-green;
   border-bottom: 1px solid @black;
-  position: absolute;
-  top: -1px;
-  left: 0;
-  right: 0;
 
   @media (min-width: @tablet-width) {
     top: 0;
@@ -41,14 +31,6 @@
   @media (min-width: @desktop-width) {
     position: static;
     background-color: transparent;
-  }
-}
-
-.main-nav--no-js .main-nav__list {
-  display: block;
-
-  @media (min-width: @desktop-width) {
-    display: flex;
   }
 }
 
@@ -85,7 +67,7 @@
 }
 
 .main-nav__wrapper {
-  height: 66px;
+  height: fit-content;
   display: flex;
   flex-direction: column;
 
@@ -113,7 +95,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  height: 66px;
+  height: 63px;
 
   @media (min-width: @tablet-width) {
     min-height: 110px;
@@ -149,6 +131,10 @@
 .main-nav__logo-tablet {
   fill: @white;
   color: @white;
+
+  @media (min-width: @tablet-width) {
+    margin-bottom: 11px;
+  }
 }
 
 //логотип на десктопе
@@ -179,8 +165,6 @@
 }
 
 .main-nav__link-logo[href] {
-  padding: 10px 0;
-
   &:hover .main-nav__logo-mobile,
   &:hover .main-nav__logo-tablet,
   &:hover .main-nav__logo-desktop {

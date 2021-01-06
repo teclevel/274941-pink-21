@@ -2,12 +2,17 @@
 <html class="page" lang="ru">
   <head>
     <meta charset="utf-8">
+    <meta name="description" content="Сайт фотоприложения для раскрашивания серых будней">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>HTML Academy: Пинк</title>
     <link rel="stylesheet" href="css/style.min.css">
+    <link rel="preload" href="/css/style.min.css" as="style">
+    <!-- <link rel="preload" href="/js/script.min.js" as="script"> -->
+    <link rel="preload" href="/img/page-header-mobile@2x.png" as="image">
+    <link rel="preload" href="/img/page-header-back-mobile@2x.jpg" as="image">
+    <link rel="preload" href="/fonts/opensans.woff2" as="font" type="font/woff2" crossorigin>
   </head>
   <body class="page__body">
-
     <svg style="display: none">
       <symbol id="main-nav__logo-mobile">
         <path d="M0 1.55A1.29 1.29 0 011.26.26h7.13c5.06 0 8.39 2.7 8.39 7.13v.06c0 4.85-4.04 7.36-8.8 7.36H2.53v6.8A1.28 1.28 0 011.27 23 1.27 1.27 0 010 21.61V1.55zm8.07 10.97c3.7 0 6.14-2 6.14-4.99v-.06c0-3.2-2.4-4.87-5.96-4.87H2.6v9.88l5.48.04zM21.6 1.39A1.28 1.28 0 0122.85 0a1.27 1.27 0 011.27 1.39V21.6A1.28 1.28 0 0122.86 23a1.27 1.27 0 01-1.27-1.39V1.4zM30.67 1.42A1.28 1.28 0 0131.93.17h.34a1.54 1.54 0 011.29.74l13.6 17.4V1.36A1.24 1.24 0 0148.39.12a1.23 1.23 0 011.23 1.24v20.3a1.14 1.14 0 01-1.15 1.17h-.13a1.7 1.7 0 01-1.31-.78L33.12 4.25v17.4a1.26 1.26 0 01-1.2 1.25 1.23 1.23 0 01-1.2-1.25V1.42h-.05zM55.94 1.39A1.28 1.28 0 0157.2 0a1.27 1.27 0 011.26 1.39v12.3L71.23.54c.26-.27.62-.43 1-.45a1.27 1.27 0 011.21 1.26 1.29 1.29 0 01-.41.9l-7.95 7.9 8.57 10.52c.23.26.35.6.35.94a1.31 1.31 0 01-1.34 1.28 1.23 1.23 0 01-1-.58L63.3 11.86l-4.83 4.85v4.88a1.27 1.27 0 01-1.26 1.27 1.26 1.26 0 01-1.26-1.27V1.4h-.01z"/>
@@ -73,12 +78,11 @@
         <path d="M13.64.02L13.5 0 0 1.4v24.61L13.5 34 27 26.01V1.41L13.64 0zm11.6 25L13.5 31.96 1.77 25.02v-10.1l11.68 6.93.02 1.25-8.02-4.75v1.23l8.04 4.8.02 1.3-8.05-4.76v1.22l8.04 4.81 8.12-4.83V16.9l3.62-2.15v10.26zm0-11.57L22 15.33l-1.48.88-7.06-4.19-.01 1.23 6.04 3.57-.06.03-.13.07-.86.5-4.98-2.95-.01 1.22 3.93 2.33-.93.61-.02.01-2.97-1.74-.01 1.23 1.94 1.13-1.98 1.19L1.8 13.58l11.63-6.96 11.8 6.83zm0-1.22L13.43 5.3 1.77 12.22V2.99L13.5 1.76 25.23 3v9.24z"/>
       </symbol>
     </svg>
-
-    <header class="page-header">
-      <div class="main-nav main-nav--closed main-nav--nojs">
+    <header class="page-header page-header--nojs">
+      <div class="main-nav main-nav--closed">
         <nav class="main-nav__wrapper">
           <div class="main-nav__logo-button">
-            <a class="main-nav__link-logo">
+            <a class="main-nav__link-logo" href="index.html" aria-label="главная страница">
               <svg class="main-nav__logo-mobile" fill="none" width="74" height="23">
                 <use xlink:href="#main-nav__logo-mobile"></use>
               </svg>
@@ -89,8 +93,7 @@
                 <use xlink:href="#main-nav__logo-desktop"></use>
               </svg>
             </a>
-            <a href="#" class="main-nav__toggle">
-              <span class="visually-hidden">Открыть/закрыть меню</span>
+            <a href="#" class="main-nav__toggle" aria-label="Открыть/закрыть меню">
               <svg class="main-nav__close" width="23" height="23" fill="none">
                 <use xlink:href="#main-nav__close"></use>
               </svg>
@@ -100,7 +103,7 @@
             </a>
           </div>
           <ul class="main-nav__list site-list">
-            <li class="site-list__item site-list__item--active"><a>Главная</a></li>
+            <li class="site-list__item site-list__item--active">Главная</li>
             <li class="site-list__item"><a href="photos.html">Фотографии</a></li>
             <li class="site-list__item"><a href="form.html">Конкурс</a></li>
             <li class="site-list__item"><a href="https://htmlacademy.ru">HTML Academy</a></li>
@@ -154,12 +157,12 @@
                 <p class="advantages__text">Приложение позволит вам победить осеннюю хандру и депрессию буквально в несколько кликов!</p>
               </div>
               <picture>
-                <source type="image/webp" media="(min-width: 1200px)" srcset="img/advantages-desktop-grey.webp 1x, img/advantages-desktop-grey@2x.webp 2x">
+                <source type="image/webp" media="(min-width: 960px)" srcset="img/advantages-desktop-grey.webp 1x, img/advantages-desktop-grey@2x.webp 2x">
                 <source type="image/webp" media="(min-width: 660px)" srcset="img/advantages-tablet-grey.webp 1x, img/advantages-tablet-grey@2x.webp 2x">
                 <source type="image/webp" srcset="img/advantages-mobile-grey.webp 1x, img/advantages-mobile-grey@2x.webp 2x">
-                <source media="(min-width: 1200px)" srcset="img/advantages-desktop-grey.png 1x, img/advantages-desktop-grey@2x.png 2x">
+                <source media="(min-width: 960px)" srcset="img/advantages-desktop-grey.png 1x, img/advantages-desktop-grey@2x.png 2x">
                 <source media="(min-width: 660px)" srcset="img/advantages-tablet-grey.png 1x, img/advantages-tablet-grey@2x.png 2x">
-                <img class="advantages__cell-phone advantages__cell-phone--invisible" src="img/advantages-mobile-grey.png" srcset="img/advantages-mobile-grey@2x.png 2x" alt="снимок на смартфоне">
+                <img class="advantages__cell-phone advantages__cell-phone--invisible" width="136" height="245" src="img/advantages-mobile-grey.png" srcset="img/advantages-mobile-grey@2x.png 2x" alt="снимок на смартфоне">
               </picture>
             </li>
             <li class="advantages__item advantages__item--invisible">
@@ -168,26 +171,26 @@
                 <p class="advantages__text">Сделайте снимок и украсьте его смайликом или текстовой подписью, чтобы усилить&nbsp;эффект</p>
               </div>
               <picture>
-                <source type="image/webp" media="(min-width: 1200px)" srcset="img/advantages-desktop-pink.webp 1x, img/advantages-desktop-pink@2x.webp 2x">
+                <source type="image/webp" media="(min-width: 960px)" srcset="img/advantages-desktop-pink.webp 1x, img/advantages-desktop-pink@2x.webp 2x">
                 <source type="image/webp" media="(min-width: 660px)" srcset="img/advantages-tablet-pink.webp 1x, img/advantages-tablet-pink@2x.webp 2x">
                 <source type="image/webp" srcset="img/advantages-mobile-pink.webp 1x, img/advantages-mobile-pink@2x.webp 2x">
-                <source media="(min-width: 1200px)" srcset="img/advantages-desktop-pink.png 1x, img/advantages-desktop-pink@2x.png 2x">
+                <source media="(min-width: 960px)" srcset="img/advantages-desktop-pink.png 1x, img/advantages-desktop-pink@2x.png 2x">
                 <source media="(min-width: 660px)" srcset="img/advantages-tablet-pink.png 1x, img/advantages-tablet-pink@2x.png 2x">
-                <img class="advantages__cell-phone advantages__cell-phone--invisible" src="img/advantages-mobile-pink.png" srcset="img/advantages-mobile-pink@2x.png 2x" alt="снимок с розовым фильтром">
+                <img class="advantages__cell-phone advantages__cell-phone--invisible" width="136" height="245" src="img/advantages-mobile-pink.png" srcset="img/advantages-mobile-pink@2x.png 2x" alt="снимок с розовым фильтром">
               </picture>
             </li>
             <li class="advantages__item">
               <div class="advantages__description">
-                <h3 class="advantages__title">Заводит новых друзей</h3>
+                <h3 class="advantages__title">Заводит новых&nbsp;друзей</h3>
                 <p class="advantages__text">Ставьте лайки, комментируйте, делитесь фотографиями с друзьями и заводите новых</p>
               </div>
               <picture>
-                <source type="image/webp" media="(min-width: 1200px)" srcset="img/advantages-desktop-smile.webp 1x, img/advantages-desktop-smile@2x.webp 2x">
+                <source type="image/webp" media="(min-width: 960px)" srcset="img/advantages-desktop-smile.webp 1x, img/advantages-desktop-smile@2x.webp 2x">
                 <source type="image/webp" media="(min-width: 660px)" srcset="img/advantages-tablet-smile.webp 1x, img/advantages-tablet-smile@2x.webp 2x">
                 <source type="image/webp" srcset="img/advantages-mobile-smile.webp 1x, img/advantages-mobile-smile@2x.webp 2x">
-                <source media="(min-width: 1200px)" srcset="img/advantages-desktop-smile.png 1x, img/advantages-desktop-smile@2x.png 2x">
+                <source media="(min-width: 960px)" srcset="img/advantages-desktop-smile.png 1x, img/advantages-desktop-smile@2x.png 2x">
                 <source media="(min-width: 660px)" srcset="img/advantages-tablet-smile.png 1x, img/advantages-tablet-smile@2x.png 2x">
-                <img class="advantages__cell-phone" src="img/advantages-mobile-smile.png" srcset="img/advantages-mobile-smile@2x.png 2x" alt="снимок с наложенным смайликом">
+                <img class="advantages__cell-phone" src="img/advantages-mobile-smile.png" width="136" height="245" srcset="img/advantages-mobile-smile@2x.png 2x" alt="снимок с наложенным смайликом">
               </picture>
             </li>
           </ul>
@@ -196,8 +199,8 @@
       <section class="news">
         <div class="news__description">
           <h2 class="visually-hidden">Новости</h2>
-          <h3 class="news__caption">Эффект <br>на 24 часа!</h3>
-          <p class="news__text">Британские ученые провели исследования и&nbsp;доказали, <br>что положительный эффект от&nbsp;использования приложения длится целые сутки!</p>
+          <h3 class="news__caption">Эффект&nbsp;<br>на 24 часа!</h3>
+          <p class="news__text">Британские ученые провели исследования и&nbsp;доказали, что&nbsp;положительный эффект от&nbsp;использования приложения длится целые сутки!</p>
           <a class="news__learn-about" href="#">Узнать больше об исследовании</a>
         </div>
       </section>
@@ -278,7 +281,7 @@
           <ul class="contacts__list">
             <li class="contacts__item contacts__item-phone">
               <span class="contacts__text-title">Звоните:</span>
-              <a class="contacts__link" href="tel:+78125556666">+7(812)555-66-66</a>
+              <a class="contacts__link" href="tel:+78125556666">+7 (812) 555-66-66</a>
             </li>
             <li class="contacts__item contacts__item-write">
               <span class="contacts__text-title">Пишите:</span>
@@ -291,6 +294,7 @@
           </ul>
         </div>
         <div class="contacts__map">
+          <iframe class="contacts__map-google" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d9506.482998884241!2d30.32564292404735!3d59.94057345152094!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCAxOTExODY!5e0!3m2!1sru!2sru!4v1609585623097!5m2!1sru!2sru" width="600" height="450" ></iframe>
           <svg class= "contacts__map-marker" width="36" height="36" fill="none">
             <use xlink:href="#contacts__map-marker"></use>
           </svg>
@@ -336,6 +340,6 @@
         </svg>
       </a>
     </footer>
-    <script src="js/script.min.js"></script>
+<!--     <script src="js/script.min.js"></script> -->
   </body>
 </html>

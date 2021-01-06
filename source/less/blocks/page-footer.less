@@ -2,7 +2,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin: 40px auto;
+  margin: 41px auto 35px;
 
   @media (min-width: @tablet-width) {
     flex-direction: row;
@@ -65,7 +65,20 @@
 .page-footer__list {
   list-style: none;
   padding: 0;
-  margin: 32px 0;
+  margin: 35px 0 33px;
+  width: 178px;
+  display: flex;
+  justify-content: space-between;
+
+  @media (min-width: @tablet-width) {
+    margin-right: 17px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin: 0;
+    margin-left: 7px;
+    width: 173px;
+  }
 }
 
 .page-footer__text {
@@ -73,6 +86,10 @@
   font-weight: 400;
   line-height: 18px;
   color: @black-green;
+
+  @media (min-width: @desktop-width) {
+    font-size: 18px;
+  }
 }
 
 .page-footer__logo-academy {
@@ -93,5 +110,9 @@
 
   &:active .page-footer__logo-academy {
     fill: @black-green-03;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 153px;
   }
 }
