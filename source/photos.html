@@ -7,7 +7,7 @@
     <title>HTML Academy: Пинк</title>
     <link rel="stylesheet" href="css/style.min.css">
     <link rel="preload" href="/css/style.min.css" as="style">
-    <!-- <link rel="preload" href="/js/script.min.js" as="script"> -->
+    <link rel="preload" href="/js/script.min.js" as="script">
     <link rel="preload" href="/fonts/opensans.woff2" as="font" type="font/woff2" crossorigin>
   </head>
   <body class="page__body">
@@ -111,14 +111,16 @@
         <h1 class="visually-hidden">Посты пользователей</h1>
         <p class="photos__title">Взгляните на фотографии, которые выкладывают пользователи!<br>&nbsp;Видите, как не хватает ваших?</p>
         <figure class="photos__panorama">
-          <picture>
-            <source type="image/webp" media="(min-width: 960px)" srcset="img/photos/panorama-desktop.webp 1x, img/photos/panorama-desktop@2x.webp 2x">
-            <source type="image/webp" media="(min-width: 660px)" srcset="img/photos/panorama-tablet.webp 1x, img/photos/panorama-tablet@2x.webp 2x">
-            <source type="image/webp" srcset="img/photos/panorama-mobile.webp 1x, img/photos/panorama-mobile@2x.webp 2x">
-            <source media="(min-width: 960px)" srcset="img/photos/panorama-desktop.jpg 1x, img/photos/panorama-desktop@2x.jpg 2x">
-            <source media="(min-width: 660px)" srcset="img/photos/panorama-tablet.jpg 1x, img/photos/panorama-tablet@2x.jpg 2x">
-            <img class="photos__full" width="320" height="137" src="/img/photos/panorama-mobile.jpg" srcset="/img/photos/panorama-mobile@2x.jpg 2x" alt="снимок пользователя">
-          </picture>
+          <a href="#" aria-label="увеличить фотографию">
+            <picture>
+              <source type="image/webp" media="(min-width: 960px)" srcset="img/photos/panorama-desktop.webp 1x, img/photos/panorama-desktop@2x.webp 2x">
+              <source type="image/webp" media="(min-width: 660px)" srcset="img/photos/panorama-tablet.webp 1x, img/photos/panorama-tablet@2x.webp 2x">
+              <source type="image/webp" srcset="img/photos/panorama-mobile.webp 1x, img/photos/panorama-mobile@2x.webp 2x">
+              <source media="(min-width: 960px)" srcset="img/photos/panorama-desktop.jpg 1x, img/photos/panorama-desktop@2x.jpg 2x">
+              <source media="(min-width: 660px)" srcset="img/photos/panorama-tablet.jpg 1x, img/photos/panorama-tablet@2x.jpg 2x">
+              <img class="photos__full" width="320" height="137" src="/img/photos/panorama-mobile.jpg" srcset="/img/photos/panorama-mobile@2x.jpg 2x" alt="снимок пользователя">
+            </picture>
+          </a>
           <figcaption class="photos__caption photos__caption--top">
             <blockquote class="photos__description">
               <cite class="photos__author">Анна</cite>
@@ -406,6 +408,6 @@
         </svg>
       </a>
     </footer>
-<!--     <script src="js/script.min.js"></script> -->
+    <script src="js/script.min.js"></script>
   </body>
 </html>
