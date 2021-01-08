@@ -1,18 +1,12 @@
 .main-nav {
-  //min-height: 63px;
   background-color: @black-03;
-
-  @media (min-width: @tablet-width) {
-    //min-height: 110px;
-  }
-
-  /* @media (min-width: @desktop-width) {
-    padding: 15px 0;
-  } */
 }
 
 .main-nav--opened .main-nav__list {
   display: block;
+  position: absolute;
+  width: 100%;
+  top: 63px;
 
   @media (min-width: @tablet-width) {
     top: 110px;
@@ -79,12 +73,7 @@
   display: flex;
   flex-direction: column;
 
- /*  @media (min-width: @tablet-width) {
-    min-height: 110px;
-  }
- */
   @media (min-width: @desktop-width) {
-    //min-height: 110px;
     width: 940px;
     margin: 0 auto;
     position: static;

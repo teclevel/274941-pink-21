@@ -56,22 +56,29 @@
   @media (min-width: @tablet-width) {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
+    justify-content: center;
     margin: 0 auto;
-    width: 562px;
-    padding: 34px 0 9px 18px;
+    padding: 37px 0 25px 0;
+    gap: 45px 80px;
   }
 
   @media (min-width: @desktop-width) {
-    width: 881px;
-    padding: 40px 0 0 18px;
+    padding: 40px 0 0 0;
+    display: grid;
+    grid-template-columns: auto auto auto;
+    width: 93%;
+    gap: 40px;
   }
 }
 
 .contacts__item {
   @media (min-width: @tablet-width) {
     margin: 0;
-    min-height: 105px;
+    width: 240px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 280px;
   }
 }
 
@@ -92,12 +99,6 @@
 
   @media (min-width: @tablet-width) {
     margin: 0;
-    margin-left: 158px;
-  }
-
-  @media (min-width: @desktop-width) {
-    margin: 0;
-    margin-left: 16px;
   }
 }
 

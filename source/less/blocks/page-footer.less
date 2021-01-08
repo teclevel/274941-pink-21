@@ -7,7 +7,7 @@
   @media (min-width: @tablet-width) {
     flex-direction: row;
     justify-content: space-between;
-    padding: 0 20px;
+    padding: 33px 20px 20px;
     margin: 0;
   }
 
@@ -15,7 +15,7 @@
     min-height: 197px;
     width: 940px;
     margin: 0 auto;
-    padding: 0;
+    padding: 20px 0 25px;
   }
 }
 
@@ -66,18 +66,23 @@
   list-style: none;
   padding: 0;
   margin: 35px 0 33px;
-  width: 178px;
+  max-width: 232px;
   display: flex;
-  justify-content: space-between;
+  flex-wrap: wrap;
+  align-content: center;
+  gap: 5px;
 
   @media (min-width: @tablet-width) {
-    margin-right: 17px;
+    margin: 0;
+    margin-right: 15px;
+    max-width: 291px;
+    gap: 8px;
   }
 
   @media (min-width: @desktop-width) {
     margin: 0;
     margin-left: 7px;
-    width: 173px;
+    max-width: 586px;
   }
 }
 

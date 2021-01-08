@@ -1,9 +1,11 @@
 .table {
-  position: relative;
   margin: 0 20px;
   border-collapse: collapse;
+  display: flex;
+  flex-direction: column;
 
   @media (min-width: @tablet-width) {
+    display: table;
     width: 620px;
     margin: 0 auto;
   }
@@ -18,26 +20,26 @@
   background-color: @black-green;
   color: @white;
   text-transform: uppercase;
+  display: flex;
+
+  @media (min-width: @tablet-width) {
+    display: table-row;
+  }
 }
 
 .table__cell-header {
-  padding-top: 11px;
-  padding-bottom: 27px;
-  position: absolute;
+  padding: 11px 45px 27px;
   background-color: @black-green;
   width: 100%;
-  top: -101px;
+
 
   @media (min-width: @tablet-width) {
-    padding-top: 13px;
-    padding-bottom: 6px;
+    padding: 11px 35px 6px;
     width: 25%;
-    position: static;
   }
 
   @media (min-width: @desktop-width) {
-    padding-top: 16px;
-    padding-bottom: 20px;
+    padding: 16px 50px 20px;
   }
 
   &:nth-child(2) {
@@ -85,14 +87,14 @@
       position: absolute;
       content: "";
       top: -11px;
-      left: -1px;
+      left: -45px;
       width: 74px;
       height: 74px;
       background-image: url("../img/table-hit-ribbon.svg");
 
       @media (min-width: @tablet-width) {
-        top: -13px;
-        left: -1px;
+        top: -10px;
+        left: -35px;
         width: 61px;
         height: 61px;
         background-image: url("../img/table-hit-ribbon.svg");
@@ -100,7 +102,7 @@
 
       @media (min-width: @desktop-width) {
         top: -16px;
-        left: -1px;
+        left: -50px;
         width: 74px;
         height: 74px;
         background-image: url("../img/table-hit-ribbon.svg");
@@ -187,6 +189,6 @@
 
   @media (min-width: @desktop-width) {
     font-size: 18px;
-    padding: 16px 0 13px 22px;
+    padding: 16px 15px 13px 22px;
   }
 }

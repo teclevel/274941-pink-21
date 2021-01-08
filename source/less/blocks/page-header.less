@@ -1,6 +1,4 @@
 .page-header {
-  height: 462px;
-  margin-bottom: 268px;
   display: flex;
   flex-direction: column;
   background-size: cover;
@@ -15,7 +13,6 @@
   }
 
   @media (min-width: @tablet-width) {
-    height: 729px;
     margin-bottom: 0;
     background-position: 50% 0;
     background-image: url("../img/page-header-back-tablet.jpg");
@@ -26,7 +23,6 @@
   }
 
   @media (min-width: @desktop-width) {
-    height: 858px;
     background-image: url("../img/page-header-back-desktop.jpg");
 
     @media (min-resolution: 2dppx) {
@@ -93,37 +89,28 @@
 }
 
 .page-header__section {
-  background-position: 50% 29%;
-  background-image: url("../img/page-header-mobile.png");
-  background-repeat: no-repeat;
-
-  @media (min-resolution: 2dppx) {
-    background-image: url("../img/page-header-mobile@2x.png");
-    background-size: 320px auto;
-  }
-
   @media (min-width: @tablet-width) {
-    background-position: 50%;
+    background-position: 50% bottom;
     background-image: url("../img/page-header-tablet.png");
-    background-size: auto 545px;
-    height: 545px;
-    margin-top: 74px;
+    min-height: 545px;
+    background-repeat: no-repeat;
 
     @media (min-resolution: 2dppx) {
       background-image: url("../img/page-header-tablet@2x.png");
+      background-size: 660px auto;
     }
   }
 
   @media (min-width: @desktop-width) {
     background-image: url("../img/page-header-desktop.png");
     width: 940px;
-    height: 645px;
-    background-position: -15% 0;
-    background-size: cover;
+    min-height: 645px;
+    background-position: -15% bottom;
     margin: 102px auto 0;
 
     @media (min-resolution: 2dppx) {
       background-image: url("../img/page-header-desktop@2x.png");
+      background-size: 1050px auto;
     }
   }
 }
@@ -158,6 +145,29 @@
   text-align: center;
   color: @white;
   min-height: 271px;
+  position: relative;
+
+
+  &::before {
+    position: absolute;
+    content: "";
+    bottom: 271px;
+    left: 0;
+    right: 0;
+    height: 286px;
+    background-image: url("../img/page-header-mobile.png");
+    background-repeat: no-repeat;
+    background-position: 50% 0;
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/page-header-mobile@2x.png");
+      background-size: 320px auto;
+    }
+
+    @media (min-width: @tablet-width) {
+      display: none;
+    }
+  }
 
   @media (min-width: @tablet-width) {
     background-color: transparent;
@@ -165,6 +175,7 @@
     margin-left: 20px;
     width: 300px;
     margin-top: 29px;
+    padding-bottom: 20px;
   }
 
   @media (min-width: @desktop-width) {
