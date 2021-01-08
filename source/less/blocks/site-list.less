@@ -9,24 +9,22 @@
     background: transparent;
     border: none;
     padding: 0;
-    padding-top: 50px;
+    text-align: end;
+  }
+}
 
-    &:last-child {
-      margin-right: 0;
-    }
+.site-list__item--active a {
+  position: relative;
 
-    &--active {
-      position: relative;
-
-      &::after {
-        content: "";
-        position: absolute;
-        right: 0;
-        bottom: 29px;
-        left: 0;
-        height: 2px;
-        background: @white;
-      }
+  &::after {
+    @media (min-width: @desktop-width) {
+      content: "";
+      position: absolute;
+      right: 0;
+      bottom: -12px;
+      left: 0;
+      height: 2px;
+      background: @white;
     }
   }
 }
@@ -36,23 +34,17 @@
 
   &:hover {
     color: @cherry;
+
+    @media (min-width: @desktop-width) {
+      padding: 20px 0;
+    }
   }
 
   &:active {
     opacity: 0.3;
-  }
 
-
-  @media (min-width: @desktop-width) {
-    padding: 20px 0;
-
-    &:hover {
-      color: @cherry;
-    }
-
-    &:active {
+    @media (min-width: @desktop-width) {
       color: @white;
-      opacity: 0.3;
     }
   }
 }
