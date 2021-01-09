@@ -40,13 +40,14 @@ exports.styles = styles;
 const html = () => {
   return gulp.src("source/*.html")
     .pipe(htmlmin({ collapseWhitespace: true }))
+    .pipe(posthtml([include()]))
     .pipe(gulp.dest("build"));
 }
 
 // Scripts
 
 const scripts = () => {
-  return gulp.src("source/js/script.js")
+  return gulp.src("source/js/*.js")
     .pipe(uglify())
     .pipe(rename("script.min.js"))
     .pipe(gulp.dest("build/js"))
@@ -60,7 +61,9 @@ exports.scripts = scripts;
 const images = () => {
   return gulp.src("source/img/**/*.{png,jpg,svg}")
     .pipe(imagemin([
-      imagemin.mozjpeg({quality: 75, progressive: true}),
+      imagemin.mozjpeg({
+        quality: 75,
+        progressive: true}),
       imagemin.optipng({optimizationLevel: 3}),
       imagemin.svgo()
     ]))
@@ -85,7 +88,7 @@ const sprite = () => {
   return gulp.src("source/img/icons/*.svg")
     .pipe(svgstore())
     .pipe(rename("sprite.svg"))
-    .pipe(gulp.dest("build/img"));
+    .pipe(gulp.dest("build/img/icons"));
 }
 
 exports.sprite = sprite;
@@ -95,7 +98,7 @@ exports.sprite = sprite;
 const copy = (done) => {
   gulp.src([
     "source/fonts/*.{woff2,woff}",
-    "source/*.ico",
+    "source/*.svg",
     "source/img/**/*.{jpg,png,svg}",
   ], {
     base: "source"
@@ -124,6 +127,9 @@ const server = (done) => {
     ui: false,
   });
   done();
+    gulp.watch("source/less/**/*.less", gulp.series(styles));
+    gulp.watch("source/js/*.js", gulp.series(scripts));
+    gulp.watch("source/*.html", gulp.series(html, reload));
 }
 
 exports.server = server;
@@ -135,14 +141,16 @@ const reload = done => {
   done();
 }
 
-// Watcher
 
-const watcher = () => {
-  gulp.watch("source/less/**/*.less", gulp.series(styles));
-  gulp.watch("source/js/script.js", gulp.series(scripts));
-  gulp.watch("source/*.html", gulp.series(html, reload));
-}
 
+const build = gulp.series(clean, styles, scripts, sprite, copy, createWebp, html);
+
+const start = gulp.series(build, server);
+
+exports.build = build;
+exports.start = start;
+
+/*
 // Build
 
 const build = gulp.series(
@@ -175,3 +183,4 @@ exports.default = gulp.series(
     server,
     watcher
   ));
+ */

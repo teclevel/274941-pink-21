@@ -103,8 +103,6 @@
   }
 }
 
-// логотип на мобильном
-
 @media (max-width: @mobile-width-only) {
   .main-nav__logo-tablet,
   .main-nav__logo-desktop {
@@ -115,8 +113,6 @@
 .main-nav__logo-mobile {
   fill: @white;
 }
-
-//логотип на планшете
 
 @media (min-width: @tablet-width) {
   .main-nav__logo-mobile,
@@ -133,8 +129,6 @@
     margin-bottom: 11px;
   }
 }
-
-//логотип на десктопе
 
 @media (min-width: @desktop-width) {
   .main-nav__logo-mobile,
@@ -169,14 +163,11 @@
     color: @cherry;
   }
 
+  &:active .main-nav__logo-mobile,
+  &:active .main-nav__logo-tablet,
   &:active .main-nav__logo-desktop {
     fill: @white;
-    color: @cherry;
-    opacity: 0.3;
-  }
-
-  &:active .main-nav__logo-mobile,
-  &:active .main-nav__logo-tablet {
+    color: @white;
     opacity: 0.3;
   }
 }
