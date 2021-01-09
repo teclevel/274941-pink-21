@@ -19,8 +19,10 @@
     "gulp-uglify": "^3.0.2",
     "gulp-uglify-es": "^2.0.0",
     "gulp-webp": "^4.0.1",
+    "include": "^1.1.0",
     "postcss": "8.1.7",
     "postcss-csso": "^5.0.0",
+    "posthtml": "^0.15.1",
     "stylelint": "13.7.2",
     "stylelint-config-htmlacademy": "0.1.4"
   },

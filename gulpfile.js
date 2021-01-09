@@ -13,6 +13,8 @@ const webp = require("gulp-webp");
 const svgstore = require("gulp-svgstore");
 const del = require("del");
 const sync = require("browser-sync").create();
+const posthtml = require("gulp-posthtml");
+const include = require("posthtml-include");
 
 // Styles
 
@@ -28,7 +30,7 @@ const styles = () => {
     .pipe(rename("style.min.css"))
     .pipe(sourcemap.write("."))
     .pipe(gulp.dest("build/css"))
-    .pipe(sync.stream());
+    .pipe(sync.stream());              // обновление файлов для сервера
 }
 
 exports.styles = styles;
