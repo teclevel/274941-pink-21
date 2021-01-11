@@ -17,10 +17,15 @@ navToggle.addEventListener('click', function() {
   }
 });
 
-ymaps.ready(init);
-        function init(){
-            var myMap = new ymaps.Map("map", {
-                center: [59.938635,30.323118],
-                zoom: 14
-            });
-        }
+var mapBlock = document.querySelector('#map');
+
+if (mapBlock) {
+  ymaps.ready(init);
+  function init(){
+      var myMap = new ymaps.Map(mapBlock, {
+          center: [59.938635,30.323118],
+          zoom: 14
+      });
+  }
+}
+

@@ -216,7 +216,6 @@
 
   @media (min-width: @tablet-width) {
     display: block;
-    padding-bottom: 11px;
   }
 }
 
@@ -228,7 +227,6 @@
 
   @media (min-width: @tablet-width) {
     position: static;
-    padding-bottom: 11px;
   }
 }
 
@@ -236,6 +234,7 @@
   appearance: none;
   margin: 0 auto;
   width: 240px;
+  background-color: @black-0;
 
   &:focus {
     outline: none;
@@ -246,6 +245,7 @@
     height: 2px;
     cursor: pointer;
     background: @black-green;
+    margin-bottom: 6px;
   }
 
   &::-webkit-slider-thumb {
@@ -276,8 +276,8 @@
 
   &::-moz-range-thumb {
     border: 2px solid @cherry;
-    height: 14px;
-    width: 14px;
+    height: 10px;
+    width: 10px;
     border-radius: 50%;
     background-color: @white;
     cursor: pointer;
