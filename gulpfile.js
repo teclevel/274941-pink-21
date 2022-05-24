@@ -141,11 +141,6 @@ const reload = done => {
   done();
 }
 
+exports.build = gulp.series(clean, styles, scripts, sprite, copy, images, createWebp, html);
+exports.default = gulp.series(server);
 
-
-const build = gulp.series(clean, styles, scripts, sprite, copy, createWebp, html);
-
-const start = gulp.series(build, server);
-
-exports.build = build;
-exports.start = start;
